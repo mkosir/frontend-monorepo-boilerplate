@@ -1,0 +1,163 @@
+## Conventions
+
+Since "consistency is the key" majority of rules is enforced by automated tooling as ESLint, TypeScript, Prettier, etc.  
+Still certain design and architectural decisions must be followed which are covered with described conventions bellow.
+
+### Project Structure
+
+- Every application or package in monorepo has all project files/folders organized and grouped by **feature**.  
+  Deep folder nesting does not represent an issue.
+- All applications in monorepo are built with Next.js.
+- Every Next.js application is [statically exported](https://nextjs.org/docs/advanced-features/static-html-export).
+- Every application has following file/folder structure:
+  ```shell
+  apps/
+  ├─ product-manager/
+  │  ├─ common/
+  │  │  ├─ components/
+  │  │  │  ├─ ProductTitle/
+  │  │  │  ├─ ...
+  │  │  │  └─ _index.tsx
+  │  │  ├─ consts/
+  │  │  │  ├─ paths.ts
+  │  │  │  └─ ...
+  │  │  └─ types/
+  │  ├─ modules/
+  │  │  ├─ HomePageContainer/
+  │  │  ├─ ProductAddPageContainer/
+  │  │  ├─ ProductPageContainer/
+  │  │  ├─ ProductsPageContainer/
+  │  │  │  ├─ api/
+  │  │  │  │  └─ useGetProducts/
+  │  │  │  ├─ components/
+  │  │  │  │  ├─ ProductItem/
+  │  │  │  │  ├─ ProductsStatistics/
+  │  │  │  │  └─ ...
+  │  │  │  ├─ utils/
+  │  │  │  │  └─ filterProductsByType/
+  │  │  │  └─ index.tsx
+  │  │  ├─ ...
+  │  │  └─ index.tsx
+  │  └─ pages/
+  │     ├─ products/
+  │     │  ├─ [id].tsx
+  │     │  ├─ add.tsx
+  │     │  ├─ index.tsx
+  │     ├─ _app.tsx
+  │     ├─ _index.tsx
+  │     └─ ...
+  ├─ warehouse/
+  ├─ admin-dashboard/
+  └─ ...
+  ```
+  - `common` folder is responsible for implementations that are truly used across application, where it should be used sparingly since codebase tries to follow grouped by feature project structure as much as possible
+  - `modules` folder is responsible for implementation of each individual page (routed from `pages` folder)
+  - `pages` folder serves as a router, where its responsibility is only to define possible routes
+
+### Data immutability
+
+Majority of the data should be immutable (`Readonly`, `ReadonlyArray`). Always return new array, object etc. with the changes, not the original.
+
+### Functions
+
+- Function should have single responsibility.
+- Function should be stateless where for the same input arguments they return same value every single time.
+- Function should accept at least one argument and return data.
+- Function should not have side effects, but be pure. It's implementation should not modify or access variable value outside its local environment (global state, fetching etc.).
+
+Since React components are also functions, convention should be followed as much as possible.
+
+Sometimes **potential** exceptions are react components and hooks.
+
+<details>
+<summary>Examples</summary>
+
+```ts
+const Logo = () => {
+  return (
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40"></circle>
+      <text x="50%" y="50%">
+        Icon
+      </text>
+    </svg>
+  );
+};
+
+const ProductsPageContainer = () => {
+  const { data: products } = useFetchProducts();
+
+  return (
+    <div>
+      {products.map((product) => (
+        <ProductItem name={product.name} />
+      ))}
+    </div>
+  );
+};
+
+const useGetUsers: UseGeUsers = ({ country, isActive }) =>
+  useQuery(["fetchUsers", { country, isActive }], () =>
+    fetchUsers({ country, isActive })
+  );
+```
+
+</details>
+
+### React Components
+
+#### Component Types
+
+- Container:
+  - Each feature has a container component (`AddUserContainer.tsx`, `EditProductContainer.tsx`, `ProductsPageContainer.tsx` etc.)
+  - Includes business logic.
+  - API integration.
+  - Expected file/folder structure:
+  ```
+  ProductsPageContainer/
+  ├─ api/
+  │  └─ useGetProducts/
+  ├─ components/
+  │  └─ ProductItem/
+  ├─ utils/
+  │  └─ filterProductsByType/
+  └─ index.tsx
+  ```
+- UI - Feature specific
+  - Representational components that are designed to fulfill feature requirements.
+  - Should follow functions conventions as much as possible.
+  - No API integration.
+  - Expected file/folder structure:
+  ```
+  ProductItem/
+  ├─ index.tsx
+  ├─ ProductItem.stories.tsx
+  └─ ProductItem.test.tsx
+  ```
+- UI - Design system
+  - Reusable/generic types of components used throughout whole monorepo.
+  - Expected file/folder structure:
+  ```
+  Button/
+  ├─ index.tsx
+  ├─ Button.stories.tsx
+  └─ Button.test.tsx
+  ```
+
+#### Passing Data
+
+- Prop drilling does not represent an issue. React components (functions) should have single-responsibility. [Break out render method](https://kentcdodds.com/blog/prop-drilling#how-can-we-avoid-problems-with-prop-drilling).
+- Component composition is not allowed.
+- Global state is not allowed.
+- Fetching of data is only allowed in container components.
+
+### Tests
+
+- Test can be run through npm scripts, but is also highly encouraged to use [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) VS code extension
+
+```shell
+code --install-extension firsttris.vscode-jest-runner
+```
+
+- All test should follow naming convention as `it('should ... when ...')`.
+- Snapshot tests are not allowed (except small exceptions in design system library).
