@@ -1,9 +1,9 @@
-## Conventions
+# Conventions
 
 Since "consistency is the key" majority of rules is enforced by automated tooling as ESLint, TypeScript, Prettier, etc.  
 Still certain design and architectural decisions must be followed which are covered with described conventions bellow.
 
-### Project Structure
+## Project Structure
 
 - Every application or package in monorepo has all project files/folders organized and grouped by **feature**.  
   Deep folder nesting does not represent an issue.
@@ -54,11 +54,11 @@ Still certain design and architectural decisions must be followed which are cove
   - `modules` folder is responsible for implementation of each individual page (routed from `pages` folder)
   - `pages` folder serves as a router, where its responsibility is only to define possible routes
 
-### Data immutability
+## Data immutability
 
 Majority of the data should be immutable (`Readonly`, `ReadonlyArray`). Always return new array, object etc. with the changes, not the original.
 
-### Functions
+## Functions
 
 - Function should have single responsibility.
 - Function should be stateless where for the same input arguments they return same value every single time.
@@ -104,9 +104,9 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
 
 </details>
 
-### React Components
+## React Components
 
-#### Component Types
+### Component Types
 
 - Container:
   - Each feature has a container component (`AddUserContainer.tsx`, `EditProductContainer.tsx`, `ProductsPageContainer.tsx` etc.)
@@ -144,14 +144,14 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
   └─ Button.test.tsx
   ```
 
-#### Passing Data
+### Passing Data
 
 - Prop drilling does not represent an issue. React components (functions) should have single-responsibility. [Break out render method](https://kentcdodds.com/blog/prop-drilling#how-can-we-avoid-problems-with-prop-drilling).
 - Component composition is not allowed.
 - Global state is not allowed.
 - Fetching of data is only allowed in container components.
 
-### Tests
+## Tests
 
 - Test can be run through npm scripts, but is also highly encouraged to use [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) VS code extension
 
@@ -159,5 +159,20 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
 code --install-extension firsttris.vscode-jest-runner
 ```
 
-- All test should follow naming convention as `it('should ... when ...')`.
+- All test descriptions should follow naming convention as `it('should ... when ...')`.
 - Snapshot tests are not allowed (except small exceptions in design system library).
+
+## Conventions enforced by automated tooling
+List and reasoning of some conventions enforced by automated tooling:
+- Whole monorepo codebase is written in TypeScript strict mode with enabled ESlint [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
+- All types are defined with `type` alias. In case of rare exceptions (extending third-party types) `interface` can be used with disabling linter:
+```ts
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+```
+- Arrays are defined with `generic` syntax. In case of rare exceptions (extending third-party types) `interface` can be used with disabling linter:
+```ts
+const x: Array<string> = ['a', 'b'];
+const y: ReadonlyArray<string> = ['a', 'b'];
+```
+- Default export is not allowed. In case of exception this rule is disabled in `.eslintrc.js` (Next.js pages etc.)
+- All test descriptions follows naming convention as `it('should ... when ...')`.
