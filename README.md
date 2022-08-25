@@ -4,19 +4,17 @@ Minimal Turborepo boilerplate.
 
 ### Build
 
-To build all apps and packages, run the following command:
+To build all apps and packages:
 
 ```
-cd my-turborepo
 npm run build
 ```
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To develop all apps and packages:
 
 ```
-cd my-turborepo
 npm run dev
 ```
 
