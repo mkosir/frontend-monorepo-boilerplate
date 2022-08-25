@@ -104,6 +104,7 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
 
 ## Naming
 
+Strive to keep naming conventions consistent and readable, because another person will maintain the code you have written.  
 There is no convention on cache invalidation, but bellow naming conventions should be followed:
 
 - React components - Pascal case (`ProductItem`, `ProductsPageContainer`)
@@ -164,7 +165,7 @@ There is no convention on cache invalidation, but bellow naming conventions shou
 
 ### Passing Data
 
-- Prop drilling does not represent an issue. React components (functions) should have single-responsibility. [Break out render method](https://kentcdodds.com/blog/prop-drilling#how-can-we-avoid-problems-with-prop-drilling).
+- Prop drilling should not become an issue, if it does [break out your render method](https://kentcdodds.com/blog/prop-drilling#how-can-we-avoid-problems-with-prop-drilling) and keep in mind that React components are functions, which should have single responsibility.
 - Component composition is not allowed.
 - Global state is not allowed.
 - Fetching of data is only allowed in container components.
