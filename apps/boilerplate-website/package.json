@@ -6,22 +6,23 @@
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "next": "12.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "ui": "*"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "eslint": "7.32.0",
+    "@babel/core": "^7.18.13",
+    "eslint": "8.22.0",
     "eslint-config-custom": "*",
     "next-transpile-modules": "9.0.0",
     "tsconfig": "*",
-    "@types/node": "^17.0.12",
-    "@types/react": "17.0.48",
-    "typescript": "^4.5.3"
+    "@types/node": "^18.7.13",
+    "@types/react": "18.0.17",
+    "typescript": "^4.7.4"
   }
 }

@@ -5,15 +5,16 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint *.ts*",
+    "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
-    "eslint": "^7.32.0",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^8.22.0",
     "eslint-config-custom": "*",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "tsconfig": "*",
-    "typescript": "^4.5.2"
+    "typescript": "^4.7.4"
   }
 }
