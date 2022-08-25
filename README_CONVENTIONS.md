@@ -102,6 +102,26 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
 
 </details>
 
+## Naming
+
+There is no convention on cache invalidation, but bellow naming conventions should be followed:
+
+- React components - Pascal case (`ProductItem`, `ProductsPageContainer`)
+- Prop Types - component name with "Props" postfix `[ComponentName]Props` - Pascal case (`ProductItemProps`, `ProductsPageContainerProps`)
+- Functions - Camel case (`filterProductsByType`, `useGetProducts`)
+- Variables
+  - Locals (`products`, `productsFiltered`)
+  - Booleans are prefixed with `is`, `has` (`isProduct`)
+  - Constants (`PRODUCT_ID`)
+  - Enums are singular with values as constants
+    ```ts
+    enum OrderStatus {
+      PENDING,
+      FULFILLED,
+      ERROR,
+    }
+    ```
+
 ## React Components
 
 ### Component Types
