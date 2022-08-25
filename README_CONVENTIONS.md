@@ -97,9 +97,7 @@ const ProductsPageContainer = () => {
 };
 
 const useGetUsers: UseGeUsers = ({ country, isActive }) =>
-  useQuery(["fetchUsers", { country, isActive }], () =>
-    fetchUsers({ country, isActive })
-  );
+  useQuery(["fetchUsers", { country, isActive }], () => fetchUsers({ country, isActive }));
 ```
 
 </details>
@@ -163,16 +161,22 @@ code --install-extension firsttris.vscode-jest-runner
 - Snapshot tests are not allowed (except small exceptions in design system library).
 
 ## Conventions enforced by automated tooling
+
 List and reasoning of some conventions enforced by automated tooling:
+
 - Whole monorepo codebase is written in TypeScript strict mode with enabled ESlint [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
 - All types are defined with `type` alias. In case of rare exceptions (extending third-party types) `interface` can be used with disabling linter:
+
 ```ts
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 ```
+
 - Arrays are defined with `generic` syntax. In case of rare exceptions (extending third-party types) `interface` can be used with disabling linter:
+
 ```ts
-const x: Array<string> = ['a', 'b'];
-const y: ReadonlyArray<string> = ['a', 'b'];
+const x: Array<string> = ["a", "b"];
+const y: ReadonlyArray<string> = ["a", "b"];
 ```
+
 - Default export is not allowed. In case of exception this rule is disabled in `.eslintrc.js` (Next.js pages etc.)
 - All test descriptions follows naming convention as `it('should ... when ...')`.
