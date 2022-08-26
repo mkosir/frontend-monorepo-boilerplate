@@ -1,0 +1,14 @@
+.deleteButton {
+  font-size: 14px;
+  margin-left: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-blue-sky-400);
+}
+
+.deleteButton:hover,
+.deleteButton:focus,
+.deleteButton:active {
+  text-decoration: underline;
+  color: var(--color-blue-sky-500);
+}
