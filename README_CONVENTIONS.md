@@ -60,12 +60,12 @@ Majority of the data should be immutable (`Readonly`, `ReadonlyArray`). Always r
 
 ## Functions
 
+Since React components are also functions, convention should be followed as much as possible.
+
 - Function should have single responsibility.
 - Function should be stateless where for the same input arguments they return same value every single time.
 - Function should accept at least one argument and return data.
 - Function should not have side effects, but be pure. It's implementation should not modify or access variable value outside its local environment (global state, fetching etc.).
-
-Since React components are also functions, convention should be followed as much as possible.
 
 Sometimes **potential** exceptions are react components and hooks.
 
@@ -172,7 +172,7 @@ There is no convention on cache invalidation, but bellow naming conventions shou
 
 ## Tests
 
-- Test can be run through npm scripts, but is also highly encouraged to use [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) VS code extension
+Test can be run through npm scripts, but it's highly encouraged to use [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) VS code extension.
 
 ```shell
 code --install-extension firsttris.vscode-jest-runner
