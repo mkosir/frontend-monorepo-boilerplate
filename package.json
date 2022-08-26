@@ -13,7 +13,7 @@
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "clean-all": "npm exec --workspaces -- shx rm -rf node_modules .next .turbo && shx rm -rf node_modules",
-    "update-all-dependencies": "npx npm-check-updates -u && turbo run update-dependencies --parallel"
+    "update-all-dependencies": "turbo run update-dependencies --parallel && npx npm-check-updates -u"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
