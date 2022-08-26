@@ -12,12 +12,14 @@
     "lint": "turbo run lint",
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
+    "clean-all": "npm exec --workspaces -- shx rm -rf node_modules && shx rm -rf node_modules",
     "update-all-dependencies": "npx npm-check-updates -u && turbo run update-dependencies --parallel"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
+    "shx": "^0.3.4",
     "turbo": "^1.4.3"
   },
   "engines": {
