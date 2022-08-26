@@ -1,10 +1,10 @@
 import { Button } from "ui";
 
-export default function Docs() {
+export const HomePage = () => {
   return (
     <div>
-      <h1>Docs</h1>
+      <h1>Home</h1>
       <Button />
     </div>
   );
-}
+};
