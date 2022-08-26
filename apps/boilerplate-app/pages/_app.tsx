@@ -8,12 +8,12 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Turborepo Boilerplate</title>
+        <title>Turborepo Boilerplate - App</title>
         <meta name="description" content="Minimal Turborepo boilerplate." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ textAlign: "center", margin: "15px 0 30px" }}>
-        <div style={{ fontSize: "22px", fontWeight: "bold" }}>Minimal boilerplate - Prisma / Next.js / TypeScript</div>
+        <div style={{ fontSize: "22px", fontWeight: "bold" }}>Turborepo Boilerplate - App</div>
       </div>
       {/* <div style={{ display: "flex" }}>
         <Breadcrumbs />

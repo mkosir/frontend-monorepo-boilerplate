@@ -1,10 +1,5 @@
-// import { Button } from "ui";
+import { HomePage } from "modules";
 
-export default function Web() {
-  return (
-    <div>
-      <h1>Web</h1>
-      {/* <Button /> */}
-    </div>
-  );
-}
+const Home = () => <HomePage />;
+
+export default Home;
