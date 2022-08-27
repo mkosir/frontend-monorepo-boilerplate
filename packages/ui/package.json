@@ -9,11 +9,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
     "eslint-config-custom": "*",
-    "react": "^18.2.0",
-    "tsconfig": "*",
-    "typescript": "^4.8.2"
+    "tsconfig": "*"
   }
 }

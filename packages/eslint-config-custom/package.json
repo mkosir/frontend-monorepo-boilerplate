@@ -12,9 +12,6 @@
     "eslint-plugin-react": "7.31.1",
     "eslint-config-turbo": "latest"
   },
-  "devDependencies": {
-    "typescript": "^4.8.2"
-  },
   "publishConfig": {
     "access": "public"
   }

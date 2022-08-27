@@ -19,6 +19,11 @@
     "clean-all": "npm exec --workspaces -- shx rm -rf node_modules .next .turbo && shx rm -rf node_modules",
     "update-all-dependencies": "turbo run update-dependencies --parallel && npx npm-check-updates -u"
   },
+  "dependencies": {
+    "next": "12.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.1",
     "@commitlint/config-conventional": "^17.1.0",
@@ -30,7 +35,11 @@
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
     "shx": "^0.3.4",
-    "turbo": "^1.4.3"
+    "turbo": "^1.4.3",
+    "@types/node": "^18.7.13",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.8.2"
   },
   "engines": {
     "npm": ">=8.0.0",
