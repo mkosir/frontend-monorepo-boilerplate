@@ -7,10 +7,9 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "eslint": "^8.22.0",
     "eslint-config-next": "^12.2.5",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-react": "7.31.0",
+    "eslint-plugin-react": "7.31.1",
     "eslint-config-turbo": "latest"
   },
   "devDependencies": {

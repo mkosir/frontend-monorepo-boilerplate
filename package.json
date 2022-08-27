@@ -23,6 +23,7 @@
     "@commitlint/cli": "^17.1.1",
     "@commitlint/config-conventional": "^17.1.0",
     "commitizen": "^4.2.5",
+    "eslint": "8.23.0",
     "eslint-config-custom": "*",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
