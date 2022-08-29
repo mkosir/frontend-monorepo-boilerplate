@@ -5,7 +5,7 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*",
+    "lint": "eslint --max-warnings 0 .",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
