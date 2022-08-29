@@ -6,7 +6,8 @@
     "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --max-warnings 0 .",
+    "lint-fix": "eslint --fix .",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
