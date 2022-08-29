@@ -6,11 +6,19 @@
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
   },
-  "dependencies": {
-    "eslint-config-next": "^12.2.5",
+  "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-react": "7.31.1",
-    "eslint-config-turbo": "latest"
+    "eslint-import-resolver-typescript": "^3.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.1",
+    "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-no-array-reduce": "^1.0.62",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.4",
+    "eslint-plugin-testing-library": "^5.6.0"
   },
   "publishConfig": {
     "access": "public"
