@@ -1,10 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    // project: ["../tsconfig/tsconfig.nextjs.json"],
-    project: ["../tsconfig/nextjs.json"],
-  },
 
   plugins: ["@typescript-eslint", "testing-library", "jest-dom", "jest", "import"],
 
