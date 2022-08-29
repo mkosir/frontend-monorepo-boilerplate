@@ -97,7 +97,7 @@ const ProductsPageContainer = () => {
 };
 
 const useGetUsers: UseGeUsers = ({ country, isActive }) =>
-  useQuery(["fetchUsers", { country, isActive }], () => fetchUsers({ country, isActive }));
+  useQuery(['fetchUsers', { country, isActive }], () => fetchUsers({ country, isActive }));
 ```
 
 </details>
@@ -195,8 +195,8 @@ List and reasoning of some conventions enforced by automated tooling:
 - Arrays are defined with `generic` syntax. In case of rare exceptions (extending third-party types) `interface` can be used with disabling linter:
 
   ```ts
-  const x: Array<string> = ["a", "b"];
-  const y: ReadonlyArray<string> = ["a", "b"];
+  const x: Array<string> = ['a', 'b'];
+  const y: ReadonlyArray<string> = ['a', 'b'];
   ```
 
 - Default export is not allowed. In case of exception this rule is disabled in `.eslintrc.js` (Next.js pages etc.)
