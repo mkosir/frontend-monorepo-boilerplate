@@ -1,4 +1,4 @@
-import { UsersPage } from "modules";
+import { UsersPage } from 'modules';
 
 const Users = () => <UsersPage />;
 

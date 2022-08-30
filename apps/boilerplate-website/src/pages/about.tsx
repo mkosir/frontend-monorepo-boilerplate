@@ -1,4 +1,4 @@
-import { AboutPage } from "modules";
+import { AboutPage } from 'modules';
 
 const About = () => <AboutPage />;
 

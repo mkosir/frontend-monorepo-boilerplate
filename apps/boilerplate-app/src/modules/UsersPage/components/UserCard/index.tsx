@@ -1,6 +1,6 @@
 // import Router from "next/router";
 // import { useState } from "react";
-import Tilt from "react-parallax-tilt";
+import Tilt from 'react-parallax-tilt';
 
 // import { Link, Progress } from "common/components";
 // import { paths } from "common/consts/paths";
@@ -15,7 +15,8 @@ export type UserCardProps = {
   user: string;
 };
 
-export const UserCard = ({ user }: UserCardProps) => {
+// export const UserCard = ({ user }: UserCardProps) => {
+export const UserCard = () => {
   // const [isDeletingUser, setIsDeletingUser] = useState<boolean>(false);
 
   // const purities = user.batches.map((batch) => batch.purity);
@@ -33,20 +34,20 @@ export const UserCard = ({ user }: UserCardProps) => {
   // };
 
   return (
-    <Tilt tiltMaxAngleX={8} tiltMaxAngleY={6} scale={1.04} style={{ minWidth: "360px", maxWidth: "400px" }}>
+    <Tilt tiltMaxAngleX={8} tiltMaxAngleY={6} scale={1.04} style={{ minWidth: '360px', maxWidth: '400px' }}>
       <div
         style={{
-          backgroundColor: "#64b0ce17",
-          margin: "14px",
-          padding: "13px",
-          borderRadius: "5px",
-          boxShadow: "0 4px 8px 0 #3d9cc23b",
+          backgroundColor: '#64b0ce17',
+          margin: '14px',
+          padding: '13px',
+          borderRadius: '5px',
+          boxShadow: '0 4px 8px 0 #3d9cc23b',
         }}
       >
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
+            display: 'flex',
+            justifyContent: 'space-between',
           }}
         >
           User

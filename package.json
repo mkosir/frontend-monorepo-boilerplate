@@ -33,8 +33,6 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "commitizen": "^4.2.5",
-    "eslint": "8.23.0",
-    "eslint-config-custom": "*",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",

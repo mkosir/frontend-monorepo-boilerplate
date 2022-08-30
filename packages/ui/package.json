@@ -9,6 +9,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
+    "eslint-config-custom": "*",
     "tsconfig": "*"
   }
 }

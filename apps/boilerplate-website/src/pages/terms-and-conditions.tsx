@@ -1,4 +1,4 @@
-import { TermsAndConditionsPage } from "modules";
+import { TermsAndConditionsPage } from 'modules';
 
 const TermsAndConditions = () => <TermsAndConditionsPage />;
 
