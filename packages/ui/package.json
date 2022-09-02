@@ -6,6 +6,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --max-warnings 0 .",
+    "lint-fix": "eslint --fix .",
+    "tsc": "tsc -p tsconfig.json",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
