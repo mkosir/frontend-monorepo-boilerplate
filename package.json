@@ -12,6 +12,7 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint-staged-husky": "lint-staged",
+    "tsc": "turbo run tsc",
     "test": "turbo run test",
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
