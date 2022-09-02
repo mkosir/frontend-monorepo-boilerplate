@@ -77,12 +77,10 @@ module.exports = {
   ],
 
   // ESlint default behaviour ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
-  // ignorePatterns: ["!.*", ".next", "compiled", "node_modules"],
+  ignorePatterns: ['!.*', 'next-env.d.ts', '.next', 'compiled', 'node_modules'],
 
   settings: {
-    typescript: {
-      // project: ['apps/*/tsconfig.json'],
-    },
+    typescript: {},
     react: {
       version: 'detect',
     },
