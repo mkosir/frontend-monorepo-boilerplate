@@ -8,6 +8,9 @@
     "lint": {
       "outputs": []
     },
+    "tsc": {
+      "outputs": []
+    },
     "test": {},
     "dev": {
       "cache": false
