@@ -12,7 +12,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "react-parallax-tilt": "^1.7.61",
+    "react-parallax-tilt": "^1.7.62",
     "ui": "*"
   },
   "devDependencies": {
