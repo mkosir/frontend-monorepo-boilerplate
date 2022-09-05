@@ -4,6 +4,7 @@
   "private": true,
   "files": [
     "tsconfig.base.json",
-    "tsconfig.nextjs.json"
+    "tsconfig.nextjs.json",
+    "tsconfig.test.json"
   ]
 }
