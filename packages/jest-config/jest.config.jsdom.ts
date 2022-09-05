@@ -5,9 +5,11 @@ export const jestConfigJsdom: Config = {
   preset: 'ts-jest',
   moduleDirectories: ['node_modules'],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  collectCoverage: true,
+  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.stories.tsx'],
   globals: {
     'ts-jest': {
-      tsconfig: '../tsconfig/tsconfig.test.json',
+      tsconfig: `${__dirname}/../tsconfig/tsconfig.test.json`,
     },
   },
 };
