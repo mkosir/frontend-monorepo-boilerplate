@@ -2,12 +2,14 @@ import { screen, render } from '@testing-library/react';
 
 import { Button } from '.';
 
-describe('Packages - UI', () => {
-  describe('Button', () => {
-    it('should render button when no props are present', () => {
-      render(<Button />);
+describe('packages', () => {
+  describe('ui', () => {
+    describe('Button', () => {
+      it('should render button when no props are present', () => {
+        render(<Button />);
 
-      expect(screen.getByText('Boop')).toBeInTheDocument();
+        expect(screen.getByText('Boop')).toBeInTheDocument();
+      });
     });
   });
 });
