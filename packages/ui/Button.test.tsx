@@ -4,7 +4,7 @@ import { Button } from './Button';
 
 describe('Packages - UI', () => {
   describe('Button', () => {
-    it('should not calculate tilt when disabled', () => {
+    it('should render button when no props are present', () => {
       render(<Button />);
 
       expect(screen.getByText('Boop')).toBeInTheDocument();
