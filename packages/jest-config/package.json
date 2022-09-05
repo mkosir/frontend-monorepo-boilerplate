@@ -1,8 +1,7 @@
 {
-  "name": "jest-config-base",
+  "name": "jest-config",
   "version": "0.0.0",
-  "main": "jest.config.js",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
   },
@@ -13,8 +12,5 @@
     "jest-config": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "ts-jest": "^28.0.8"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
