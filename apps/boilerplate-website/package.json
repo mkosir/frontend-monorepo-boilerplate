@@ -9,6 +9,8 @@
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
+    "test": "jest --verbose",
+    "test-watch": "jest --verbose --watch",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
