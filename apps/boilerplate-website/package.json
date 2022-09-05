@@ -18,7 +18,6 @@
     "ui": "*"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.13",
     "next-transpile-modules": "9.0.0",
     "tsconfig": "*"
   }
