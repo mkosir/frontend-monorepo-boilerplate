@@ -3,6 +3,7 @@
 [![CI][lint-badge]][lint-url]
 [![CI][tsc-badge]][tsc-url]
 [![CI][build-badge]][build-url]
+[![CI][test-badge]][test-url]
 
 Minimal Turborepo boilerplate.
 
@@ -28,3 +29,5 @@ npm run dev
 [tsc-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml
 [build-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml
+[test-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml/badge.svg
+[test-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml
