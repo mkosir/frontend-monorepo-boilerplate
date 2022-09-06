@@ -4,6 +4,7 @@ import { jestConfigJsdom } from '../../packages/jest-config';
 
 const jestConfig: Config = {
   ...jestConfigJsdom,
+  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.stories.tsx'],
   coverageThreshold: {
     global: {
       branches: 0,
