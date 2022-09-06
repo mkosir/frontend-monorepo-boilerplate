@@ -14,6 +14,7 @@
     "lint-staged-husky": "lint-staged",
     "tsc": "turbo run tsc",
     "test": "turbo run test",
+    "storybook": "turbo run storybook",
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",

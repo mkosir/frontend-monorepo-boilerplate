@@ -12,6 +12,8 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
+    "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009",
+    "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
