@@ -6,5 +6,11 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js"]
+  "include": [".", ".eslintrc.js", ".storybook/**/*"],
+  // Storybook
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }
