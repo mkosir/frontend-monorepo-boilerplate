@@ -12,7 +12,7 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006",
     "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
@@ -21,6 +21,14 @@
     "ui": "*"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/theming": "^6.5.10",
     "next-transpile-modules": "9.0.0",
     "tsconfig": "*"
   }
