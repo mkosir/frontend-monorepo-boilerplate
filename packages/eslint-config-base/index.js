@@ -69,7 +69,7 @@ module.exports = {
       },
     },
     {
-      files: ['src/pages/**/*'],
+      files: ['src/**/*.stories.*', 'src/pages/**/*'],
       rules: {
         'import/no-default-export': 'off',
       },
