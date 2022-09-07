@@ -14,7 +14,7 @@ export const HomePage = () => {
   return (
     <div>
       <h1>Home</h1>
-      <Button />
+      <Button text="Boop" onClick={() => console.log('Boop')} />
     </div>
   );
 };
