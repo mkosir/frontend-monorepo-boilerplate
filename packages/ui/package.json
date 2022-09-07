@@ -11,11 +11,16 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 6008",
+    "storybook": "start-storybook -p 6008",
     "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
+    "@storybook/addons": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/theming": "^6.5.10",
     "tsconfig": "*"
   }
 }
