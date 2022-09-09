@@ -3,11 +3,11 @@ import { Button } from 'ui';
 import { MontyHome } from './components/MontyHome';
 
 export const HomePage = () => {
+  // const test = "test333" + 1;
+
   // if (test === null) {
   //   return <div></div>;
   // }
-
-  // const test = "test333" + name;
 
   return (
     <div>
