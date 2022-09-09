@@ -11,7 +11,7 @@ export const HomePage = () => {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Home2</h1>
       <Button text="Echo" onClick={() => console.log('Echo')} />
       <MontyHome
         title="Home page (specific) feature"
