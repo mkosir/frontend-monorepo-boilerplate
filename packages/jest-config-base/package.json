@@ -1,5 +1,5 @@
 {
-  "name": "jest-config",
+  "name": "jest-config-base",
   "version": "0.0.0",
   "private": true,
   "scripts": {
