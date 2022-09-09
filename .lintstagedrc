@@ -1,5 +1,11 @@
 {
   "*": [
     "pretty-quick --staged"
+  ],
+  "*.{js,jsx,ts,tsx}": [
+    "npm run lint"
+  ],
+  "*.{ts,tsx}": [
+    "npm run tsc"
   ]
 }
