@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
+    "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings 0 .",
@@ -12,7 +12,7 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "start-storybook -p 6007",
+    "storybook": "start-storybook -p 6000",
     "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
