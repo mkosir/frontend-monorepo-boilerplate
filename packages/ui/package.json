@@ -5,7 +5,6 @@
   "types": "./src/index.tsx",
   "license": "MIT",
   "scripts": {
-    "dev": "npm run storybook",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
