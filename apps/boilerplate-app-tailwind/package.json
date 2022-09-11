@@ -22,10 +22,6 @@
   },
   "devDependencies": {
     "next-transpile-modules": "9.0.0",
-    "tsconfig": "*",
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16",
-    "tailwind-config": "*",
-    "tailwindcss": "^3.1.8"
+    "tsconfig": "*"
   }
 }
