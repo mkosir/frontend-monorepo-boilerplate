@@ -1,6 +1,5 @@
 import Tilt from 'react-parallax-tilt';
 import { Button } from 'ui-tailwind';
-// import { Button } from 'ui';
 
 export type MontyHomeProps = {
   title: string;
