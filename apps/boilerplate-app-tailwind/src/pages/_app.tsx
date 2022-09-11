@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import 'ui-tailwind/src/styles.css';
+import 'ui-tailwind/styles.css';
 
 // import { Breadcrumbs, Progress } from 'common/components';
 // import { usePageLoading } from 'common/utils/usePageLoading';

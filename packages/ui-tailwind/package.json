@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "main": "./src/index.tsx",
   "types": "./src/index.tsx",
+  "exports": {
+    ".": "./src",
+    "./styles.css": "./src/styles.css"
+  },
   "scripts": {
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
