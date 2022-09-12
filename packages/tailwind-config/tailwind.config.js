@@ -6,10 +6,6 @@ module.exports = {
 
   theme: {
     extend: {
-      fontFamily: {
-        display: ['Brush Script MT', 'Comic Sans MS', 'Comic Sans', 'sans-serif'],
-        body: ['Brush Script MT', 'Comic Sans MS', 'Comic Sans', 'sans-serif'],
-      },
       colors: {
         brandRed: colors.red[500],
         brandGreen: colors.green[500],
