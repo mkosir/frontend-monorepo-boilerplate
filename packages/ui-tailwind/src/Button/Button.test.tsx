@@ -11,7 +11,6 @@ describe('packages', () => {
         const btnTextContent = 'Click Me';
 
         render(<Button text={btnTextContent} onClick={onClick} />);
-
         expect(screen.getByRole('button', { name: btnTextContent })).toBeInTheDocument();
         expect(onClick).not.toBeCalled();
       });
