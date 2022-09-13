@@ -1,3 +1,5 @@
+import 'ui-tailwind/styles.css';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
