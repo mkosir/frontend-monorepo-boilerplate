@@ -3,12 +3,6 @@ import { Button } from 'ui-tailwind';
 import { MontyHome } from './components/MontyHome';
 
 export const HomePage = () => {
-  // const test = "test333" + 1;
-
-  // if (test === null) {
-  //   return <div></div>;
-  // }
-
   return (
     <div>
       <h1 className=" text-brandRed bg-primary-500">Home</h1>
