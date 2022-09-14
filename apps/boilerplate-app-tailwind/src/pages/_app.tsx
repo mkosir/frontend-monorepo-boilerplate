@@ -3,9 +3,6 @@ import Head from 'next/head';
 
 import 'ui-tailwind/styles.css';
 
-// import { Breadcrumbs, Progress } from 'common/components';
-// import { usePageLoading } from 'common/utils/usePageLoading';
-
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
@@ -17,9 +14,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       <div style={{ textAlign: 'center', margin: '15px 0 30px' }}>
         <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Turborepo Boilerplate - App Tailwind</div>
       </div>
-      {/* <div style={{ display: "flex" }}>
-        <Breadcrumbs />
-      </div> */}
       {<Component {...pageProps} />}
     </>
   );
