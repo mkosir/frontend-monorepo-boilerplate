@@ -8,7 +8,7 @@ describe('apps', () => {
       it('should render home page when no props are present', () => {
         render(<HomePage />);
 
-        expect(screen.getByText('Home')).toBeInTheDocument();
+        expect(screen.getByText('Home Page')).toBeInTheDocument();
       });
     });
   });
