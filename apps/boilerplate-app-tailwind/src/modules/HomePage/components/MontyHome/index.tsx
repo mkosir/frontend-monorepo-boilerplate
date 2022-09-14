@@ -4,12 +4,13 @@ import { Button } from 'ui-tailwind';
 export type MontyHomeProps = {
   title: string;
   isTiltEnabled: boolean;
+  className?: string;
   onMontyHomeSelected: (isHome: boolean) => void;
 };
 
 type MontyHomeSelection = 'goat' | 'home';
 
-export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHomeProps) => {
+export const MontyHome = ({ title, isTiltEnabled, className, onMontyHomeSelected }: MontyHomeProps) => {
   const handleMontyHomeSelected = (montyHomeSelection: MontyHomeSelection) => {
     if (montyHomeSelection === 'home') {
       console.log('Always go with option 2!');
@@ -22,27 +23,21 @@ export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHo
   };
 
   return (
-    <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} style={{ maxWidth: '400px' }}>
-      <div
-        className="flex min-h-screen flex-col items-center justify-center py-2 bg-green-600"
-        style={{
-          backgroundColor: '#64b0ce17',
-          margin: '14px',
-          padding: '13px',
-          borderRadius: '5px',
-          boxShadow: '0 4px 8px 0 #3d9cc23b',
-        }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <h2>{title}</h2>
-          <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
-            Monty Home Problem
-          </a>
-          <div style={{ display: 'flex' }}>
-            <Button text="Home 1" onClick={() => handleMontyHomeSelected('goat')} />
-            <Button text="Home 2" onClick={() => handleMontyHomeSelected('home')} />
-            <Button text="Home 3" onClick={() => handleMontyHomeSelected('goat')} />
-          </div>
+    <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} style={{ maxWidth: '500px' }}>
+      <div className={`${className ?? ''} bg-blue-50 p-12 rounded-lg shadow-lg flex flex-col items-center`}>
+        <h2>{title}</h2>
+        <a
+          href="https://en.wikipedia.org/wiki/Monty_Hall_problem"
+          target="_blank"
+          rel="noreferrer"
+          className="my-1 no-underline hover:underline text-blue-600 hover:text-blue-800 visited:text-blue-600"
+        >
+          Monty Home Problem
+        </a>
+        <div className="flex space-x-5 mt-4">
+          <Button text="Home 1" onClick={() => handleMontyHomeSelected('goat')} />
+          <Button text="Home 2" onClick={() => handleMontyHomeSelected('home')} />
+          <Button text="Home 3" onClick={() => handleMontyHomeSelected('goat')} />
         </div>
       </div>
     </Tilt>

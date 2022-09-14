@@ -1,15 +1,13 @@
-import { Button } from 'ui-tailwind';
-
 import { MontyHome } from './components/MontyHome';
 
 export const HomePage = () => {
   return (
-    <div className="m-2">
-      <h1 className="font-medium leading-tight text-xl text-blue-700">Home</h1>
-      <Button text="Echo" className="my-2" onClick={() => console.log('Echo')} />
+    <div className="m-5">
+      <h1 className="font-medium leading-tight text-xl text-black">Home Page</h1>
       <MontyHome
         title="Home page (specific) feature"
         isTiltEnabled={true}
+        className="mt-5"
         onMontyHomeSelected={(isHome) =>
           isHome ? console.log('Congrats') : console.log('Sorry, better luck next time')
         }
