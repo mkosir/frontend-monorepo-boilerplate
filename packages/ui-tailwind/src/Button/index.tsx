@@ -9,28 +9,9 @@ export const Button = ({ text, className, onClick }: ButtonProps) => {
     <button
       onClick={onClick}
       className={`
-      ${className ?? ''}
-      px-6 py-2.5 
-      bg-gradient-to-r 
-    from-brandBlue 
-    to-brandGreen 
-    text-white 
-      font-medium 
-      text-xs 
-      leading-tight 
-      rounded 
-      shadow-md
-    hover:from-primary-600 hover:to-green-500
-    focus:bg-blue-700
-    active:bg-blue-800 
-     hover:shadow-lg  
-     focus:shadow-lg
-     focus:outline-none 
-     focus:ring-0  
-     active:shadow-lg 
-     hover:scale-110
-     transition ease-in-out
-     duration-200`}
+      ${
+        className ?? ''
+      }from-brandBlue to-brandGreen hover:from-primary-600 rounded bg-gradient-to-r px-6 py-2.5 text-xs font-medium leading-tight text-white shadow-md transition duration-200 ease-in-out hover:scale-110 hover:to-green-500 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg`}
     >
       {text}
     </button>
