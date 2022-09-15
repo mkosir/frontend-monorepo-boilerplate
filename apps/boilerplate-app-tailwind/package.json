@@ -21,6 +21,7 @@
     "ui-tailwind": "*"
   },
   "devDependencies": {
+    "eslint-plugin-tailwindcss": "^3.6.1",
     "next-transpile-modules": "9.0.0",
     "tsconfig": "*"
   }
