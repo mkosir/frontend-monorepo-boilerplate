@@ -1,12 +1,14 @@
 /** @type {import("eslint").Linter.Config} */
 
-// This eslint configuration is being used only with lint-staged
+// This eslint configuration file (and tsconfig.lintstaged.json) is being used only by lint-staged
 
 module.exports = {
   root: true,
-  extends: ['eslint-config-base'],
+
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.lintstaged.json'],
   },
+
+  extends: ['eslint-config-base'],
 };
