@@ -7,5 +7,9 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
 
-  extends: ['eslint-config-base'],
+  extends: ['eslint-config-base', 'plugin:tailwindcss/recommended'],
+
+  rules: {
+    'tailwindcss/classnames-order': 'error',
+  },
 };
