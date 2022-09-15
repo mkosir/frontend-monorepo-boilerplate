@@ -10,4 +10,8 @@ module.exports = {
   plugins: ['tailwindcss'],
 
   extends: ['eslint-config-base', 'plugin:tailwindcss/recommended'],
+
+  rules: {
+    'tailwindcss/classnames-order': 'error',
+  },
 };

@@ -24,17 +24,17 @@ export const MontyHome = ({ title, isTiltEnabled, className, onMontyHomeSelected
 
   return (
     <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} className="max-w-lg">
-      <div className={`${className ?? ''} bg-blue-50 p-12 rounded-lg shadow-lg flex flex-col items-center`}>
+      <div className={`${className ?? ''} flex flex-col items-center rounded-lg bg-blue-50 p-12 shadow-lg`}>
         <h3>{title}</h3>
         <a
           href="https://en.wikipedia.org/wiki/Monty_Hall_problem"
           target="_blank"
           rel="noreferrer"
-          className="my-1 no-underline hover:underline text-blue-600 hover:text-blue-800 visited:text-blue-600"
+          className="my-1 text-blue-600 no-underline visited:text-blue-600 hover:text-blue-800 hover:underline"
         >
           Monty Home Problem
         </a>
-        <div className="flex space-x-5 mt-4">
+        <div className="mt-4 flex space-x-5">
           <Button text="Home 1" onClick={() => handleMontyHomeSelected('goat')} />
           <Button text="Home 2" onClick={() => handleMontyHomeSelected('home')} />
           <Button text="Home 3" onClick={() => handleMontyHomeSelected('goat')} />

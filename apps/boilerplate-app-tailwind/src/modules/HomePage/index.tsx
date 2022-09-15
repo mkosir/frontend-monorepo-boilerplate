@@ -3,7 +3,7 @@ import { MontyHome } from './components/MontyHome';
 export const HomePage = () => {
   return (
     <div className="m-5">
-      <h2 className="font-medium leading-tight text-xl text-black">Home Page</h2>
+      <h2 className="text-xl font-medium leading-tight text-black">Home Page</h2>
       <MontyHome
         title="Home page (specific) feature"
         isTiltEnabled={true}
