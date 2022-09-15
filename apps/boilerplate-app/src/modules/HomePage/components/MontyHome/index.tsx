@@ -36,7 +36,7 @@ export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHo
             boxShadow: '0 4px 8px 0 #3d9cc23b',
           }}
         >
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
             Monty Home Problem
           </a>

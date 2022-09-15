@@ -25,7 +25,7 @@ export const MontyHome = ({ title, isTiltEnabled, className, onMontyHomeSelected
   return (
     <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} className="max-w-lg">
       <div className={`${className ?? ''} bg-blue-50 p-12 rounded-lg shadow-lg flex flex-col items-center`}>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <a
           href="https://en.wikipedia.org/wiki/Monty_Hall_problem"
           target="_blank"

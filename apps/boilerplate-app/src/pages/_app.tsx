@@ -1,6 +1,8 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import 'common/styles.css';
+
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
