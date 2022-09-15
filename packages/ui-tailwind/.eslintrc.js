@@ -11,5 +11,6 @@ module.exports = {
 
   rules: {
     'tailwindcss/classnames-order': 'error',
+    'tailwindcss/no-custom-classname': 'off',
   },
 };
