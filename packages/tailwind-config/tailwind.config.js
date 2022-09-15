@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brandBlue: colors.blue[500],
-        brandGreen: colors.green[400],
+        'brand-blue': colors.blue[500],
+        'brand-green': colors.green[400],
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
