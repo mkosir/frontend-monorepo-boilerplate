@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-// import { ThemeOptions } from '@mui/material';
+import { PaletteColor, PaletteColorOptions } from '@mui/material';
 import React from 'react';
 
 declare module '@mui/material/styles' {
@@ -17,7 +17,11 @@ declare module '@mui/material/styles' {
     };
   }
 
-  // interface PaletteOptions {
-  //   neutral: PaletteColorOptions;
-  // }
+  interface Palette {
+    neutral: PaletteColor;
+  }
+
+  interface PaletteOptions {
+    neutral: PaletteColorOptions;
+  }
 }
