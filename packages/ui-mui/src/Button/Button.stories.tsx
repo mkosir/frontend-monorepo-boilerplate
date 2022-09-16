@@ -18,6 +18,7 @@ const base: ButtonProps = {
 const Template: Story<ButtonProps> = (args) => <Button {...base} {...args} />;
 
 export const Default = Template.bind({});
+Default.args = base;
 
 export const LongText = Template.bind({});
 const LongTextArgs: ButtonProps = {

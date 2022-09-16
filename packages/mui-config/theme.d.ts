@@ -3,12 +3,12 @@
 import React from 'react';
 
 declare module '@mui/material/styles' {
-  // interface Theme {
-  //   brand: {
-  //     blue: string;
-  //     green: string;
-  //   };
-  // }
+  interface Theme {
+    brand: {
+      blue: string;
+      green: string;
+    };
+  }
 
   interface ThemeOptions {
     brand: {
