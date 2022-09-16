@@ -30,9 +30,9 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [NextJs](https://github.com/vercel/next.js) apps
 - Depending on your preference to build custom UI components, monorepo includes 3 separate packages with respective configs.  
   Any UI package can be easily imported into Nextjs app:
-  - [Vanilla](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
-  - [MUI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui)
-  - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind)
+  - Vanilla CSS package - [ui](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
+  - [MUI v5](https://mui.com/) package - [ui-mui](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui)
+  - [Tailwind v3](https://tailwindcss.com/) package - [ui-tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind)
 - Unit and integration tests with [Jest](https://github.com/facebook/jest)
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
