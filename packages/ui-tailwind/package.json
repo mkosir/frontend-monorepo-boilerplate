@@ -19,7 +19,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "eslint-plugin-tailwindcss": "^3.6.1",
+    "eslint-plugin-tailwindcss": "^3.6.2",
     "tsconfig": "*"
   }
 }
