@@ -18,8 +18,8 @@
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",
-    "clean-all": "npm exec --workspaces -- shx rm -rf node_modules coverage .next .turbo && shx rm -rf node_modules",
-    "update-all-dependencies": "turbo run update-dependencies --parallel && npx npm-check-updates -u"
+    "clean": "npm exec --workspaces -- shx rm -rf node_modules coverage .next .turbo && shx rm -rf node_modules",
+    "update-dependencies": "turbo run update-dependencies --parallel && npx npm-check-updates -u"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.3.4",
