@@ -1,12 +1,9 @@
 {
-  "name": "ui-tailwind",
+  "name": "ui-mui",
   "version": "0.0.0",
   "main": "./src/index.tsx",
   "types": "./src/index.tsx",
-  "exports": {
-    ".": "./src",
-    "./styles.css": "./src/styles.css"
-  },
+  "license": "MIT",
   "scripts": {
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
@@ -14,12 +11,11 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "start-storybook -p 6202",
+    "storybook": "start-storybook -p 6201",
     "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "eslint-plugin-tailwindcss": "^3.6.2",
     "tsconfig": "*"
   }
 }
