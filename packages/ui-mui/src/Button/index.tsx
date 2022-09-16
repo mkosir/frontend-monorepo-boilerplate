@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Button as ButtonMUI, ButtonTypeMap } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 export type ButtonProps = {
   text: string;
@@ -7,10 +9,15 @@ export type ButtonProps = {
   onClick: () => void;
 };
 
+const ButtonMUIStyled = styled(ButtonMUI)<Omit<ButtonProps, 'text'>>(({ theme, isDisabled }) => ({
+  width: isDisabled ? '100%' : undefined,
+  backgroundColor: isDisabled ? theme.palette.grey[600] : theme.palette.primary.main,
+}));
+
 export const Button = ({ text, isDisabled, size, onClick }: ButtonProps) => {
   return (
-    <ButtonMUI variant="contained" disabled={isDisabled} size={size} onClick={onClick}>
+    <ButtonMUIStyled variant="contained" disabled={isDisabled} isDisabled={isDisabled} size={size} onClick={onClick}>
       {text}
-    </ButtonMUI>
+    </ButtonMUIStyled>
   );
 };
