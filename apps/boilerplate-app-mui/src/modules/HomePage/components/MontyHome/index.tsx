@@ -1,3 +1,4 @@
+import { useTheme } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { Button } from 'ui-mui';
 
@@ -10,6 +11,8 @@ export type MontyHomeProps = {
 type MontyHomeSelection = 'goat' | 'home';
 
 export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHomeProps) => {
+  const theme = useTheme();
+
   const handleMontyHomeSelected = (montyHomeSelection: MontyHomeSelection) => {
     if (montyHomeSelection === 'home') {
       console.log('Always go with option 2!');
@@ -41,7 +44,7 @@ export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHo
             Monty Home Problem
           </a>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', marginTop: '12px' }}>
-            <Button text="Home 1" onClick={() => handleMontyHomeSelected('goat')} />
+            <Button bgColor={theme.brand.green} text="Home 1" onClick={() => handleMontyHomeSelected('goat')} />
             <Button text="Home 2" onClick={() => handleMontyHomeSelected('home')} />
             <Button text="Home 3" onClick={() => handleMontyHomeSelected('goat')} />
           </div>
