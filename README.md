@@ -7,7 +7,7 @@
 
 Minimal Turborepo boilerplate.
 
-# Command
+# Commands
 
 Bellow commands will be executed on monorepo level - on all apps and packages where npm script exists.
 
