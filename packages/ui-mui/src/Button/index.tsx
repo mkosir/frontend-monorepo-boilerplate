@@ -9,9 +9,13 @@ export type ButtonProps = {
   onClick: () => void;
 };
 
-const ButtonMUIStyled = styled(ButtonMUI)<Omit<ButtonProps, 'text'>>(({ theme, isDisabled }) => ({
+const ButtonMUIStyled = styled(ButtonMUI)<Omit<ButtonProps, 'text'>>(({ theme, isDisabled, size }) => ({
   width: isDisabled ? '100%' : undefined,
-  backgroundColor: isDisabled ? theme.palette.grey[600] : theme.palette.primary.main,
+  color: size === 'small' ? theme.palette.secondary.dark : undefined,
+  '&.Mui-disabled': {
+    color: theme.palette.text.primary,
+    backgroundColor: theme.palette.grey[600],
+  },
 }));
 
 export const Button = ({ text, isDisabled, size, onClick }: ButtonProps) => {
