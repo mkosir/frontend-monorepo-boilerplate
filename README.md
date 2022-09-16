@@ -60,6 +60,10 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | clean               | Remove installed, generated and cached folders (node_modules, coverage, .next etc.) |
 | update-dependencies | Update dependencies to their latest versions                                        |
 
+# Conventions
+
+Convention over configuration should be followed as much as possible as described in [Conventions.md](https://github.com/mkosir/turborepo-boilerplate/blob/main/README_CONVENTIONS.md)
+
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
