@@ -5,8 +5,8 @@ import React from 'react';
 declare module '@mui/material/styles' {
   interface Theme {
     brand: {
-      blue: string;
-      green: string;
+      blue: React.CSSProperties['color'];
+      green: React.CSSProperties['color'];
     };
   }
 
