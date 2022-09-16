@@ -5,7 +5,7 @@
 [![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 
-Opinionated frontend monorepo boilerplate with focus on best practices and painless developer experience.
+Opinionated frontend monorepo with focus on best practices and painless developer experience.
 
 ## Requirements
 
