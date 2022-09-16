@@ -1,5 +1,8 @@
 # Turborepo / Next.js / TypeScript boilerplate
 
+[![TypeScript][typescript-badge]][typescript-url]
+[![semantic-release][semantic-badge]][semantic-url]
+
 [![CI][lint-badge]][lint-url]
 [![CI][tsc-badge]][tsc-url]
 [![CI][build-badge]][build-url]
@@ -57,6 +60,10 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | clean               | Remove installed, generated and cached folders (node_modules, coverage, .next etc.) |
 | update-dependencies | Update dependencies to their latest versions                                        |
 
+[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
+[typescript-url]: https://github.com/microsoft/TypeScript
+[semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
 [lint-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml/badge.svg
 [lint-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml
 [tsc-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml/badge.svg
