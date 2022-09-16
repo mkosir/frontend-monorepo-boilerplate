@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "open http://localhost:3102",
+    "dev": "next dev --port 3102",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings 0 .",
