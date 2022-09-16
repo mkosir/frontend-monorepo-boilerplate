@@ -10,6 +10,8 @@ export default {
 
 const base: ButtonProps = {
   text: 'Click Me',
+  isDisabled: false,
+  size: 'medium',
   onClick: action('onClick'),
 };
 
