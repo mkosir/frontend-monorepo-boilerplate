@@ -20,6 +20,13 @@ export const Default = Template.bind({});
 export const LongText = Template.bind({});
 const LongTextArgs: ButtonProps = {
   ...base,
-  text: 'Really Long Text',
+  text: 'Really Looooong Text',
 };
 LongText.args = LongTextArgs;
+
+export const Disabled = Template.bind({});
+const DisabledArgs: ButtonProps = {
+  ...base,
+  isDisabled: true,
+};
+Disabled.args = DisabledArgs;
