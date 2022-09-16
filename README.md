@@ -5,7 +5,7 @@
 [![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 
-Frontend monorepo boilerplate with focus on best practices and painless developer experience.
+Opinionated frontend monorepo boilerplate with focus on best practices and painless developer experience.
 
 ## Requirements
 
@@ -56,10 +56,6 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | commit              | Run Commitizen on staged file                                                       |
 | clean               | Remove installed, generated and cached folders (node_modules, coverage, .next etc.) |
 | update-dependencies | Update dependencies to their latest versions                                        |
-
-## Contributing
-
-All contributions are welcome!
 
 [lint-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml/badge.svg
 [lint-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml
