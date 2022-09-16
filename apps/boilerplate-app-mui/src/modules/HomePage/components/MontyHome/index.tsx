@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt';
-import { Button } from 'ui';
+import { Button } from 'ui-mui';
 
 export type MontyHomeProps = {
   title: string;
