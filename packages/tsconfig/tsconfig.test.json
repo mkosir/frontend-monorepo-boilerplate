@@ -5,5 +5,5 @@
   "compilerOptions": {
     "jsx": "react-jsx"
   },
-  "include": ["."]
+  "include": ["../ui-mui/src/config/mui-theme.d.ts"]
 }
