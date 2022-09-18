@@ -1,7 +1,6 @@
 {
   "name": "jest-config-base",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
   },

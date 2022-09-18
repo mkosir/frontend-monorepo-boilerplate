@@ -1,5 +1,5 @@
 {
-  "name": "ui-mui",
+  "name": "test-utils",
   "version": "0.0.0",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -7,15 +7,9 @@
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
-    "test": "jest --verbose",
-    "test-watch": "jest --verbose --watch",
-    "test-coverage": "jest --coverage --verbose",
-    "storybook": "start-storybook -p 6201",
-    "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "test-utils": "*",
     "tsconfig": "*"
   }
 }
