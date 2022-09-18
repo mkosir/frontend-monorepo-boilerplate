@@ -1,6 +1,8 @@
 {
   "name": "mui-config",
   "version": "0.0.0",
+  "main": "./index.ts",
+  "types": "./theme.d.ts",
   "private": true,
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
