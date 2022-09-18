@@ -10,4 +10,12 @@ export const theme = createTheme({
     secondary: { main: '#3289a8' },
     neutral: { main: '#FF5733' },
   },
+
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
+  },
 });
