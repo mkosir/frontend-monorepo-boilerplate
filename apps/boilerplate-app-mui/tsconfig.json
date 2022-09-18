@@ -6,7 +6,7 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", ".storybook/**/*"],
+  "include": [".", ".eslintrc.js", ".storybook/**/*", "../../packages/ui-mui/src/config/mui-theme.d.ts"],
   // Storybook
   "ts-node": {
     "compilerOptions": {
