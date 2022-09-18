@@ -17,7 +17,7 @@ Still certain design and architectural decisions must be followed which are cove
   │  │  ├─ components/
   │  │  │  ├─ ProductTitle/
   │  │  │  ├─ ...
-  │  │  │  └─ _index.tsx
+  │  │  │  └─ index.tsx
   │  │  ├─ consts/
   │  │  │  ├─ paths.ts
   │  │  │  └─ ...
@@ -44,7 +44,7 @@ Still certain design and architectural decisions must be followed which are cove
   │     │  ├─ add.tsx
   │     │  ├─ index.tsx
   │     ├─ _app.tsx
-  │     ├─ _index.tsx
+  │     ├─ index.tsx
   │     └─ ...
   ├─ warehouse/
   ├─ admin-dashboard/
