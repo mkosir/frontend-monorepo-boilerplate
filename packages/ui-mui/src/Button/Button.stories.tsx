@@ -12,6 +12,7 @@ const base: ButtonProps = {
   text: 'Click Me',
   isDisabled: false,
   size: 'medium',
+  bgColor: undefined,
   onClick: action('onClick'),
 };
 
@@ -33,3 +34,10 @@ const DisabledArgs: ButtonProps = {
   isDisabled: true,
 };
 Disabled.args = DisabledArgs;
+
+export const RedBgColor = Template.bind({});
+const RedBGColorArgs: ButtonProps = {
+  ...base,
+  bgColor: 'red',
+};
+RedBgColor.args = RedBGColorArgs;
