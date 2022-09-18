@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "next-transpile-modules": "9.0.0",
+    "test-utils": "*",
     "tsconfig": "*"
   }
 }
