@@ -150,6 +150,7 @@ There is no convention on cache invalidation, but bellow naming conventions shou
   ```
   ProductItem/
   ├─ index.tsx
+  ├─ styled.tsx
   ├─ ProductItem.stories.tsx
   └─ ProductItem.test.tsx
   ```
@@ -159,6 +160,7 @@ There is no convention on cache invalidation, but bellow naming conventions shou
   ```
   Button/
   ├─ index.tsx
+  ├─ styled.tsx
   ├─ Button.stories.tsx
   └─ Button.test.tsx
   ```
