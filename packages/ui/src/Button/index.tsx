@@ -1,21 +1,27 @@
+import { ButtonTypeMap } from '@mui/material';
+import { CSSProperties } from 'react';
+
+import { ButtonStyled } from './styled';
+
 export type ButtonProps = {
   text: string;
+  isDisabled?: boolean;
+  size?: ButtonTypeMap['props']['size'];
+  bgColor?: CSSProperties['backgroundColor'];
   onClick: () => void;
 };
 
-export const Button = ({ text, onClick }: ButtonProps) => {
+export const Button = ({ text, isDisabled, size, bgColor, onClick }: ButtonProps) => {
   return (
-    <button
-      style={{
-        backgroundColor: '#3b82f6',
-        padding: '5px 15px',
-        whiteSpace: 'nowrap',
-        borderRadius: '3px',
-        boxShadow: '0 2px 4px 0 #3d9cc23b',
-      }}
+    <ButtonStyled
+      variant="contained"
+      disabled={isDisabled}
+      isDisabled={isDisabled}
+      size={size}
+      bgColor={bgColor}
       onClick={onClick}
     >
       {text}
-    </button>
+    </ButtonStyled>
   );
 };

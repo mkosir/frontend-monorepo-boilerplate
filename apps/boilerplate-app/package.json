@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3100",
+    "dev": "open http://localhost:3100 && next dev --port 3100",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings 0 .",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "next-transpile-modules": "9.0.0",
+    "test-utils": "*",
     "tsconfig": "*"
   }
 }
