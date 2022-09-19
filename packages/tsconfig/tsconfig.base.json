@@ -21,5 +21,11 @@
     "declarationMap": true,
     "target": "ES6"
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  // Storybook
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }
