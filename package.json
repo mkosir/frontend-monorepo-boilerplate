@@ -33,7 +33,7 @@
     "@commitlint/config-conventional": "17.1.0",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
-    "@mui/material": "5.10.5",
+    "@mui/material": "5.10.6",
     "@storybook/addon-actions": "6.5.12",
     "@storybook/addon-essentials": "6.5.12",
     "@storybook/addon-interactions": "6.5.12",
