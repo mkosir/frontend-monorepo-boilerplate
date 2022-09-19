@@ -4,6 +4,5 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx"
-  },
-  "include": ["../ui/src/config/mui-theme.d.ts"]
+  }
 }
