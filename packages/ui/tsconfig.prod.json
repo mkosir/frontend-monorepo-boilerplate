@@ -7,5 +7,6 @@
     },
     "jsx": "react-jsx"
   },
-  "include": [".", ".eslintrc.js", ".storybook/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
 }
