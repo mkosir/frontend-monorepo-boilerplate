@@ -8,6 +8,6 @@ export const jestConfigJsdom: Config = {
   moduleDirectories: ['node_modules'],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
   transform: {
-    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.base.json' }],
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
   },
 };
