@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "open http://localhost:3100 && next dev --port 3100",
     "build": "next build",
-    "start": "next start",
+    "dev": "open http://localhost:3100 && next dev --port 3100",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
@@ -21,7 +20,6 @@
     "ui": "*"
   },
   "devDependencies": {
-    "next-transpile-modules": "9.0.0",
     "test-utils": "*",
     "tsconfig": "*"
   }
