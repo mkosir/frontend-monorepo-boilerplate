@@ -1,16 +1,10 @@
 {
-  "extends": "tsconfig/tsconfig.ui.json",
+  "extends": "tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", ".storybook/**/*", "../ui/src/config/mui-theme.d.ts"],
-  // Storybook
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  }
+  "include": [".", ".eslintrc.js", ".storybook/**/*", "../ui/src/config/mui-theme.d.ts"]
 }

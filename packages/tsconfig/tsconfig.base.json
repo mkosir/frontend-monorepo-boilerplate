@@ -19,7 +19,8 @@
     "composite": false,
     "declaration": true,
     "declarationMap": true,
-    "target": "ES6"
+    "target": "ES6",
+    "jsx": "react-jsx"
   },
   "exclude": ["node_modules"],
   // Storybook
