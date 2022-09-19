@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "mui-config": "*",
+    "mui-utils": "*",
     "ui": "*"
   },
   "devDependencies": {
