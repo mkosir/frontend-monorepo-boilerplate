@@ -1,0 +1,10 @@
+{
+  "extends": "tsconfig/tsconfig.test.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      ".": ["."]
+    }
+  },
+  "include": [".", ".eslintrc.js", ".storybook/**/*", "../../packages/ui/src/config/mui-theme.d.ts"]
+}
