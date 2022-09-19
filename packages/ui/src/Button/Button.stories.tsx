@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const base: ButtonProps = {
-  text: 'Click Me',
+  children: 'Click Me',
   isDisabled: false,
   size: 'medium',
   bgColor: undefined,
@@ -24,7 +24,7 @@ Default.args = base;
 export const LongText = Template.bind({});
 const LongTextArgs: ButtonProps = {
   ...base,
-  text: 'Really Looooong Text',
+  children: 'Really Looooong Text',
 };
 LongText.args = LongTextArgs;
 

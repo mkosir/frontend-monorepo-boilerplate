@@ -11,7 +11,7 @@ describe('packages', () => {
         const onClick = jest.fn();
         const btnTextContent = 'Click Me';
 
-        renderWithTheme(<Button text={btnTextContent} onClick={onClick} />);
+        renderWithTheme(<Button onClick={onClick}>{btnTextContent}</Button>);
 
         expect(screen.getByRole('button', { name: btnTextContent })).toBeInTheDocument();
         expect(onClick).not.toBeCalled();
@@ -21,7 +21,7 @@ describe('packages', () => {
         const onClick = jest.fn();
         const btnTextContent = 'Click Me';
 
-        renderWithTheme(<Button text={btnTextContent} onClick={onClick} />);
+        renderWithTheme(<Button onClick={onClick}>{btnTextContent}</Button>);
 
         const button = screen.getByRole('button', { name: btnTextContent });
         await userEvent.click(button);

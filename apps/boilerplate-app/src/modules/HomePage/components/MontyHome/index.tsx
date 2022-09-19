@@ -44,9 +44,11 @@ export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHo
             Monty Home Problem
           </a>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', marginTop: '12px' }}>
-            <Button text="Home 1" onClick={() => handleMontyHomeSelected('goat')} />
-            <Button bgColor={theme.brand.green} text="Home 2" onClick={() => handleMontyHomeSelected('home')} />
-            <Button text="Home 3" onClick={() => handleMontyHomeSelected('goat')} />
+            <Button onClick={() => handleMontyHomeSelected('goat')}>Home 1</Button>
+            <Button bgColor={theme.brand.green} onClick={() => handleMontyHomeSelected('home')}>
+              Home 2
+            </Button>
+            <Button onClick={() => handleMontyHomeSelected('goat')}>Home 3</Button>
           </div>
         </div>
       </div>

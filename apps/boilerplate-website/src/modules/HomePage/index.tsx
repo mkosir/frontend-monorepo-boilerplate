@@ -10,7 +10,7 @@ export const HomePage = () => {
   return (
     <div>
       <h1>Home</h1>
-      <Button text="Boop" onClick={() => console.log('Boop')} />
+      <Button onClick={() => console.log('Boop')}>Boop</Button>
     </div>
   );
 };

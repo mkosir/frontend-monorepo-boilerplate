@@ -1,17 +1,17 @@
 import { ButtonTypeMap } from '@mui/material';
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 import { ButtonStyled } from './styled';
 
 export type ButtonProps = {
-  text: string;
+  children: ReactNode;
   isDisabled?: boolean;
   size?: ButtonTypeMap['props']['size'];
   bgColor?: CSSProperties['backgroundColor'];
   onClick: () => void;
 };
 
-export const Button = ({ text, isDisabled, size, bgColor, onClick }: ButtonProps) => {
+export const Button = ({ children, isDisabled, size, bgColor, onClick }: ButtonProps) => {
   return (
     <ButtonStyled
       variant="contained"
@@ -21,7 +21,7 @@ export const Button = ({ text, isDisabled, size, bgColor, onClick }: ButtonProps
       bgColor={bgColor}
       onClick={onClick}
     >
-      {text}
+      {children}
     </ButtonStyled>
   );
 };
