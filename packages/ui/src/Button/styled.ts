@@ -1,5 +1,5 @@
 import { Button, styled } from '@mui/material';
-import { shouldForwardProp } from 'utils';
+import { shouldForwardProp } from 'mui-utils';
 
 import { ButtonProps } from './';
 
