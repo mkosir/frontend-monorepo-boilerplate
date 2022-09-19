@@ -22,7 +22,7 @@
     "update-dependencies": "turbo run update-dependencies --parallel && npx npm-check-updates -u"
   },
   "dependencies": {
-    "@tanstack/react-query": "4.3.7",
+    "@tanstack/react-query": "4.3.9",
     "axios": "0.27.2",
     "next": "12.3.0",
     "react": "18.2.0",
