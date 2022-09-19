@@ -9,6 +9,9 @@
     "tsc": "tsc -p tsconfig.json",
     "update-dependencies": "npx npm-check-updates -u"
   },
+  "dependencies": {
+    "mui-config": "*"
+  },
   "devDependencies": {
     "tsconfig": "*"
   }

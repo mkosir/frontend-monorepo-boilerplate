@@ -1,7 +1,6 @@
 import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 import { Story } from '@storybook/react';
-
-import { theme } from '../src/config';
+import { theme } from 'mui-config';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

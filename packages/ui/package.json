@@ -21,6 +21,9 @@
     "storybook-build": "build-storybook",
     "update-dependencies": "npx npm-check-updates -u"
   },
+  "dependencies": {
+    "mui-config": "*"
+  },
   "devDependencies": {
     "test-utils": "*",
     "tsconfig": "*"

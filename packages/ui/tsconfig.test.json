@@ -6,5 +6,5 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", ".storybook/**/*"]
+  "include": [".", ".eslintrc.js", ".storybook/**/*", "../mui-config/src/mui-theme.d.ts"]
 }
