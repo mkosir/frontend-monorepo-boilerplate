@@ -2,7 +2,6 @@
   "name": "eslint-config-base",
   "version": "0.0.0",
   "main": "index.js",
-  "license": "MIT",
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
   },

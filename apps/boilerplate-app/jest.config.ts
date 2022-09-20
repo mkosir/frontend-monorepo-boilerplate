@@ -1,6 +1,6 @@
 import { Config } from 'jest';
 
-import { jestConfigJsdom } from '../../packages/jest-config-base';
+import { jestConfigJsdom } from '../../packages/config-jest';
 
 const jestConfig: Config = {
   ...jestConfigJsdom,

@@ -1,6 +1,7 @@
 {
-  "name": "jest-config-base",
+  "name": "config-jest",
   "version": "0.0.0",
+  "main": "index.ts",
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
   },
