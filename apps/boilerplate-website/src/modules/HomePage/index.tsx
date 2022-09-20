@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import { Button } from 'ui';
 
 export const HomePage = () => {
@@ -8,9 +9,9 @@ export const HomePage = () => {
   // }
 
   return (
-    <div>
+    <Box m={5}>
       <h1>Home</h1>
       <Button onClick={() => console.log('Boop')}>Boop</Button>
-    </div>
+    </Box>
   );
 };
