@@ -1,16 +1,19 @@
-import { Box, useTheme } from '@mui/material';
+import { Box, SxProps, useTheme } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { Button } from 'ui';
+
+import { TiltContent } from './styled';
 
 export type MontyHomeProps = {
   title: string;
   isTiltEnabled: boolean;
+  sx?: SxProps;
   onMontyHomeSelected: (isHome: boolean) => void;
 };
 
 type MontyHomeSelection = 'goat' | 'home';
 
-export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHomeProps) => {
+export const MontyHome = ({ title, isTiltEnabled, sx, onMontyHomeSelected }: MontyHomeProps) => {
   const theme = useTheme();
 
   const handleMontyHomeSelected = (montyHomeSelection: MontyHomeSelection) => {
@@ -26,18 +29,7 @@ export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHo
 
   return (
     <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} style={{ maxWidth: '600px' }}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          backgroundColor: '#64b0ce17',
-          margin: '14px',
-          padding: '50px 40px',
-          borderRadius: '5px',
-          boxShadow: '0 4px 8px 0 #3d9cc23b',
-        }}
-      >
+      <TiltContent sx={sx}>
         <h3>{title}</h3>
         <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
           Monty Home Problem
@@ -49,7 +41,7 @@ export const MontyHome = ({ title, isTiltEnabled, onMontyHomeSelected }: MontyHo
           </Button>
           <Button onClick={() => handleMontyHomeSelected('goat')}>Home 3</Button>
         </Box>
-      </Box>
+      </TiltContent>
     </Tilt>
   );
 };

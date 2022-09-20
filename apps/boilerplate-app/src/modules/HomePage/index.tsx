@@ -10,11 +10,12 @@ export const HomePage = () => {
   // }
 
   return (
-    <Box m={3}>
+    <Box m={5}>
       <h2>Home Page</h2>
       <MontyHome
         title="Home page (specific) feature"
         isTiltEnabled={true}
+        sx={{ mt: 3 }}
         onMontyHomeSelected={(isHome) =>
           isHome ? console.log('Congrats') : console.log('Sorry, better luck next time')
         }
