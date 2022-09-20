@@ -15,6 +15,7 @@
     "tsc": "turbo run tsc",
     "test": "turbo run test",
     "storybook": "turbo run storybook",
+    "storybook-build": "turbo run storybook-build",
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",
