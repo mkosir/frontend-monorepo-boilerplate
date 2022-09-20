@@ -1,3 +1,5 @@
+import { Box } from '@mui/material';
+
 import { MontyHome } from './components/MontyHome';
 
 export const HomePage = () => {
@@ -8,7 +10,7 @@ export const HomePage = () => {
   // }
 
   return (
-    <div>
+    <Box m={3}>
       <h2>Home Page</h2>
       <MontyHome
         title="Home page (specific) feature"
@@ -17,6 +19,6 @@ export const HomePage = () => {
           isHome ? console.log('Congrats') : console.log('Sorry, better luck next time')
         }
       />
-    </div>
+    </Box>
   );
 };
