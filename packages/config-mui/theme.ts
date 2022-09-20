@@ -1,16 +1,27 @@
 import { colors, createTheme } from '@mui/material';
 
 export const theme = createTheme({
+  // Theme
   brand: {
     blue: colors.blue[100],
     green: colors.green[400],
   },
 
+  // Palette
   palette: {
     secondary: { main: '#3289a8' },
     neutral: { main: '#FF5733' },
   },
 
+  // Typography
+  typography: {
+    title1: {
+      fontSize: 24,
+      fontWeight: 700,
+    },
+  },
+
+  // Breakpoints
   breakpoints: {
     values: {
       // default
@@ -26,6 +37,7 @@ export const theme = createTheme({
     },
   },
 
+  // Components
   components: {
     MuiButtonBase: {
       defaultProps: {

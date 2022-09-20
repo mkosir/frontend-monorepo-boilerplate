@@ -1,4 +1,4 @@
-import { Box, SxProps, useTheme } from '@mui/material';
+import { Box, SxProps, Typography, useTheme } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { Button } from 'ui';
 
@@ -30,7 +30,7 @@ export const MontyHome = ({ title, isTiltEnabled, sx, onMontyHomeSelected }: Mon
   return (
     <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} style={{ maxWidth: '600px' }}>
       <TiltContent sx={sx}>
-        <h3>{title}</h3>
+        <Typography variant="h6">{title}</Typography>
         <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
           Monty Home Problem
         </a>

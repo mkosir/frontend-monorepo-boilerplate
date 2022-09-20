@@ -3,6 +3,7 @@ import { PaletteColor, PaletteColorOptions } from '@mui/material';
 import { CSSProperties } from 'react';
 
 declare module '@mui/material/styles' {
+  // Theme
   interface Theme {
     brand: {
       blue: CSSProperties['color'];
@@ -17,6 +18,7 @@ declare module '@mui/material/styles' {
     };
   }
 
+  // Palette
   interface Palette {
     neutral: PaletteColor;
   }
@@ -25,6 +27,16 @@ declare module '@mui/material/styles' {
     neutral: PaletteColorOptions;
   }
 
+  // Typography
+  interface TypographyVariants {
+    title1: React.CSSProperties;
+  }
+
+  interface TypographyVariantsOptions {
+    title1?: React.CSSProperties;
+  }
+
+  // Breakpoints
   interface BreakpointOverrides {
     xs: true;
     sm: true;
@@ -34,5 +46,15 @@ declare module '@mui/material/styles' {
     mobile: true;
     tablet: true;
     desktop: true;
+  }
+}
+
+// Typography
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    title1: true;
+    body1: false;
+    body2: false;
+    button: false;
   }
 }

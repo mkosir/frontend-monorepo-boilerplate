@@ -1,5 +1,5 @@
 import { CacheProvider } from '@emotion/react';
-import { ThemeProvider, CssBaseline, Box } from '@mui/material';
+import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
 import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -21,7 +21,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box textAlign="center" mt={3} mb={5}>
-            <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Turborepo Boilerplate - Website</div>
+            <Typography variant="title1">Turborepo Boilerplate - Website</Typography>
           </Box>
           {<Component {...pageProps} />}
         </ThemeProvider>

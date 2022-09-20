@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import { MontyHome } from './components/MontyHome';
 
@@ -11,7 +11,7 @@ export const HomePage = () => {
 
   return (
     <Box m={5}>
-      <h2>Home Page</h2>
+      <Typography variant="h5">Home Page</Typography>
       <MontyHome
         title="Home page (specific) feature"
         isTiltEnabled={true}
