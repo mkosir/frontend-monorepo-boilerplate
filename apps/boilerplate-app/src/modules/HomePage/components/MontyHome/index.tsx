@@ -1,4 +1,4 @@
-import { Box, SxProps, Typography, useTheme } from '@mui/material';
+import { Box, Link, SxProps, Typography, useTheme } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { Button } from 'ui';
 
@@ -31,9 +31,9 @@ export const MontyHome = ({ title, isTiltEnabled, sx, onMontyHomeSelected }: Mon
     <Tilt tiltEnable={isTiltEnabled} tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.03} style={{ maxWidth: '600px' }}>
       <TiltContent sx={sx}>
         <Typography variant="h6">{title}</Typography>
-        <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
+        <Link href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
           Monty Home Problem
-        </a>
+        </Link>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '60%', marginTop: 2 }}>
           <Button onClick={() => handleMontyHomeSelected('goat')}>Home 1</Button>
           <Button bgColor={theme.brand.green} onClick={() => handleMontyHomeSelected('home')}>
