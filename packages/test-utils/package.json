@@ -16,7 +16,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "mui-config": "*"
+    "config-mui": "*"
   },
   "devDependencies": {
     "tsconfig": "*"

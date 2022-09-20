@@ -1,6 +1,6 @@
 import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { theme } from 'mui-config';
+import { theme } from 'config-mui';
 
 type RenderWithTheme = (elm: React.ReactElement, renderOptions?: RenderOptions) => RenderResult;
 

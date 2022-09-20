@@ -6,5 +6,5 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", "../mui-config/src/mui-theme.d.ts"]
+  "include": [".", ".eslintrc.js", "../config-mui/mui-theme.d.ts"]
 }
