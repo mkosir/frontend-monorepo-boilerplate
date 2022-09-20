@@ -34,7 +34,7 @@ export const MontyHome = ({ title, isTiltEnabled, sx, onMontyHomeSelected }: Mon
         <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noreferrer">
           Monty Home Problem
         </a>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '60%', marginTop: '12px' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '60%', marginTop: 2 }}>
           <Button onClick={() => handleMontyHomeSelected('goat')}>Home 1</Button>
           <Button bgColor={theme.brand.green} onClick={() => handleMontyHomeSelected('home')}>
             Home 2
