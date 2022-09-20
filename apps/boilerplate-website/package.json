@@ -1,7 +1,6 @@
 {
   "name": "boilerplate-website",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "build": "next build && next export -o build-next-static",
     "dev": "next dev --port 3101",
