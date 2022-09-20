@@ -1,0 +1,10 @@
+{
+  "extends": "tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      ".": ["."]
+    }
+  },
+  "include": [".", ".eslintrc.js"]
+}
