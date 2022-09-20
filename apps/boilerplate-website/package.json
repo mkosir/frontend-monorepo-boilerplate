@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "next build && next export -o build-static",
     "dev": "next dev --port 3101",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
