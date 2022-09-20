@@ -11,6 +11,7 @@ export default {
 const base: MontyHomeProps = {
   title: 'Home page (specific) feature',
   isTiltEnabled: true,
+  sx: undefined,
   onMontyHomeSelected: action('onMontyHomeSelected'),
 };
 
