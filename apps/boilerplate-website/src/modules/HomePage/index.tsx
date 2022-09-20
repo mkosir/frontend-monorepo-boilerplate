@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Button } from 'ui';
 
 export const HomePage = () => {
@@ -10,7 +10,7 @@ export const HomePage = () => {
 
   return (
     <Box m={5}>
-      <h1>Home</h1>
+      <Typography variant="h5">Home Page</Typography>
       <Button onClick={() => console.log('Boop')}>Boop</Button>
     </Box>
   );

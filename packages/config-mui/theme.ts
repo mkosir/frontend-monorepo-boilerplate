@@ -19,6 +19,10 @@ export const theme = createTheme({
       fontSize: 24,
       fontWeight: 700,
     },
+    title2: {
+      fontSize: 22,
+      fontWeight: 700,
+    },
   },
 
   // Breakpoints
