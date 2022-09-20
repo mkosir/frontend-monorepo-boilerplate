@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "test-utils": "*",
-    "tsconfig": "*"
+    "config-tsconfig": "*"
   }
 }

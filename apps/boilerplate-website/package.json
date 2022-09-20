@@ -21,7 +21,7 @@
     "ui": "*"
   },
   "devDependencies": {
-    "test-utils": "*",
-    "tsconfig": "*"
+    "config-tsconfig": "*",
+    "test-utils": "*"
   }
 }
