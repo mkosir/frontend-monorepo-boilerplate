@@ -17,11 +17,11 @@
   },
   "dependencies": {
     "config-mui": "*",
-    "mui-utils": "*",
-    "ui": "*"
+    "ui": "*",
+    "utils-mui": "*"
   },
   "devDependencies": {
     "config-tsconfig": "*",
-    "test-utils": "*"
+    "utils-test": "*"
   }
 }

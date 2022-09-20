@@ -23,10 +23,10 @@
   },
   "dependencies": {
     "config-mui": "*",
-    "mui-utils": "*"
+    "utils-mui": "*"
   },
   "devDependencies": {
-    "test-utils": "*",
+    "utils-test": "*",
     "config-tsconfig": "*"
   }
 }

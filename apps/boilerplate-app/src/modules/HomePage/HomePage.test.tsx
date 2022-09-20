@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import { renderWithTheme } from 'test-utils';
+import { renderWithTheme } from 'utils-test';
 
 import { HomePage } from '.';
 
