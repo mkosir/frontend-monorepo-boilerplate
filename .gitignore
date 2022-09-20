@@ -1,8 +1,8 @@
 node_modules
 coverage
 dist
-build-static
-storybook-static
+build-next-static
+build-storybook-static
 compiled
 
 .pnp
