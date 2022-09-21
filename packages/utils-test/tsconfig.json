@@ -6,5 +6,15 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", "../config-mui/mui-theme.d.ts"]
+  "include": [".", ".eslintrc.js", "../config-mui/mui-theme.d.ts"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".turbo",
+    "coverage",
+    "dist",
+    "compiled",
+    "build-next-static",
+    "build-storybook-static"
+  ]
 }

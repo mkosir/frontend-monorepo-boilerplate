@@ -6,5 +6,15 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js"]
+  "include": [".", ".eslintrc.js"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".turbo",
+    "coverage",
+    "dist",
+    "compiled",
+    "build-next-static",
+    "build-storybook-static"
+  ]
 }

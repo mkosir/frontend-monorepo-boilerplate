@@ -7,5 +7,14 @@
     }
   },
   "include": [".", ".eslintrc.js", ".storybook/**/*", "../../packages/config-mui/mui-theme.d.ts"],
-  "exclude": ["node_modules", ".next", ".turbo", "dist", "compiled", "build-next-static", "build-storybook-static"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".turbo",
+    "coverage",
+    "dist",
+    "compiled",
+    "build-next-static",
+    "build-storybook-static"
+  ]
 }
