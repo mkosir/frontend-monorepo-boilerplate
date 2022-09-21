@@ -6,10 +6,10 @@
       "outputs": ["dist/**", "build-next-static/**"]
     },
     "storybook-build": {
-      "dependsOn": ["^storybook-build"],
       "outputs": ["build-storybook-static/**"]
     },
     "lint": {
+      "dependsOn": ["build"],
       "outputs": []
     },
     "tsc": {
