@@ -6,5 +6,6 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", ".storybook/**/*", "../../packages/config-mui/mui-theme.d.ts"]
+  "include": [".", ".eslintrc.js", ".storybook/**/*", "../../packages/config-mui/mui-theme.d.ts"],
+  "exclude": ["node_modules", ".next", ".turbo", "dist", "compiled", "build-next-static", "build-storybook-static"]
 }
