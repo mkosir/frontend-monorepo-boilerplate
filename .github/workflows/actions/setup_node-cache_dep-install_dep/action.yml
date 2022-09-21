@@ -8,7 +8,7 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version: '18.x'
-        cache: 'test-cache'
+        cache: 'npm'
 
     - name: Cache dependencies ⚡
       id: cache_dependencies
