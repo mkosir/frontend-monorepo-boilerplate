@@ -9,14 +9,17 @@
       "outputs": ["build-storybook-static/**"]
     },
     "lint": {
-      "dependsOn": ["build"],
-      "outputs": []
+      "dependsOn": ["build"]
     },
     "tsc": {
-      "outputs": []
+      "dependsOn": ["build"]
     },
-    "test": {},
-    "storybook": {},
+    "test": {
+      "dependsOn": ["build"]
+    },
+    "storybook": {
+      "dependsOn": ["build"]
+    },
     "dev": {
       "cache": false
     },
