@@ -9,7 +9,7 @@
   "scripts": {
     "prepare": "husky install",
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
     "lint": "turbo run lint",
     "lint-staged-husky": "lint-staged",
     "tsc": "turbo run tsc",
@@ -20,7 +20,8 @@
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",
     "clean": "npm exec --workspaces -- shx rm -rf node_modules coverage .next .turbo && shx rm -rf node_modules",
-    "update-dependencies": "turbo run update-dependencies --parallel && npx npm-check-updates -u"
+    "remove-turbo-cache": "shx rm -rf ./node_modules/.cache/turbo",
+    "update-dependencies": "turbo run update-dependencies && npx npm-check-updates -u"
   },
   "dependencies": {
     "@tanstack/react-query": "4.3.9",
