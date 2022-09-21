@@ -54,10 +54,12 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | tsc                 | Run TypeScript compiler                                                             |
 | test                | Run tests on all apps and packages                                                  |
 | storybook           | Start storybooks on all apps and packages                                           |
+| storybook-build     | Build all storybooks                                                                |
 | format-lint         | Lint formatting with Prettier                                                       |
 | format-fix          | Fix formatting with Prettier                                                        |
 | commit              | Run Commitizen on staged file                                                       |
 | clean               | Remove installed, generated and cached folders (node_modules, coverage, .next etc.) |
+| remove-turbo-cache  | Removes Turborepo local cache                                                       |
 | update-dependencies | Update dependencies to their latest versions                                        |
 
 ## Conventions
