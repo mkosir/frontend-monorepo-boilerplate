@@ -1,1 +1,1 @@
-## Boilerplate App MUI
+## Boilerplate App

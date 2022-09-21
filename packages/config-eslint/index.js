@@ -79,6 +79,7 @@ module.exports = {
   // ESlint default behaviour ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
   ignorePatterns: [
     '!.*',
+    'node_modules',
     'next-env.d.ts',
     '.next',
     '.turbo',
@@ -86,7 +87,6 @@ module.exports = {
     'compiled',
     'build-next-static',
     'build-storybook-static',
-    'node_modules',
   ],
 
   settings: {
