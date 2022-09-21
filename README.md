@@ -36,7 +36,7 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - Commit messages must meet [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) format.  
   After staging changes just run `npm run commit` and get instant feedback on your commit message formatting and be prompted for required fields by [Commitizen](https://github.com/commitizen/cz-cli)
 
-# Commands
+## Commands
 
 Bellow commands will be executed on monorepo level - on all apps and packages where npm script exists.
 
@@ -56,7 +56,7 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | clean               | Remove installed, generated and cached folders (node_modules, coverage, .next etc.) |
 | update-dependencies | Update dependencies to their latest versions                                        |
 
-# Conventions
+## Conventions
 
 Convention over configuration should be followed as much as possible as described in [Conventions.md](https://github.com/mkosir/turborepo-boilerplate/blob/main/README_CONVENTIONS.md)
 
