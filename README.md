@@ -8,7 +8,11 @@
 [![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 
-Opinionated frontend monorepo with focus on best practices and painless developer experience.
+Opinionated frontend monorepo with focus on best practices and painless developer experience:
+
+- Monorepo setup can be easily extended with custom libraries or into micro-frontend architecture 🔧
+- Spin it up with single command 🌀
+- TypeScript 100% codebase
 
 ## Requirements
 
@@ -72,3 +76,14 @@ Convention over configuration should be followed as much as possible as describe
 [build-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml
 [test-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml/badge.svg
 [test-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml
+
+## Monorepo
+
+Monorepo features and conventions:
+
+- Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, Material UI support (UI component library, shared theme across all apps and packages etc.), consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
+- Workspaces:
+  - It comes with two workspaces `apps` and `packages`.
+  - All configurations (eslint, jest, material ui etc.) are located in `packages` and always imported into other workspaces directly from source without building (never transpiled).
+  - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
+- Monorepo doesn't include any implementation of micro-frontend architecture, but is prepared with that in mind, so it can be easily extended (adding shared state, page composition etc.)
