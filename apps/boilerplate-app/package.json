@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6100",
     "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u",
-    "api-generate-TEST": "openapi --useOptions --client axios --input https://github.com/test_swagger.yaml --output ./src/common/api/TEST/api-types-generated"
+    "api-generate-TEST": "openapi --useOptions --client axios --input https://github.com/test_swagger.yaml --output ./src/common/api/TEST/api-types-generated/index"
   },
   "dependencies": {
     "config-mui": "*",
