@@ -12,16 +12,18 @@
     "test-coverage": "jest --coverage --verbose",
     "storybook": "start-storybook -p 6100",
     "storybook-build": "build-storybook -o build-storybook-static",
-    "update-dependencies": "npx npm-check-updates -u"
+    "update-dependencies": "npx npm-check-updates -u",
+    "api-generate-TEST": "openapi --useOptions --client axios --input https://github.com/test_swagger.yaml --output ./src/common/api/TEST/api-types-generated"
   },
   "dependencies": {
     "config-mui": "*",
-    "react-parallax-tilt": "^1.7.67",
+    "react-parallax-tilt": "1.7.67",
     "ui": "*",
     "utils-mui": "*"
   },
   "devDependencies": {
     "config-tsconfig": "*",
+    "openapi-typescript-codegen": "0.23.0",
     "utils-test": "*"
   }
 }
