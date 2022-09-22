@@ -16,10 +16,8 @@ jobs:
       - name: Cache build ⚡
         uses: actions/cache@v3
         with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: nextjs-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**.ts', '**.tsx') }}
+          path: node_modules/.cache/turbo
+          key: turbo-${{ hashFiles('package-lock.json') }}
 
       - name: Build 🏗️
         run: npm run build
