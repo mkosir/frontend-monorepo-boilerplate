@@ -12,6 +12,7 @@ Opinionated frontend monorepo with focus on best practices and painless develope
 
 - Monorepo setup can be easily extended with custom libraries or into micro-frontend architecture 🔧
 - Spin it up with single command 🌀
+- Blazing fast builds with Turborepo [remote caching](https://turborepo.org/docs/core-concepts/remote-caching) ⚡
 - TypeScript 100% codebase
 
 ## Requirements
