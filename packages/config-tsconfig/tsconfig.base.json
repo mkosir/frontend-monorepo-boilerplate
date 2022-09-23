@@ -19,8 +19,8 @@
     "composite": false,
     "declaration": true,
     "declarationMap": true,
-    "target": "ES6",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "target": "ES6"
   },
   // Storybook
   "ts-node": {
