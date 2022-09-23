@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6100",
     "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u",
-    "api-generate-petstore": "openapi --useOptions --client axios --output ./src/common/api/petstore/api-types-generated/index --input https://raw.githubusercontent.com/swagger-api/swagger-petstore/master/src/main/resources/openapi.yaml"
+    "api-generate-petstore": "openapi-typescript https://raw.githubusercontent.com/swagger-api/swagger-petstore/master/src/main/resources/openapi.yaml --output ./src/common/api/petstore/api-types-generated/index.ts --immutable-types --export-type --prettier-config ../../.prettierrc"
   },
   "dependencies": {
     "config-mui": "*",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "config-tsconfig": "*",
-    "openapi-typescript-codegen": "0.23.0",
+    "openapi-typescript": "^5.4.1",
     "utils-test": "*"
   }
 }
