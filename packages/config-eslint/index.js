@@ -87,6 +87,7 @@ module.exports = {
     'compiled',
     'build-next-static',
     'build-storybook-static',
+    'api-types-generated', // File is not git ignored. Eslint fix in the making https://github.com/eslint/eslint/issues/15010
   ],
 
   settings: {
