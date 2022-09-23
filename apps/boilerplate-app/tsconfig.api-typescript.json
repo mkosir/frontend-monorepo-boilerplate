@@ -1,0 +1,9 @@
+{
+  "extends": "config-tsconfig/tsconfig.base.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "esnext",
+      "target": "ESNext"
+    }
+  }
+}
