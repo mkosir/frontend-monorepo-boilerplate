@@ -80,14 +80,15 @@ module.exports = {
   ignorePatterns: [
     '!.*',
     'node_modules',
-    'next-env.d.ts',
     '.next',
     '.turbo',
     'dist',
     'compiled',
     'build-next-static',
     'build-storybook-static',
-    'api-types-generated', // File is not git ignored. Eslint fix in the making https://github.com/eslint/eslint/issues/15010
+    // Files bellow are not git ignored. Eslint fix in the making https://github.com/eslint/eslint/issues/15010
+    'next-env.d.ts',
+    'api-types-generated',
   ],
 
   settings: {
