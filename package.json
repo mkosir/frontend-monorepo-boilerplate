@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "TIMING=1 turbo lint",
+    "lint": "turbo lint",
     "lint-staged-husky": "lint-staged",
     "tsc": "turbo tsc",
     "test": "turbo test",
