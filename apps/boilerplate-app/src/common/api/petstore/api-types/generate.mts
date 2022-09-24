@@ -3,6 +3,8 @@ import { promises } from 'fs';
 import chalk from 'chalk';
 import openapiTS, { SwaggerToTSOptions } from 'openapi-typescript';
 
+import { formatter } from './formatter.mjs';
+
 const URL_SCHEMA_PET_STORE =
   'https://raw.githubusercontent.com/swagger-api/swagger-petstore/master/src/main/resources/openapi.yaml';
 
@@ -10,11 +12,7 @@ const OPENAPI_TS_OPTIONS: SwaggerToTSOptions = {
   prettierConfig: '../../.prettierrc',
   immutableTypes: true,
   exportType: true,
-  formatter: (node) => {
-    if (node.format === 'date-time') {
-      return 'Date';
-    }
-  },
+  formatter,
 };
 
 try {
