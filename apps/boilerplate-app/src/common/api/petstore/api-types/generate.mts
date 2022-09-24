@@ -10,6 +10,11 @@ const OPENAPI_TS_OPTIONS: SwaggerToTSOptions = {
   prettierConfig: '../../.prettierrc',
   immutableTypes: true,
   exportType: true,
+  formatter: (node) => {
+    if (node.format === 'date-time') {
+      return 'Date';
+    }
+  },
 };
 
 try {
