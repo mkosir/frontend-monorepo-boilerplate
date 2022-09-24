@@ -1,3 +1,5 @@
+import { writeFileSync } from 'fs';
+
 import openapiTS, { SwaggerToTSOptions } from 'openapi-typescript';
 
 const URL_SCHEMA_PET_STORE =
@@ -9,8 +11,7 @@ const OPENAPI_TS_OPTIONS: SwaggerToTSOptions = {
   exportType: true,
 };
 
-// --output ./src/common/api/petstore/api-types-generated/index.ts
-const GENERATED_API_TYPES_PATH = './index.ts';
+const generatedOutput = await openapiTS(URL_SCHEMA_PET_STORE, OPENAPI_TS_OPTIONS);
 
-const output = await openapiTS(URL_SCHEMA_PET_STORE, OPENAPI_TS_OPTIONS);
-console.log('🔎 Log ~ output', output);
+const GENERATED_API_TYPES_PATH = './src/common/api/petstore/api-types/index.ts';
+writeFileSync(GENERATED_API_TYPES_PATH, generatedOutput);
