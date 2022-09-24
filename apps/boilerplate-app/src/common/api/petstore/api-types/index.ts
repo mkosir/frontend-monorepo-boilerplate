@@ -3,6 +3,8 @@
  * Do not make direct changes to the file.
  */
 
+/* eslint-disable */
+
 export type paths = {
   readonly '/pet': {
     /** Update an existing pet by Id */
@@ -83,7 +85,7 @@ export type components = {
        */
       readonly quantity?: number;
       /** Format: date-time */
-      readonly shipDate?: string;
+      readonly shipDate?: Date;
       /**
        * @description Order Status
        * @example approved
@@ -100,7 +102,7 @@ export type components = {
       readonly id?: number;
       /** @example fehguy */
       readonly username?: string;
-      readonly address?: ReadonlyArray<components['schemas']['Address']>;
+      readonly address?: readonly components['schemas']['Address'][];
     };
     readonly Address: {
       /** @example 437 Lytton */
@@ -160,8 +162,8 @@ export type components = {
       /** @example doggie */
       readonly name: string;
       readonly category?: components['schemas']['Category'];
-      readonly photoUrls: ReadonlyArray<string>;
-      readonly tags?: ReadonlyArray<components['schemas']['Tag']>;
+      readonly photoUrls: readonly string[];
+      readonly tags?: readonly components['schemas']['Tag'][];
       /**
        * @description pet status in the store
        * @enum {string}
@@ -186,7 +188,7 @@ export type components = {
     /** List of user object */
     UserArray: {
       readonly content: {
-        readonly 'application/json': ReadonlyArray<components['schemas']['User']>;
+        readonly 'application/json': readonly components['schemas']['User'][];
       };
     };
   };
@@ -253,8 +255,8 @@ export type operations = {
       /** successful operation */
       readonly 200: {
         readonly content: {
-          readonly 'application/xml': ReadonlyArray<components['schemas']['Pet']>;
-          readonly 'application/json': ReadonlyArray<components['schemas']['Pet']>;
+          readonly 'application/xml': readonly components['schemas']['Pet'][];
+          readonly 'application/json': readonly components['schemas']['Pet'][];
         };
       };
       /** Invalid status value */
@@ -266,15 +268,15 @@ export type operations = {
     readonly parameters: {
       readonly query: {
         /** Tags to filter by */
-        readonly tags?: ReadonlyArray<string>;
+        readonly tags?: readonly string[];
       };
     };
     readonly responses: {
       /** successful operation */
       readonly 200: {
         readonly content: {
-          readonly 'application/xml': ReadonlyArray<components['schemas']['Pet']>;
-          readonly 'application/json': ReadonlyArray<components['schemas']['Pet']>;
+          readonly 'application/xml': readonly components['schemas']['Pet'][];
+          readonly 'application/json': readonly components['schemas']['Pet'][];
         };
       };
       /** Invalid tag value */
@@ -367,7 +369,7 @@ export type operations = {
       /** successful operation */
       readonly 200: {
         readonly content: {
-          readonly 'application/json': Readonly<Record<string, number>>;
+          readonly 'application/json': { readonly [key: string]: number };
         };
       };
     };
@@ -464,7 +466,7 @@ export type operations = {
     };
     readonly requestBody: {
       readonly content: {
-        readonly 'application/json': ReadonlyArray<components['schemas']['User']>;
+        readonly 'application/json': readonly components['schemas']['User'][];
       };
     };
   };
@@ -484,7 +486,7 @@ export type operations = {
           /** calls per hour allowed by the user */
           readonly 'X-Rate-Limit'?: number;
           /** date in UTC when token expires */
-          readonly 'X-Expires-After'?: string;
+          readonly 'X-Expires-After'?: Date;
         };
         readonly content: {
           readonly 'application/xml': string;

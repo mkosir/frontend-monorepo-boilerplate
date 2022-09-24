@@ -15,7 +15,6 @@
     "dist",
     "compiled",
     "build-next-static",
-    "build-storybook-static",
-    "src/common/api/petstore/api-types"
+    "build-storybook-static"
   ]
 }
