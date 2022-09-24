@@ -22,6 +22,7 @@
     "utils-mui": "*"
   },
   "devDependencies": {
+    "chalk": "^5.0.1",
     "config-tsconfig": "*",
     "openapi-typescript": "^5.4.1",
     "utils-test": "*"
