@@ -1,7 +1,7 @@
 import { SchemaFormatter } from 'openapi-typescript';
 
 export const formatter: SchemaFormatter = (node) => {
-  if (node.items === 'shipDate') {
+  if (node.format === 'date-time') {
     return 'PetDate';
   }
 };
