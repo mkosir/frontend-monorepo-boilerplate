@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/prefer-ts-expect-error */
+
 import { promises } from 'fs';
 
 import chalk from 'chalk';
@@ -23,15 +25,16 @@ const OPENAPI_TS_OPTIONS: SwaggerToTSOptions = {
 
   type PetMonth = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   export type PetDate = 'Y{number}-M{PetMonth}}'
+  
   `,
 };
 
 try {
-  // @ts-expect-error - Top-level await used only in Node.js
+  // @ts-ignore - Top-level await used only in Node.js
   const generatedOutput = await openapiTS(URL_SCHEMA_PET_STORE, OPENAPI_TS_OPTIONS);
 
   const GENERATED_API_TYPES_PATH = './src/common/api/petstore/api-types/index.ts';
-  // @ts-expect-error - Top-level await used only in Node.js
+  // @ts-ignore - Top-level await used only in Node.js
   await promises.writeFile(GENERATED_API_TYPES_PATH, generatedOutput);
 
   console.log(chalk.blue('API types updated successfully!'));
