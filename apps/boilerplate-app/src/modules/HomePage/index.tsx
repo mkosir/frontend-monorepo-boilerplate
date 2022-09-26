@@ -13,11 +13,11 @@ export const HomePage = () => {
     <Box m={5}>
       <Typography variant="h5">Home Page</Typography>
       <MontyHome
-        title="Home page (specific) feature11"
+        title="Home page (specific) feature"
         isTiltEnabled={true}
         sx={{ mt: 3 }}
         onMontyHomeSelected={(isHome) =>
-          isHome ? console.log('Congrats') : console.log('Sorry, better luck next time')
+          isHome ? console.log('Congratss') : console.log('Sorry, better luck next time')
         }
       />
     </Box>
