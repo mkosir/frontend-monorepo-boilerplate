@@ -13,7 +13,7 @@ export const HomePage = () => {
     <Box m={5}>
       <Typography variant="h5">Home Page</Typography>
       <MontyHome
-        title="Home page (specific) feature11"
+        title="Home page (specific) feature"
         isTiltEnabled={true}
         sx={{ mt: 3 }}
         onMontyHomeSelected={(isHome) =>
