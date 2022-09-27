@@ -1,4 +1,5 @@
 {
+  "display": "Dev",
   "compilerOptions": {
     "moduleResolution": "node"
   },
