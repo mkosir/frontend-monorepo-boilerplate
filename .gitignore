@@ -11,10 +11,9 @@ compiled
 .idea
 
 .next/
+.turbo
 out/
 build
 
 npm-debug.log*
 .pnpm-debug.log*
-
-.turbo
