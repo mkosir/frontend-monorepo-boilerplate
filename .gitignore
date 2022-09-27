@@ -5,9 +5,6 @@ build-next-static
 build-storybook-static
 compiled
 
-.pnp
-.pnp.js
-
 .DS_Store
 *.log
 .vscode
