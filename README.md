@@ -3,9 +3,9 @@
 [![TypeScript][typescript-badge]][typescript-url]
 [![semantic-release][semantic-badge]][semantic-url]
 
+[![CI][build-badge]][build-url]
 [![CI][lint-badge]][lint-url]
 [![CI][tsc-badge]][tsc-url]
-[![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 
 Opinionated frontend monorepo with focus on best practices and painless developer experience:
@@ -67,19 +67,6 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 
 Convention over configuration should be followed as much as possible as described in [Conventions.md](https://github.com/mkosir/turborepo-boilerplate/blob/main/README_CONVENTIONS.md)
 
-[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
-[typescript-url]: https://github.com/microsoft/TypeScript
-[semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-url]: https://github.com/semantic-release/semantic-release
-[lint-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml/badge.svg
-[lint-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml
-[tsc-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml/badge.svg
-[tsc-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml
-[build-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml
-[test-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml/badge.svg
-[test-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml
-
 ## Monorepo
 
 Monorepo features and conventions:
@@ -90,3 +77,16 @@ Monorepo features and conventions:
   - All configurations (eslint, jest, material ui etc.) in `packages` are always imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
 - Monorepo doesn't include any implementation of micro-frontend architecture, but is prepared with that in mind, so it can be easily extended (adding shared state, page composition etc.)
+
+[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
+[typescript-url]: https://github.com/microsoft/TypeScript
+[semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
+[build-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml
+[lint-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml/badge.svg
+[lint-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml
+[tsc-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml/badge.svg
+[tsc-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml
+[test-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml/badge.svg
+[test-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml
