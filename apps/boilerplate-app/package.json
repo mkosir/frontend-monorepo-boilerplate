@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6100",
     "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u",
-    "api-generate-petstore": "ts-node-esm -P tsconfig.openapi-typescript.json ./src/common/api/petstore/api-types/generate/index.mts"
+    "api-generate-petstore": "ts-node-esm -P tsconfig.openapi-typescript.json ./src/common/api/petstore/generate/index.mts"
   },
   "dependencies": {
     "config-mui": "*",
