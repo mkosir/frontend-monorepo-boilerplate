@@ -52,7 +52,7 @@ Still certain design and architectural decisions must be followed which are cove
   ```
   - `common` folder is responsible for implementations that are truly used across application, where it should be used sparingly since codebase tries to follow grouped by feature project structure as much as possible
   - `modules` folder is responsible for implementation of each individual page (routed from `pages` folder)
-  - `pages` folder serves as a router, where its responsibility is only to define possible routes
+  - `pages` folder serves as a router, where its only responsibility is to define possible routes
 
 ## Data immutability
 
@@ -194,7 +194,7 @@ List and reasoning of some conventions enforced by automated tooling:
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   ```
 
-- Arrays are defined with `generic` syntax. In case of rare exceptions (extending third-party types) `interface` can be used with disabling linter:
+- Arrays are defined with `generic` syntax.
 
   ```ts
   const x: Array<string> = ['a', 'b'];
