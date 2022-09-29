@@ -74,8 +74,10 @@ Monorepo features and conventions:
 - Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, Material UI support (UI component library, shared theme across all apps and packages etc.), consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
 - Workspaces:
   - It comes with two workspaces `apps` and `packages`.
-  - All configurations (eslint, jest, material ui etc.) in `packages` are always imported into other workspaces directly from source without building (never transpiled).
+  - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
+- All applications in monorepo are built with Next.js.
+- Every Next.js application is [statically exported](https://nextjs.org/docs/advanced-features/static-html-export).
 - Monorepo doesn't include any implementation of micro-frontend architecture, but is prepared with that in mind, so it can be easily extended (adding shared state, page composition etc.)
 
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101

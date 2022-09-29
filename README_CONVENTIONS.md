@@ -5,10 +5,8 @@ Still certain design and architectural decisions must be followed which are cove
 
 ## Project Structure
 
-- Every application or package in monorepo has all project files/folders organized and grouped by **feature**.  
+- Every application or package in monorepo has project files/folders organized and grouped by **feature**.  
   Deep folder nesting does not represent an issue.
-- All applications in monorepo are built with Next.js.
-- Every Next.js application is [statically exported](https://nextjs.org/docs/advanced-features/static-html-export).
 - Every application has following file/folder structure:
   ```shell
   apps/
