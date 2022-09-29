@@ -1,14 +1,14 @@
-import { VersionInfoCI } from './VersionInfoCI';
+import { VersionInfo } from './VersionInfo';
 
 export const getVersionInfo = (): string => {
-  if (VersionInfoCI.tag) {
-    return VersionInfoCI.tag;
+  if (VersionInfo.tag) {
+    return VersionInfo.tag;
   }
 
-  if (VersionInfoCI.commit) {
+  if (VersionInfo.commit) {
     let branchCommit = '';
-    branchCommit = VersionInfoCI.branch ? VersionInfoCI.branch : '';
-    branchCommit += VersionInfoCI.commit ? ` [${VersionInfoCI.commit.substring(0, 8)}]` : '';
+    branchCommit = VersionInfo.branch ? VersionInfo.branch : '';
+    branchCommit += VersionInfo.commit ? ` [${VersionInfo.commit.substring(0, 8)}]` : '';
     return branchCommit;
   }
 
