@@ -1,3 +1,9 @@
 VersionInfo.ts
 
 .next
+.turbo
+coverage
+dist
+compiled
+build-next-static
+build-storybook-static
