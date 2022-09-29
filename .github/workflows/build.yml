@@ -13,11 +13,5 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
-      # - name: Cache build ⚡
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: node_modules/.cache/turbo
-      #     key: turbo-${{ turboGetHash() }}
-
       - name: Build 🏗️
         run: npm run build
