@@ -18,6 +18,7 @@ jobs:
 
       - name: Version Info 💉
         run: |
+          echo ${GITHUB_REF/refs\/tags\//}
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
           echo "export const VersionInfo = { tag: '$GITHUB_REF_NAME', branch: '$GITHUB_REF_NAME', commit: '$GITHUB_SHA' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
