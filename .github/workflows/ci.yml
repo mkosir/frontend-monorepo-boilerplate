@@ -18,8 +18,8 @@ jobs:
 
       - name: Version Info 💉
         run: |
-          'echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO_CI"'
-          'echo "export const VersionInfoCI = { tag: ''$CI_COMMIT_TAG'', branch: ''$CI_COMMIT_REF_NAME'', commit: ''$CI_COMMIT_SHA'' }" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO_CI'
+          echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO_CI"
+          echo "export const VersionInfoCI = { tag: ''$GITHUB_REF_NAME'', branch: ''$CI_COMMIT_REF_NAME'', commit: ''$CI_COMMIT_SHA'' }" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO_CI
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO_CI
 
       - name: Build 🏗️
