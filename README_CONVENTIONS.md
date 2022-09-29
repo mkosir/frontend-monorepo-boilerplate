@@ -173,7 +173,7 @@ There is no convention on cache invalidation, but for naming bellow conventions 
 
 ## Tests
 
-Test can be run through npm scripts, but it's highly encouraged to use [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) VS code extension so any app/package individual test in monorepo can be run instantly.
+Test can be run through npm scripts, but it's highly encouraged to use [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) VS code extension so any monorepo app/package single test can be run [instantly](https://github.com/firsttris/vscode-jest/raw/master/public/vscode-jest.gif).
 
 ```shell
 code --install-extension firsttris.vscode-jest-runner
