@@ -23,10 +23,10 @@ Still certain design and architectural decisions must be followed which are cove
   │  │  │  └─ ...
   │  │  └─ types/
   │  ├─ modules/
-  │  │  ├─ HomePageContainer/
-  │  │  ├─ ProductAddPageContainer/
-  │  │  ├─ ProductPageContainer/
-  │  │  ├─ ProductsPageContainer/
+  │  │  ├─ HomePage/
+  │  │  ├─ ProductAddPage/
+  │  │  ├─ ProductPage/
+  │  │  ├─ ProductsPage/
   │  │  │  ├─ api/
   │  │  │  │  └─ useGetProducts/
   │  │  │  ├─ components/
@@ -52,7 +52,7 @@ Still certain design and architectural decisions must be followed which are cove
   ```
   - `common` folder is responsible for implementations that are truly used across application, where it should be used sparingly since codebase tries to follow grouped by feature project structure as much as possible
   - `modules` folder is responsible for implementation of each individual page (routed from `pages` folder)
-  - `pages` folder serves as a router, where its only responsibility is to define possible routes
+  - `pages` folder serves as a router, where its only responsibility is to define routes
 
 ## Data immutability
 
@@ -70,7 +70,7 @@ Since React components are also functions, convention should be followed as much
 Sometimes **potential** exceptions are react components and hooks.
 
 <details>
-<summary>Examples</summary>
+<summary>Exception examples</summary>
 
 ```ts
 const Logo = () => {
@@ -84,7 +84,7 @@ const Logo = () => {
   );
 };
 
-const ProductsPageContainer = () => {
+const ProductsPage = () => {
   const { data: products } = useFetchProducts();
 
   return (
@@ -105,10 +105,10 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
 ## Naming
 
 Strive to keep naming conventions consistent and readable, because another person will maintain the code you have written.  
-There is no convention on cache invalidation, but bellow naming conventions should be followed:
+There is no convention on cache invalidation, but for naming bellow conventions should be followed:
 
-- React components - Pascal case (`ProductItem`, `ProductsPageContainer`)
-- Prop Types - component name with "Props" postfix `[ComponentName]Props` - Pascal case (`ProductItemProps`, `ProductsPageContainerProps`)
+- React components - Pascal case (`ProductItem`, `ProductsPage`)
+- Prop Types - component name with "Props" postfix `[ComponentName]Props` - Pascal case (`ProductItemProps`, `ProductsPageProps`)
 - Functions - Camel case (`filterProductsByType`, `useGetProducts`)
 - Variables
   - Locals (`products`, `productsFiltered`)
@@ -128,12 +128,13 @@ There is no convention on cache invalidation, but bellow naming conventions shou
 ### Component Types
 
 - Container:
-  - Each feature has a container component (`AddUserContainer.tsx`, `EditProductContainer.tsx`, `ProductsPageContainer.tsx` etc.)
+  - All container components have postfix "Container" or "Page" `[ComponentName]Container|Page`
+  - Each feature has a container component (`AddUserContainer.tsx`, `EditProductContainer.tsx`, `ProductsPage.tsx` etc.)
   - Includes business logic.
   - API integration.
   - Expected file/folder structure:
   ```
-  ProductsPageContainer/
+  ProductsPage/
   ├─ api/
   │  └─ useGetProducts/
   ├─ components/
