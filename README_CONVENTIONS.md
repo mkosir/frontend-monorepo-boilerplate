@@ -180,7 +180,7 @@ code --install-extension firsttris.vscode-jest-runner
 ```
 
 - All test descriptions should follow naming convention as `it('should ... when ...')`.
-- Snapshot tests are not allowed (except small exceptions in design system library).
+- Snapshot tests are not allowed (except if truly needed in design system library).
 
 ## Conventions enforced by automated tooling
 
