@@ -1,5 +1,6 @@
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
+import { getVersionInfo } from 'common/version/getVersionInfo';
 import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -13,6 +14,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Turborepo Boilerplate - App</title>
         <meta name="description" content="Turborepo boilerplate." />
+        <meta name="version" content={getVersionInfo()} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CacheProvider value={clientSideEmotionCache}>
