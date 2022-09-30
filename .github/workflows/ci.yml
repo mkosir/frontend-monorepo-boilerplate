@@ -109,7 +109,7 @@ jobs:
           path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           key: build_app_next-${{ github.ref_type }}
 
-      - name: Deploy Stage 🚀
+      - name: Deploy App 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
@@ -135,7 +135,7 @@ jobs:
           path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           key: build_app_next-${{ github.ref_type }}
 
-      - name: Deploy Production 🚀
+      - name: Deploy App 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
