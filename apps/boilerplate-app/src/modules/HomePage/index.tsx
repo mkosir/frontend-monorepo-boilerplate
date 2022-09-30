@@ -10,7 +10,7 @@ export const HomePage = () => {
   // }
 
   return (
-    <Box m={5} bgcolor="purple">
+    <Box m={5}>
       <Typography variant="h5">Home Page</Typography>
       <MontyHome
         title="Home page (specific) feature"

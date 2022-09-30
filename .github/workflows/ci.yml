@@ -39,7 +39,9 @@ jobs:
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
       - name: Build 🏗️
-        run: npm run build
+        run: |
+          npm run build
+          npm run storybook-build
 
       - name: Cache build ⚡
         id: cache_build
