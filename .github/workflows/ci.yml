@@ -12,7 +12,7 @@ env:
   FILE_PATH_UI_VERSION_INFO: ./packages/ui/version/VersionInfo.ts
   FILE_PATH_UI_BUILD: ./packages/ui/dist
 
-  CACHE_KEY_BUILD: build-${{ github.github_sha }}
+  CACHE_KEY_BUILD: build-${{ github.sha }}
 
 jobs:
   build:
@@ -177,7 +177,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
-    
+
     environment:
       name: UI Prod
       url: https://turbo-ui-prod.netlify.app
