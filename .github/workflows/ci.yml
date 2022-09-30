@@ -16,16 +16,19 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-        uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
+      # - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+      #   uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
       - name: Version Info 💉
         run: |
+          COMMIT=$GITHUB_SHA
+          BRANCH=${GITHUB_REF#refs/tags/}
+          TAG=''
           if github.ref_type == 'tag'; then
-            echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+            TAG=${GITHUB_REF#refs/tags/}
           fi
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '$TAG', branch: '${GITHUB_REF#refs/heads/}', commit: '$GITHUB_SHA' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
       # - name: Build 🏗️
@@ -42,21 +45,10 @@ jobs:
 
       - name: Deploy Stage 🚀
         if: github.ref == 'refs/heads/main'
-        env:
-          COMMIT: ${{ steps.version_info.outputs.COMMIT }}
-          BRANCH: ${{ steps.version_info.outputs.BRANCH }}
         run: |
-          echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
-          cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "deploy stage"
 
       - name: Deploy Production 🚀
         if: github.ref_type == 'tag'
-        env:
-          COMMIT: ${{ steps.version_info.outputs.COMMIT }}
-          BRANCH: ${{ steps.version_info.outputs.BRANCH }}
-          TAG: ${{ steps.version_info.outputs.TAG }}
         run: |
-          echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
-          cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "deploy prod"
