@@ -47,7 +47,7 @@ jobs:
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
       - name: Deploy Production 🚀
-        if: github.ref_type == 'tag' && contains(github.ref, 'main')
+        if: github.ref_type == 'tag'
         env:
           COMMIT: ${{ steps.version_info.outputs.COMMIT }}
           BRANCH: ${{ steps.version_info.outputs.BRANCH }}
