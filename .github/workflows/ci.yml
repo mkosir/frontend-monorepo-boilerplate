@@ -110,7 +110,7 @@ jobs:
       - name: DEBUG
         run: |
           echo "cd apps... & ls"
-          cd $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
+          cd ./apps/boilerplate-app/build-next-static
           ls -l
 
       - name: Deploy Stage 🚀
