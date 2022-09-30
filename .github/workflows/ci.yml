@@ -22,7 +22,7 @@ jobs:
       - name: Version Info 💉
         run: |
           COMMIT=$GITHUB_SHA
-          BRANCH=${GITHUB_REF#refs/tags/}
+          BRANCH=${GITHUB_REF#refs/heads/}
           TAG=''
           if github.ref_type == 'tag'; then
             TAG=${GITHUB_REF#refs/tags/}
