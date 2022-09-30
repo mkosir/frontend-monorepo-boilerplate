@@ -16,41 +16,43 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
-      - name: Branch name
-        id: branch_name
-        run: |
-          echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-          echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-          echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
-
-      - name: Build base image
-        run: |
-          echo $SOURCE_NAME
-          echo $SOURCE_BRANCH
-          echo $SOURCE_TAG
-        env:
-          SOURCE_NAME: ${{ steps.branch_name.outputs.SOURCE_NAME }}
-          SOURCE_BRANCH: ${{ steps.branch_name.outputs.SOURCE_BRANCH }}
-          SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
-
       - name: Version Info 💉
+        id: version_info
         run: |
-          echo "value: ${GITHUB_REF/refs\/tags\//}"
+          echo ::set-output name=COMMIT::$GITHUB_SHA
+          echo ::set-output name=BRANCH::${GITHUB_REF#refs/heads/}
+          echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+
+      # - name: Build 🏗️
+      #   run: npm run build
+
+      # - name: Lint ✅
+      #   run: npm run lint
+
+      # - name: tsc 🔎
+      #   run: npm run tsc
+
+      # - name: Test 🧪
+      #   run: npm run test
+
+      - name: Deploy Stage 🚀
+        if: github.ref == 'refs/heads/master'
+        env:
+          COMMIT: ${{ steps.version_info.outputs.COMMIT }}
+          BRANCH: ${{ steps.version_info.outputs.BRANCH }}
+          TAG: ${{ steps.version_info.outputs.TAG }}
+        run: |
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '$GITHUB_REF_NAME', branch: '$GITHUB_REF_NAME', commit: '$GITHUB_SHA' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "export const VersionInfo = { tag: '', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
-      - name: Build 🏗️
-        run: npm run build
-
-      - name: Lint ✅
-        run: npm run lint
-
-      - name: tsc 🔎
-        run: npm run tsc
-
-      - name: Test 🧪
-        run: npm run test
-
-      - name: Deploy 🚀
-        run: npm run lint
+      - name: Deploy Production 🚀
+        if: github.ref_type == 'tag' && contains(github.ref_name, 'main')
+        env:
+          COMMIT: ${{ steps.version_info.outputs.COMMIT }}
+          BRANCH: ${{ steps.version_info.outputs.BRANCH }}
+          TAG: ${{ steps.version_info.outputs.TAG }}
+        run: |
+          echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
+          echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
