@@ -21,8 +21,7 @@ jobs:
           COMMIT=$GITHUB_SHA
           BRANCH=${GITHUB_REF#refs/heads/}
           TAG=''
-          if [[ "github.ref_type" == "tag" ]]
-          then
+          if [[ ${{ github.ref_type }} == 'tag' ]]: then
             echo "inside if"
             TAG=${GITHUB_REF#refs/tags/}
           fi
