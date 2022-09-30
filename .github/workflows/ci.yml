@@ -3,14 +3,14 @@ name: CI
 on: push
 
 env:
-  FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
-  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
+  FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts # move to single package
+  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: './apps/boilerplate-app/build-next-static'
 
   FILE_PATH_BOILERPLATE_WEBSITE_VERSION_INFO: ./apps/boilerplate-website/src/common/version/VersionInfo.ts
-  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: ./apps/boilerplate-website/build-next-static
+  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: './apps/boilerplate-website/build-next-static'
 
   FILE_PATH_UI_VERSION_INFO: ./packages/ui/version/VersionInfo.ts
-  FILE_PATH_UI_BUILD: ./packages/ui/dist
+  FILE_PATH_UI_BUILD: './packages/ui/dist'
 
   CACHE_KEY_BUILD: build-${{ github.sha }}
 
@@ -45,7 +45,10 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          path: ./apps/boilerplate-app/build-next-static
+          path: |
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
   # lint:
