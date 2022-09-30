@@ -25,7 +25,7 @@ jobs:
             echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
           fi
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '$TAG', branch: '$GITHUB_REF', commit: '$GITHUB_SHA' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "export const VersionInfo = { tag: '$TAG', branch: '${GITHUB_REF#refs/heads/}', commit: '$GITHUB_SHA' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
       # - name: Build 🏗️
