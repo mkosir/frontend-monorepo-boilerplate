@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
-          key: BUILD_APP_NEXT
+          key: build_app_next
 
   # lint:
   #   name: Lint ✅
@@ -90,7 +90,8 @@ jobs:
 
   deploy-stage:
     name: Deploy Stage 🚀
-    needs: [build, lint, tsc, test]
+    # needs: [build, lint, tsc, test]
+    needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -99,6 +100,11 @@ jobs:
       url: https://turbo-app-stage.netlify.app
 
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
+          key: build_app_next
+
       - name: Version Info 💉
         run: |
           echo "pwd"
@@ -118,7 +124,8 @@ jobs:
 
   deploy-prod:
     name: Deploy Production 🚀
-    needs: [build, lint, tsc, test]
+    # needs: [build, lint, tsc, test]
+    needs: build
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
