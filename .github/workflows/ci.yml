@@ -4,7 +4,7 @@ on: push
 
 env:
   FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
-  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: './apps/boilerplate-app/build-next-static'
+  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
   CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT: build_app_next
 
   FILE_PATH_BOILERPLATE_WEBSITE_VERSION_INFO: ./apps/boilerplate-website/src/common/version/VersionInfo.ts
@@ -42,7 +42,7 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          path: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           key: build_app_next
 
   # lint:
@@ -104,7 +104,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           key: build_app_next
 
       - name: DEBUG
@@ -116,7 +116,7 @@ jobs:
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -137,7 +137,7 @@ jobs:
       - name: Deploy Production 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
