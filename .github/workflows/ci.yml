@@ -9,6 +9,10 @@ jobs:
   ci:
     runs-on: ubuntu-latest
 
+    environment:
+      name: App Stage
+      url: https://turbo-app-stage.netlify.app
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
