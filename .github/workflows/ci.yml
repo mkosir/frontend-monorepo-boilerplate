@@ -49,7 +49,7 @@ jobs:
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
             ${{ env.FILE_PATH_UI_BUILD }}
-          key: build-${{ github.ref_type }}
+          key: ${{ env.CACHE_KEY_BUILD }}
 
   # lint:
   #   name: Lint ✅
@@ -111,7 +111,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-          key: build-${{ github.ref_type }}
+          key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
         with:
@@ -136,7 +136,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-          key: build-${{ github.ref_type }}
+          key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
         with:
@@ -161,7 +161,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ${{ env.FILE_PATH_UI_BUILD }}
-          key: build-${{ github.ref_type }}
+          key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
         with:
@@ -186,7 +186,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ${{ env.FILE_PATH_UI_BUILD }}
-          key: build-${{ github.ref_type }}
+          key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
         with:
