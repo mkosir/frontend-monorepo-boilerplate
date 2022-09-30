@@ -5,7 +5,7 @@ on: push
 env:
   FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
   FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
-  CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT: build_app_next-${{ GITHUB_SHA }}
+  CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT: build_app_next-${{ github.ref_type }}
 
   FILE_PATH_BOILERPLATE_WEBSITE_VERSION_INFO: ./apps/boilerplate-website/src/common/version/VersionInfo.ts
   FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: ./apps/boilerplate-website/build-next-static
