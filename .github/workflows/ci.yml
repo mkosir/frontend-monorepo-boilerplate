@@ -45,10 +45,7 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ./apps/boilerplate-app/build-next-static
           key: ${{ env.CACHE_KEY_BUILD }}
 
   # lint:
