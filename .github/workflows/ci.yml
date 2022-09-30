@@ -92,7 +92,7 @@ jobs:
   #     - name: Test 🧪
   #       run: npm run test
 
-  deploy-stage:
+  deploy-app-stage:
     name: Deploy App Stage 🚀
     # needs: [build, lint, tsc, test]
     needs: build
@@ -117,7 +117,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_APP }}
 
-  deploy-prod:
+  deploy-app-prod:
     name: Deploy App Production 🚀
     # needs: [build, lint, tsc, test]
     needs: build
