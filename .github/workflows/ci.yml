@@ -13,8 +13,8 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      # - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-      #   uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
       - name: Version Info 💉
         run: |
@@ -28,8 +28,8 @@ jobs:
           echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
-      # - name: Build 🏗️
-      #   run: npm run build
+      - name: Build 🏗️
+        run: npm run build
 
       # - name: Lint ✅
       #   run: npm run lint
