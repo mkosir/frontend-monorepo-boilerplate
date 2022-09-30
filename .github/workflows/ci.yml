@@ -5,11 +5,11 @@ on: push
 env:
   FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
   FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
-  CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT: build_app_next-${{ github.github_sha }}
 
   FILE_PATH_BOILERPLATE_WEBSITE_VERSION_INFO: ./apps/boilerplate-website/src/common/version/VersionInfo.ts
   FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: ./apps/boilerplate-website/build-next-static
-  CACHE_KEY_BOILERPLATE_WEBSITE_BUILD_NEXT: build_website_next
+
+  CACHE_KEY_BUILD: build_app_next-${{ github.github_sha }}
 
 jobs:
   build:
@@ -25,7 +25,6 @@ jobs:
 
       - name: Version Info 💉
         run: |
-          echo $CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT
           COMMIT=$GITHUB_SHA
           BRANCH=${GITHUB_REF#refs/heads/}
           TAG=''
@@ -43,7 +42,9 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          path: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          path: |
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
           key: build_app_next-${{ github.ref_type }}
 
   # lint:
