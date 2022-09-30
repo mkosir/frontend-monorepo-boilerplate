@@ -3,11 +3,8 @@ name: CI
 on: push
 
 env:
-  FILE_PATH_BOILERPLATE_APP_VERSION_INFO:
-    ./apps/boilerplate-app/src/common/version/VersionInfo.ts
-    # echo ::set-output name=COMMIT::$GITHUB_SHA
-    # echo ::set-output name=BRANCH::${GITHUB_REF#refs/heads/}
-    # echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+  FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -25,6 +22,7 @@ jobs:
           BRANCH=${GITHUB_REF#refs/heads/}
           TAG=''
           if github.ref_type == 'tag'; then
+            echo "inside if"
             TAG=${GITHUB_REF#refs/tags/}
           fi
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
