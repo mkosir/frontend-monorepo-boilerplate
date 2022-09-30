@@ -75,6 +75,12 @@ jobs:
       url: https://turbo-app-stage.netlify.app
 
     steps:
+      - name: Version Info 💉
+        run: |
+          echo "test"
+          pwd
+          cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
