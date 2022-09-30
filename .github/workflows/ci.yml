@@ -43,7 +43,7 @@ jobs:
           TAG: ${{ steps.version_info.outputs.TAG }}
         run: |
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
       - name: Deploy Production 🚀
