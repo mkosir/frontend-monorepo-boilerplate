@@ -42,8 +42,8 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
-          key: build_app_next
+          path: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          key: ${{ secrets.CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT }}
 
   # lint:
   #   name: Lint ✅
@@ -104,8 +104,8 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
-          key: build_app_next
+          path: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          key: ${{ secrets.CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT }}
 
       - name: DEBUG
         run: |
@@ -116,7 +116,7 @@ jobs:
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
+          publish-dir: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
