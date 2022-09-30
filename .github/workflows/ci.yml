@@ -19,6 +19,7 @@ jobs:
       - name: Version Info 💉
         id: version_info
         run: |
+          echo github.ref_type == 'tag'
           echo ::set-output name=COMMIT::$GITHUB_SHA
           echo ::set-output name=BRANCH::${GITHUB_REF#refs/heads/}
           echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
