@@ -22,7 +22,6 @@ jobs:
           BRANCH=${GITHUB_REF#refs/heads/}
           TAG=''
           if [[ ${{ github.ref_type }} == 'tag' ]]; then
-            echo "inside if"
             TAG=${GITHUB_REF#refs/tags/}
           fi
           echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
