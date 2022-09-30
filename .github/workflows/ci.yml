@@ -41,11 +41,19 @@ jobs:
       #   run: npm run test
 
       - name: Deploy Stage 🚀
+        uses: nwtgck/actions-netlify@v1.2
         if: github.ref == 'refs/heads/main'
-        run: |
-          echo "deploy stage"
+        with:
+          publish-dir: './apps/boilerplate-app/build-next-static'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_APP }}
 
       - name: Deploy Production 🚀
+        uses: nwtgck/actions-netlify@v1.2
         if: github.ref_type == 'tag'
-        run: |
-          echo "deploy prod"
+        with:
+          publish-dir: './apps/boilerplate-app/build-next-static'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_BOILERPLATE_APP }}
