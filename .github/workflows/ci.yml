@@ -176,8 +176,8 @@ jobs:
     # needs: [build, lint, tsc, test]
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
+    if: github.ref_type == 'tag'
+    
     environment:
       name: UI Prod
       url: https://turbo-ui-prod.netlify.app
