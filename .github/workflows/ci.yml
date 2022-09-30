@@ -114,15 +114,15 @@ jobs:
           pwd
           echo "ls"
           ls
-          echo "cd apps & ls"
-          cd apps
+          echo "cd apps... & ls"
+          cd ./apps/boilerplate-app/build-next-static
           ls
-          cat ./apps/boilerplate-app/build-next-static
+          cat ./apps/boilerplate-app/build-next-static/index.html
 
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './apps/boilerplate-app/build-next-static/index.html'
+          publish-dir: './apps/boilerplate-app/build-next-static'
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
