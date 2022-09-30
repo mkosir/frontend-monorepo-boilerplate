@@ -1,6 +1,11 @@
 import { Config } from 'jest';
+import nextJest from 'next/jest';
 
 import { jestConfigJsdom } from '../../packages/config-jest';
+
+const createJestConfig = nextJest({
+  dir: './',
+});
 
 const jestConfig: Config = {
   ...jestConfigJsdom,
@@ -15,4 +20,4 @@ const jestConfig: Config = {
   },
 };
 
-module.exports = jestConfig;
+module.exports = createJestConfig(jestConfig);
