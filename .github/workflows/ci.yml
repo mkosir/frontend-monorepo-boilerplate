@@ -4,6 +4,10 @@ on: push
 
 env:
   FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
+  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: './apps/boilerplate-app/build-next-static'
+
+  FILE_PATH_BOILERPLATE_WEBSITE_VERSION_INFO: ./apps/boilerplate-website/src/common/version/VersionInfo.ts
+  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: './apps/boilerplate-website/build-next-static'
 
 jobs:
   build_validate:
@@ -64,6 +68,7 @@ jobs:
     # name: Deploy Stage 🚀
     needs: build_validate
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
     environment:
       name: App Stage
@@ -72,7 +77,6 @@ jobs:
     steps:
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
-        if: github.ref == 'refs/heads/main'
         with:
           publish-dir: './apps/boilerplate-app/build-next-static'
           production-deploy: true
@@ -84,6 +88,7 @@ jobs:
     name: Deploy Production 🚀
     needs: build_validate
     runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
 
     environment:
       name: App Prod
@@ -92,9 +97,8 @@ jobs:
     steps:
       - name: Deploy Production 🚀
         uses: nwtgck/actions-netlify@v1.2
-        if: github.ref_type == 'tag'
         with:
-          publish-dir: './apps/boilerplate-app/build-next-static'
+          publish-dir: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
