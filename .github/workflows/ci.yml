@@ -6,12 +6,8 @@ env:
   FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts
 
 jobs:
-  ci:
+  build_validate:
     runs-on: ubuntu-latest
-
-    environment:
-      name: App Stage
-      url: https://turbo-app-stage.netlify.app
 
     steps:
       - name: Checkout 🛎️
@@ -44,6 +40,36 @@ jobs:
       # - name: Test 🧪
       #   run: npm run test
 
+      # - name: Deploy Stage 🚀
+      #   uses: nwtgck/actions-netlify@v1.2
+      #   if: github.ref == 'refs/heads/main'
+      #   with:
+      #     publish-dir: './apps/boilerplate-app/build-next-static'
+      #     production-deploy: true
+      #   env:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_APP }}
+
+      # - name: Deploy Production 🚀
+      #   uses: nwtgck/actions-netlify@v1.2
+      #   if: github.ref_type == 'tag'
+      #   with:
+      #     publish-dir: './apps/boilerplate-app/build-next-static'
+      #     production-deploy: true
+      #   env:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_BOILERPLATE_APP }}
+
+  deploy-stage:
+    # name: Deploy Stage 🚀
+    needs: build_validate
+    runs-on: ubuntu-latest
+
+    environment:
+      name: App Stage
+      url: https://turbo-app-stage.netlify.app
+
+    steps:
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
         if: github.ref == 'refs/heads/main'
@@ -54,6 +80,16 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_APP }}
 
+  deploy-prod:
+    name: Deploy Production 🚀
+    needs: build_validate
+    runs-on: ubuntu-latest
+
+    environment:
+      name: App Prod
+      url: https://turbo-app-prod.netlify.app/
+
+    steps:
       - name: Deploy Production 🚀
         uses: nwtgck/actions-netlify@v1.2
         if: github.ref_type == 'tag'
