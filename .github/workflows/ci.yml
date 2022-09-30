@@ -36,7 +36,7 @@ jobs:
       #   run: npm run test
 
       - name: Deploy Stage 🚀
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         env:
           COMMIT: ${{ steps.version_info.outputs.COMMIT }}
           BRANCH: ${{ steps.version_info.outputs.BRANCH }}
