@@ -170,3 +170,28 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_UI }}
+
+  deploy-ui-prod:
+    name: Deploy UI Prod 🚀
+    # needs: [build, lint, tsc, test]
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    environment:
+      name: UI Prod
+      url: https://turbo-ui-prod.netlify.app
+
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: ${{ env.FILE_PATH_UI_BUILD }}
+          key: build-${{ github.ref_type }}
+
+      - uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ${{ env.FILE_PATH_UI_BUILD }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_UI }}
