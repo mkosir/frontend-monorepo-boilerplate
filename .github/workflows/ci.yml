@@ -43,7 +43,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-          key: ${{ secrets.CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT }}
+          key: build_app_next
 
   # lint:
   #   name: Lint ✅
@@ -105,7 +105,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ${{ secrets.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-          key: ${{ secrets.CACHE_KEY_BOILERPLATE_APP_BUILD_NEXT }}
+          key: build_app_next
 
       - name: DEBUG
         run: |
