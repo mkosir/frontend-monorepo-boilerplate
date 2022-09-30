@@ -42,8 +42,7 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          # path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
-          path: './apps/boilerplate-app/build-next-static'
+          path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
           key: build_app_next
 
   # lint:
@@ -105,23 +104,19 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: './apps/boilerplate-app/build-next-static'
+          path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
           key: build_app_next
 
       - name: DEBUG
         run: |
-          echo "pwd"
-          pwd
-          echo "ls"
-          ls
           echo "cd apps... & ls"
-          cd ./apps/boilerplate-app/build-next-static
-          ls
+          cd $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
+          ls -l
 
       - name: Deploy Stage 🚀
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './apps/boilerplate-app/build-next-static'
+          publish-dir: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
