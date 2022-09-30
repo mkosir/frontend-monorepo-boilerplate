@@ -36,6 +36,13 @@ jobs:
       - name: Build 🏗️
         run: npm run build
 
+      - name: Cache build ⚡
+        id: cache_build
+        uses: actions/cache@v3
+        with:
+          path: $FILE_PATH_BOILERPLATE_APP_BUILD_NEXT
+          key: BUILD_APP_NEXT
+
   # lint:
   #   name: Lint ✅
   #   needs: build
