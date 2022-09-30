@@ -24,7 +24,7 @@ jobs:
           if [[ ${{ github.ref_type }} == 'tag' ]]; then
             TAG=${GITHUB_REF#refs/tags/}
           fi
-          echo "write version, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
+          echo "write tag, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
           echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
           cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
 
