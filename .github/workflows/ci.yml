@@ -3,13 +3,10 @@ name: CI
 on: push
 
 env:
-  FILE_PATH_BOILERPLATE_APP_VERSION_INFO: ./apps/boilerplate-app/src/common/version/VersionInfo.ts # move to single package
+  FILE_PATH_VERSION_INFO: ./packages/utils-version/src/VersionInfo.ts
+  
   FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: './apps/boilerplate-app/build-next-static'
-
-  FILE_PATH_BOILERPLATE_WEBSITE_VERSION_INFO: ./apps/boilerplate-website/src/common/version/VersionInfo.ts
   FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: './apps/boilerplate-website/build-next-static'
-
-  FILE_PATH_UI_VERSION_INFO: ./packages/ui/version/VersionInfo.ts
   FILE_PATH_UI_BUILD: './packages/ui/build-storybook-static'
 
   CACHE_KEY_BUILD: build-${{ github.sha }}
@@ -34,9 +31,9 @@ jobs:
           if [[ ${{ github.ref_type }} == 'tag' ]]; then
             TAG=${GITHUB_REF#refs/tags/}
           fi
-          echo "write tag, branch & commit id to $FILE_PATH_BOILERPLATE_APP_VERSION_INFO"
-          echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
-          cat $FILE_PATH_BOILERPLATE_APP_VERSION_INFO
+          echo "write tag, branch & commit id to $FILE_PATH_VERSION_INFO"
+          echo "export const VersionInfo = { tag: '$TAG', branch: '$BRANCH', commit: '$COMMIT' };" > $FILE_PATH_VERSION_INFO
+          cat $FILE_PATH_VERSION_INFO
 
       - name: Build 🏗️
         run: |

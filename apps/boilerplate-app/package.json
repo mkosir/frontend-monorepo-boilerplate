@@ -19,7 +19,8 @@
     "config-mui": "*",
     "react-parallax-tilt": "1.7.67",
     "ui": "*",
-    "utils-mui": "*"
+    "utils-mui": "*",
+    "utils-version": "*"
   },
   "devDependencies": {
     "chalk": "5.0.1",

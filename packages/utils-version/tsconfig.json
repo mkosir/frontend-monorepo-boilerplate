@@ -1,0 +1,20 @@
+{
+  "extends": "config-tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      ".": ["."]
+    }
+  },
+  "include": [".", ".eslintrc.js"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".turbo",
+    "coverage",
+    "dist",
+    "compiled",
+    "build-next-static",
+    "build-storybook-static"
+  ]
+}

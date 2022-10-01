@@ -1,10 +1,10 @@
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
-import { getVersionInfo } from 'common/version/getVersionInfo';
 import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { createEmotionCache } from 'utils-mui';
+import { getVersionInfo } from 'utils-version';
 
 const clientSideEmotionCache = createEmotionCache();
 
