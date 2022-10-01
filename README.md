@@ -9,18 +9,18 @@
 [![CI][test-badge]][test-url]
 
 App
-[![CI][build-badge]][build-url]
-[![CI][lint-badge]][lint-url]
-[![CI][tsc-badge]][tsc-url]
+[![CI][build-badge]][deploy-app-prod-url]
+[![CI][lint-badge]][deploy-app-stage-url]
+[![CI][tsc-badge]][deploy-app-stroybook-url]
 
 Website
-[![CI][build-badge]][build-url]
-[![CI][lint-badge]][lint-url]
-[![CI][tsc-badge]][tsc-url]
+[![CI][build-badge]][deploy-website-prod-url]
+[![CI][lint-badge]][deploy-website-stage-url]
+[![CI][tsc-badge]][deploy-website-stroybook-url]
 
 UI Shared Library
-[![CI][build-badge]][build-url]
-[![CI][lint-badge]][lint-url]
+[![CI][build-badge]][deploy-ui-prod-url]
+[![CI][lint-badge]][deploy-ui-stage-url]
 
 Opinionated frontend monorepo with focus on best practices and painless developer experience:
 
