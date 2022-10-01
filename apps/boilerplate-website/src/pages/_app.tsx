@@ -4,6 +4,7 @@ import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { createEmotionCache } from 'utils-mui';
+import { getVersionInfo } from 'utils-version';
 
 // import { Breadcrumbs } from 'common/components';
 
@@ -15,6 +16,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Turborepo Boilerplate - Website</title>
         <meta name="description" content="Turborepo boilerplate." />
+        <meta name="version" content={getVersionInfo()} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CacheProvider value={clientSideEmotionCache}>
@@ -22,6 +24,13 @@ const App = ({ Component, pageProps }: AppProps) => {
           <CssBaseline />
           <Box textAlign="center" mt={3} mb={5}>
             <Typography variant="title1">Turborepo Boilerplate - Website</Typography>
+            <Typography
+              variant="caption"
+              ml={0.5}
+              sx={{ fontSize: 11, fontStyle: 'italic', color: theme.palette.grey[500] }}
+            >
+              {getVersionInfo()}
+            </Typography>
           </Box>
           {<Component {...pageProps} />}
         </ThemeProvider>

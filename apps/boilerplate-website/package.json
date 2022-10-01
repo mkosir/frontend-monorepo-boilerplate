@@ -17,7 +17,8 @@
   "dependencies": {
     "config-mui": "*",
     "ui": "*",
-    "utils-mui": "*"
+    "utils-mui": "*",
+    "utils-version": "*"
   },
   "devDependencies": {
     "config-tsconfig": "*",

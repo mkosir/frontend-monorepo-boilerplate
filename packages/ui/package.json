@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "config-mui": "*",
-    "utils-mui": "*"
+    "utils-mui": "*",
+    "utils-version": "*"
   },
   "devDependencies": {
     "utils-test": "*",

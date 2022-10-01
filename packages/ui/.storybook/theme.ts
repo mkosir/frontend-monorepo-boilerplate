@@ -1,6 +1,5 @@
 import { create } from '@storybook/theming';
-
-import { getVersionInfo } from '../version/getVersionInfo';
+import { getVersionInfo } from 'utils-version';
 
 export const theme = create({
   base: 'light',
