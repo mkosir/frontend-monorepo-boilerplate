@@ -8,6 +8,21 @@
 [![CI][tsc-badge]][tsc-url]
 [![CI][test-badge]][test-url]
 
+App
+[![CI][build-badge]][build-url]
+[![CI][lint-badge]][lint-url]
+[![CI][tsc-badge]][tsc-url]
+
+Website
+[![CI][build-badge]][build-url]
+[![CI][lint-badge]][lint-url]
+[![CI][tsc-badge]][tsc-url]
+
+UI Library
+[![CI][build-badge]][build-url]
+[![CI][lint-badge]][lint-url]
+[![CI][tsc-badge]][tsc-url]
+
 Opinionated frontend monorepo with focus on best practices and painless developer experience:
 
 - Monorepo setup can be easily extended with custom libraries or into micro-frontend architecture 🔧
