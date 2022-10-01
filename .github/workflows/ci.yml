@@ -54,12 +54,7 @@ jobs:
         id: cache_build
         uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
   # lint:
@@ -128,12 +123,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -158,12 +148,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -188,12 +173,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -222,12 +202,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -252,12 +227,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -282,12 +252,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -316,12 +281,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
@@ -346,12 +306,7 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: |
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-            ${{ env.FILE_PATH_UI_BUILD }}
+          path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
       - uses: nwtgck/actions-netlify@v1.2
