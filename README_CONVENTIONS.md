@@ -3,54 +3,61 @@
 Since "consistency is the key" majority of rules is enforced by automated tooling as ESLint, TypeScript, Prettier, etc.  
 Still certain design and architectural decisions must be followed which are covered with described conventions bellow.
 
+## Code Collocation
+
+- Every application or package in monorepo has project files/folders organized and grouped by **feature**.
+- **Place code as close to where it's relevant as possible.**
+- Deep folder nesting does not represent an issue.
+- [Relevant article](https://kentcdodds.com/blog/colocation) on code collocation.
+
 ## Project Structure
 
-- Every application or package in monorepo has project files/folders organized and grouped by **feature**.  
-  Deep folder nesting does not represent an issue.
-- Every application has following file/folder structure:
-  ```shell
-  apps/
-  ├─ product-manager/
-  │  ├─ common/
-  │  │  ├─ components/
-  │  │  │  ├─ ProductTitle/
-  │  │  │  ├─ ...
-  │  │  │  └─ index.tsx
-  │  │  ├─ consts/
-  │  │  │  ├─ paths.ts
-  │  │  │  └─ ...
-  │  │  └─ types/
-  │  ├─ modules/
-  │  │  ├─ HomePage/
-  │  │  ├─ ProductAddPage/
-  │  │  ├─ ProductPage/
-  │  │  ├─ ProductsPage/
-  │  │  │  ├─ api/
-  │  │  │  │  └─ useGetProducts/
-  │  │  │  ├─ components/
-  │  │  │  │  ├─ ProductItem/
-  │  │  │  │  ├─ ProductsStatistics/
-  │  │  │  │  └─ ...
-  │  │  │  ├─ utils/
-  │  │  │  │  └─ filterProductsByType/
-  │  │  │  └─ index.tsx
-  │  │  ├─ ...
-  │  │  └─ index.tsx
-  │  └─ pages/
-  │     ├─ products/
-  │     │  ├─ [id].tsx
-  │     │  ├─ add.tsx
-  │     │  ├─ index.tsx
-  │     ├─ _app.tsx
-  │     ├─ index.tsx
-  │     └─ ...
-  ├─ warehouse/
-  ├─ admin-dashboard/
-  └─ ...
-  ```
-  - `common` folder is responsible for implementations that are truly used across application, where it should be used sparingly since codebase tries to follow grouped by feature project structure as much as possible
-  - `modules` folder is responsible for implementation of each individual page (routed from `pages` folder)
-  - `pages` folder serves as a router, where its only responsibility is to define routes
+Every application has following file/folder structure:
+
+```shell
+apps/
+├─ product-manager/
+│  ├─ common/
+│  │  ├─ components/
+│  │  │  ├─ ProductTitle/
+│  │  │  ├─ ...
+│  │  │  └─ index.tsx
+│  │  ├─ consts/
+│  │  │  ├─ paths.ts
+│  │  │  └─ ...
+│  │  └─ types/
+│  ├─ modules/
+│  │  ├─ HomePage/
+│  │  ├─ ProductAddPage/
+│  │  ├─ ProductPage/
+│  │  ├─ ProductsPage/
+│  │  │  ├─ api/
+│  │  │  │  └─ useGetProducts/
+│  │  │  ├─ components/
+│  │  │  │  ├─ ProductItem/
+│  │  │  │  ├─ ProductsStatistics/
+│  │  │  │  └─ ...
+│  │  │  ├─ utils/
+│  │  │  │  └─ filterProductsByType/
+│  │  │  └─ index.tsx
+│  │  ├─ ...
+│  │  └─ index.tsx
+│  └─ pages/
+│     ├─ products/
+│     │  ├─ [id].tsx
+│     │  ├─ add.tsx
+│     │  ├─ index.tsx
+│     ├─ _app.tsx
+│     ├─ index.tsx
+│     └─ ...
+├─ warehouse/
+├─ admin-dashboard/
+└─ ...
+```
+
+- `common` folder is responsible for implementations that are truly used across application, where it should be used sparingly since codebase tries to follow grouped by feature project structure as much as possible
+- `modules` folder is responsible for implementation of each individual page (routed from `pages` folder)
+- `pages` folder serves as a router, where its only responsibility is to define routes
 
 ## Data immutability
 
