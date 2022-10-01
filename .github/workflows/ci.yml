@@ -151,6 +151,62 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_BOILERPLATE_APP }}
 
+  deploy-website-stage:
+    name: Deploy Website Stage 🚀
+    # needs: [build, lint, tsc, test]
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    environment:
+      name: Website Stage
+      url: https://turbo-website-stage.netlify.app
+
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_UI_BUILD }}
+          key: ${{ env.CACHE_KEY_BUILD }}
+
+      - uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_WEBSITE }}
+
+  deploy-website-prod:
+    name: Deploy Website Production 🚀
+    # needs: [build, lint, tsc, test]
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
+
+    environment:
+      name: Website Prod
+      url: https://turbo-Website-prod.netlify.app/
+
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_UI_BUILD }}
+          key: ${{ env.CACHE_KEY_BUILD }}
+
+      - uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_BOILERPLATE_WEBSITE }}
+
   deploy-ui-stage:
     name: Deploy UI Stage 🚀
     # needs: [build, lint, tsc, test]
