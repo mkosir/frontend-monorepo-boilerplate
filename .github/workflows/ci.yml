@@ -95,6 +95,10 @@ jobs:
   #     - name: Test 🧪
   #       run: npm run test
 
+  ###################################################################
+  # Deployments
+  ###################################################################
+
   deploy-app-stage:
     name: Deploy App Stage 🚀
     # needs: [build, lint, tsc, test]
