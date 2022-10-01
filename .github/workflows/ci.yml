@@ -3,7 +3,7 @@ name: CI
 on: push
 
 env:
-  # Use Turborepo remote caching
+  # Use TurboreWWpo remote caching
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
