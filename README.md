@@ -18,10 +18,9 @@ Website
 [![CI][lint-badge]][lint-url]
 [![CI][tsc-badge]][tsc-url]
 
-UI Library
+UI Shared Lib
 [![CI][build-badge]][build-url]
 [![CI][lint-badge]][lint-url]
-[![CI][tsc-badge]][tsc-url]
 
 Opinionated frontend monorepo with focus on best practices and painless developer experience:
 
