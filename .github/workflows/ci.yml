@@ -3,6 +3,10 @@ name: CI
 on: push
 
 env:
+  # Use Turborepo remote caching
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
   FILE_PATH_VERSION_INFO: ./packages/utils-version/src/VersionInfo.ts
 
   FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
