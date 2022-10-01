@@ -50,7 +50,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
@@ -103,6 +105,9 @@ jobs:
   # Deployments
   ###################################################################
 
+  ##############
+  # App
+  ##############
   deploy-app-stage:
     name: Deploy App Stage 🚀
     # needs: [build, lint, tsc, test]
@@ -119,7 +124,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
@@ -130,6 +137,36 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_APP }}
+
+  deploy-app-storybook:
+    name: Deploy App Storybook 🚀
+    # needs: [build, lint, tsc, test]
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    environment:
+      name: App Storybook
+      url: https://turbo-app-storybook.netlify.app
+
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
+            ${{ env.FILE_PATH_UI_BUILD }}
+          key: ${{ env.CACHE_KEY_BUILD }}
+
+      - uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BOILERPLATE_APP_STORYBOOK }}
 
   deploy-app-prod:
     name: Deploy App Production 🚀
@@ -147,7 +184,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
@@ -158,6 +197,10 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_BOILERPLATE_APP }}
+
+  ##############
+  # Website
+  ##############
 
   deploy-website-stage:
     name: Deploy Website Stage 🚀
@@ -175,7 +218,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
@@ -186,6 +231,36 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_WEBSITE }}
+
+  deploy-website-storybook:
+    name: Deploy Website Storybook 🚀
+    # needs: [build, lint, tsc, test]
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    environment:
+      name: Website Storybook
+      url: https://turbo-website-storybook.netlify.app
+
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
+            ${{ env.FILE_PATH_UI_BUILD }}
+          key: ${{ env.CACHE_KEY_BUILD }}
+
+      - uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BOILERPLATE_WEBSITE_STORYBOOK }}
 
   deploy-website-prod:
     name: Deploy Website Production 🚀
@@ -203,7 +278,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
@@ -214,6 +291,10 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD_BOILERPLATE_WEBSITE }}
+
+  ##############
+  # UI
+  ##############
 
   deploy-ui-stage:
     name: Deploy UI Stage 🚀
@@ -231,7 +312,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
@@ -259,7 +342,9 @@ jobs:
         with:
           path: |
             ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+            ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
             ${{ env.FILE_PATH_UI_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
