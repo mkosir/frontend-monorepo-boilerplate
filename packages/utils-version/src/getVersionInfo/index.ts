@@ -8,7 +8,7 @@ export const getVersionInfo = (): string => {
   if (VersionInfo.commit) {
     let branchCommit = '';
     branchCommit = VersionInfo.branch ? VersionInfo.branch : '';
-    branchCommit += VersionInfo.commit ? ` [${VersionInfo.commit.substring(0, 8)}]` : '';
+    branchCommit += VersionInfo.commit ? ` [${VersionInfo.commit.substring(0, 7)}]` : '';
     return branchCommit;
   }
 
