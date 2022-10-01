@@ -5,20 +5,20 @@ on: push
 env:
   FILE_PATH_VERSION_INFO: ./packages/utils-version/src/VersionInfo.ts
 
-  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: './apps/boilerplate-app/build-next-static'
-  FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK: './apps/boilerplate-app/build-storybook-static'
+  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
+  FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK: ./apps/boilerplate-app/build-storybook-static
 
-  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: './apps/boilerplate-website/build-next-static'
-  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK: './apps/boilerplate-website/build-storybook-static'
+  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: ./apps/boilerplate-website/build-next-static
+  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK: ./apps/boilerplate-website/build-storybook-static
 
-  FILE_PATH_UI_BUILD: './packages/ui/build-storybook-static'
+  FILE_PATH_UI_BUILD: ./packages/ui/build-storybook-static
 
-  CACHE_PATHS_BUILD: |
-    ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
-    ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
-    ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
-    ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
-    ${{ env.FILE_PATH_UI_BUILD }}
+  # CACHE_PATHS_BUILD: |
+  #   ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+  #   ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
+  #   ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+  #   ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
+  #   ${{ env.FILE_PATH_UI_BUILD }}
   CACHE_KEY_BUILD: build-${{ github.sha }}
 
 jobs:
