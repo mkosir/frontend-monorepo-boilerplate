@@ -18,7 +18,7 @@ Website
 [![CI][lint-badge]][lint-url]
 [![CI][tsc-badge]][tsc-url]
 
-UI Shared Lib
+UI Shared Library
 [![CI][build-badge]][build-url]
 [![CI][lint-badge]][lint-url]
 
