@@ -8,7 +8,7 @@ export const Version = ({ version }: VersionProps) => {
   const theme = useTheme();
 
   return (
-    <Typography variant="caption" ml={0.5} sx={{ fontSize: 11, fontStyle: 'italic', color: theme.palette.grey[500] }}>
+    <Typography variant="caption" ml={0.5} sx={{ fontSize: 12, fontStyle: 'italic', color: theme.palette.grey[600] }}>
       {version}
     </Typography>
   );
