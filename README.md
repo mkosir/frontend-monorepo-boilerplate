@@ -118,11 +118,11 @@ Monorepo features and conventions:
 <!-- Deployments  Website -->
 
 [deploy-website-prod-badge]: https://img.shields.io/badge/website-prod-blue?logo=netlify&logoColor=white
-[deploy-website-prod-url]: https://turbo-app-prod.netlify.app/
+[deploy-website-prod-url]: https://turbo-website-prod.netlify.app/
 [deploy-website-stage-badge]: https://img.shields.io/badge/website-stage-blue?logo=netlify&logoColor=white
-[deploy-website-stage-url]: https://turbo-app-stage.netlify.app/
+[deploy-website-stage-url]: https://turbo-website-stage.netlify.app/
 [deploy-website-storybook-badge]: https://img.shields.io/badge/website-storybook-blue?logo=storybook&logoColor=white
-[deploy-website-storybook-url]: https://turbo-app-storybook.netlify.app/
+[deploy-website-storybook-url]: https://turbo-website-storybook.netlify.app/
 
 <!-- Deployments  UI -->
 
