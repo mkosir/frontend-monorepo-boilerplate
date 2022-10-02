@@ -9,18 +9,18 @@
 [![CI][test-badge]][test-url]
 
 App
-[![CI][build-badge]][deploy-app-prod-url]
-[![CI][lint-badge]][deploy-app-stage-url]
-[![CI][tsc-badge]][deploy-app-stroybook-url]
+[![CI][deploy-app-prod-badge]][deploy-app-prod-url]
+[![CI][deploy-app-stage-badge]][deploy-app-stage-url]
+[![CI][deploy-app-storybook-badge]][deploy-app-storybook-url]
 
 Website
-[![CI][build-badge]][deploy-website-prod-url]
-[![CI][lint-badge]][deploy-website-stage-url]
-[![CI][tsc-badge]][deploy-website-stroybook-url]
+[![CI][deploy-website-prod-badge]][deploy-website-prod-url]
+[![CI][deploy-website-stage-badge]][deploy-website-stage-url]
+[![CI][deploy-website-storybook-badge]][deploy-website-storybook-url]
 
 UI Shared Library
-[![CI][build-badge]][deploy-ui-prod-url]
-[![CI][lint-badge]][deploy-ui-stage-url]
+[![CI][deploy-ui-prod-badge]][deploy-ui-prod-url]
+[![CI][deploy-ui-stage-badge]][deploy-ui-stage-url]
 
 Opinionated frontend monorepo with focus on best practices and painless developer experience:
 
@@ -106,3 +106,28 @@ Monorepo features and conventions:
 [tsc-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml
 [test-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml/badge.svg
 [test-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml
+
+<!-- Deployments  App -->
+
+[deploy-app-prod-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-app-prod-url]: https://turbo-app-prod.netlify.app/
+[deploy-app-stage-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-app-stage-url]: https://turbo-app-stage.netlify.app/
+[deploy-app-storybook-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-app-storybook-url]: https://turbo-app-storybook.netlify.app/
+
+<!-- Deployments  Website -->
+
+[deploy-website-prod-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-website-prod-url]: https://turbo-app-prod.netlify.app/
+[deploy-website-stage-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-website-stage-url]: https://turbo-app-stage.netlify.app/
+[deploy-website-storybook-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-website-storybook-url]: https://turbo-app-storybook.netlify.app/
+
+<!-- Deployments  UI -->
+
+[deploy-ui-prod-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-ui-prod-url]: https://turbo-ui-prod.netlify.app/
+[deploy-ui-stage-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-ui-stage-url]: https://turbo-ui-stage.netlify.app/
