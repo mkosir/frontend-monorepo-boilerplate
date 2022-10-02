@@ -3,6 +3,7 @@ import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
 import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { Version } from 'ui';
 import { createEmotionCache } from 'utils-mui';
 import { getVersionInfo } from 'utils-version';
 
@@ -22,13 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <CssBaseline />
           <Box textAlign="center" mt={3} mb={5}>
             <Typography variant="title1">Turborepo Boilerplate - App</Typography>
-            <Typography
-              variant="caption"
-              ml={0.5}
-              sx={{ fontSize: 11, fontStyle: 'italic', color: theme.palette.grey[500] }}
-            >
-              {getVersionInfo()}
-            </Typography>
+            <Version version={getVersionInfo()} />
           </Box>
           {<Component {...pageProps} />}
         </ThemeProvider>
