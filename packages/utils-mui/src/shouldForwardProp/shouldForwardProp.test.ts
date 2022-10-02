@@ -8,16 +8,14 @@ type CustomComponentProps = {
 };
 
 describe('packages', () => {
-  describe('ui', () => {
-    describe('utils', () => {
-      describe('shouldForwardProp', () => {
-        it('should not forward prop when it exists in custom component props', () => {
-          expect(shouldForwardProp<CustomComponentProps>(['isDisabled', 'bgColor'], 'isDisabled')).toBeFalsy();
-        });
+  describe('utils-mui', () => {
+    describe('shouldForwardProp', () => {
+      it('should not forward prop when it exists in custom component props', () => {
+        expect(shouldForwardProp<CustomComponentProps>(['isDisabled', 'bgColor'], 'isDisabled')).toBeFalsy();
+      });
 
-        it('should forward prop when it does not exists in custom component props', () => {
-          expect(shouldForwardProp<CustomComponentProps>(['isDisabled', 'bgColor'], 'notExistingProp')).toBeTruthy();
-        });
+      it('should forward prop when it does not exists in custom component props', () => {
+        expect(shouldForwardProp<CustomComponentProps>(['isDisabled', 'bgColor'], 'notExistingProp')).toBeTruthy();
       });
     });
   });
