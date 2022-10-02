@@ -109,25 +109,25 @@ Monorepo features and conventions:
 
 <!-- Deployments  App -->
 
-[deploy-app-prod-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-app-prod-badge]: https://img.shields.io/badge/app--prod-blue?logo=netlify&logoColor=white
 [deploy-app-prod-url]: https://turbo-app-prod.netlify.app/
-[deploy-app-stage-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-app-stage-badge]: https://img.shields.io/badge/app--stage-blue?logo=netlify&logoColor=white
 [deploy-app-stage-url]: https://turbo-app-stage.netlify.app/
-[deploy-app-storybook-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-app-storybook-badge]: https://img.shields.io/badge/app--storybook-blue?logo=storybook&logoColor=white
 [deploy-app-storybook-url]: https://turbo-app-storybook.netlify.app/
 
 <!-- Deployments  Website -->
 
-[deploy-website-prod-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-website-prod-badge]: https://img.shields.io/badge/website--prod-blue?logo=netlify&logoColor=white
 [deploy-website-prod-url]: https://turbo-app-prod.netlify.app/
-[deploy-website-stage-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-website-stage-badge]: https://img.shields.io/badge/website--stage-blue?logo=netlify&logoColor=white
 [deploy-website-stage-url]: https://turbo-app-stage.netlify.app/
-[deploy-website-storybook-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-website-storybook-badge]: https://img.shields.io/badge/website--storybook-blue?logo=storybook&logoColor=white
 [deploy-website-storybook-url]: https://turbo-app-storybook.netlify.app/
 
 <!-- Deployments  UI -->
 
-[deploy-ui-prod-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-ui-prod-badge]: https://img.shields.io/badge/ui--prod-blue?logo=netlify&logoColor=white
 [deploy-ui-prod-url]: https://turbo-ui-prod.netlify.app/
-[deploy-ui-stage-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
+[deploy-ui-stage-badge]: https://img.shields.io/badge/ui--stage-blue?logo=netlify&logoColor=white
 [deploy-ui-stage-url]: https://turbo-ui-stage.netlify.app/
