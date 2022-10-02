@@ -61,50 +61,50 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-  # lint:
-  #   name: Lint ✅
-  #   needs: build
-  #   runs-on: ubuntu-latest
+  lint:
+    name: Lint ✅
+    needs: build
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout 🛎️
-  #       uses: actions/checkout@v3
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
-  #     - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-  #       uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
-  #     - name: Lint ✅
-  #       run: npm run lint
+      - name: Lint ✅
+        run: npm run lint
 
-  # tsc:
-  #   name: tsc 🔎
-  #   needs: build
-  #   runs-on: ubuntu-latest
+  tsc:
+    name: tsc 🔎
+    needs: build
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout 🛎️
-  #       uses: actions/checkout@v3
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
-  #     - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-  #       uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
-  #     - name: tsc 🔎
-  #       run: npm run tsc
+      - name: tsc 🔎
+        run: npm run tsc
 
-  # test:
-  #   name: Test 🧪
-  #   needs: build
-  #   runs-on: ubuntu-latest
+  test:
+    name: Test 🧪
+    needs: build
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout 🛎️
-  #       uses: actions/checkout@v3
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
-  #     - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-  #       uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
-  #     - name: Test 🧪
-  #       run: npm run test
+      - name: Test 🧪
+        run: npm run test
 
   ###################################################################
   # Deployments
@@ -115,8 +115,7 @@ jobs:
   ##############
   deploy-app-stage:
     name: Deploy App Stage 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -140,8 +139,7 @@ jobs:
 
   deploy-app-storybook:
     name: Deploy App Storybook 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -165,8 +163,7 @@ jobs:
 
   deploy-app-prod:
     name: Deploy App Production 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
@@ -194,8 +191,7 @@ jobs:
 
   deploy-website-stage:
     name: Deploy Website Stage 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -219,8 +215,7 @@ jobs:
 
   deploy-website-storybook:
     name: Deploy Website Storybook 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -244,8 +239,7 @@ jobs:
 
   deploy-website-prod:
     name: Deploy Website Production 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
@@ -273,8 +267,7 @@ jobs:
 
   deploy-ui-stage:
     name: Deploy UI Stage 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -298,8 +291,7 @@ jobs:
 
   deploy-ui-prod:
     name: Deploy UI Prod 🚀
-    # needs: [build, lint, tsc, test]
-    needs: build
+    needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
