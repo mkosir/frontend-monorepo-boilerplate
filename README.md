@@ -8,7 +8,7 @@
 [![CI][tsc-badge]][tsc-url]
 [![CI][test-badge]][test-url]
 
-Deployments - prod | stage | storybook
+Deployments - prod/stage/storybook
 
 [![CI][deploy-app-prod-badge]][deploy-app-prod-url]
 [![CI][deploy-app-stage-badge]][deploy-app-stage-url]
