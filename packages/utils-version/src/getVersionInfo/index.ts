@@ -1,6 +1,8 @@
 import { VersionInfo } from '../VersionInfo';
 
-export const getVersionInfo = (): string => {
+type GetVersionInfo = () => string;
+
+export const getVersionInfo: GetVersionInfo = () => {
   if (VersionInfo.tag) {
     return VersionInfo.tag;
   }
