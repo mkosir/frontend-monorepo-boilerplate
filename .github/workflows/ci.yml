@@ -34,6 +34,15 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Time badge
+        uses: RubbaBoy/BYOB@v1.3.0
+        with:
+          NAME: time
+          LABEL: 'Updated at'
+          STATUS: ${{ steps.date.outputs.data }}
+          COLOR: 00EEFF
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
