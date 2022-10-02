@@ -8,17 +8,16 @@
 [![CI][tsc-badge]][tsc-url]
 [![CI][test-badge]][test-url]
 
-App
+Deployments (prod/stage/storybook) - [![GitHub tag](https://img.shields.io/github/tag/mkosir/turborepo-boilerplate?include_prereleases=&sort=semver&color=blue)](https://github.com/mkosir/turborepo-boilerplate/releases/)
+
 [![CI][deploy-app-prod-badge]][deploy-app-prod-url]
 [![CI][deploy-app-stage-badge]][deploy-app-stage-url]
 [![CI][deploy-app-storybook-badge]][deploy-app-storybook-url]
 
-Website
 [![CI][deploy-website-prod-badge]][deploy-website-prod-url]
 [![CI][deploy-website-stage-badge]][deploy-website-stage-url]
 [![CI][deploy-website-storybook-badge]][deploy-website-storybook-url]
 
-UI Shared Library
 [![CI][deploy-ui-prod-badge]][deploy-ui-prod-url]
 [![CI][deploy-ui-stage-badge]][deploy-ui-stage-url]
 
@@ -109,25 +108,25 @@ Monorepo features and conventions:
 
 <!-- Deployments  App -->
 
-[deploy-app-prod-badge]: https://img.shields.io/badge/app--prod-blue?logo=netlify&logoColor=white
+[deploy-app-prod-badge]: https://img.shields.io/badge/app-prod-blue?logo=netlify&logoColor=white
 [deploy-app-prod-url]: https://turbo-app-prod.netlify.app/
-[deploy-app-stage-badge]: https://img.shields.io/badge/app--stage-blue?logo=netlify&logoColor=white
+[deploy-app-stage-badge]: https://img.shields.io/badge/app-stage-blue?logo=netlify&logoColor=white
 [deploy-app-stage-url]: https://turbo-app-stage.netlify.app/
-[deploy-app-storybook-badge]: https://img.shields.io/badge/app--storybook-blue?logo=storybook&logoColor=white
+[deploy-app-storybook-badge]: https://img.shields.io/badge/app-storybook-blue?logo=storybook&logoColor=white
 [deploy-app-storybook-url]: https://turbo-app-storybook.netlify.app/
 
 <!-- Deployments  Website -->
 
-[deploy-website-prod-badge]: https://img.shields.io/badge/website--prod-blue?logo=netlify&logoColor=white
+[deploy-website-prod-badge]: https://img.shields.io/badge/website-prod-blue?logo=netlify&logoColor=white
 [deploy-website-prod-url]: https://turbo-app-prod.netlify.app/
-[deploy-website-stage-badge]: https://img.shields.io/badge/website--stage-blue?logo=netlify&logoColor=white
+[deploy-website-stage-badge]: https://img.shields.io/badge/website-stage-blue?logo=netlify&logoColor=white
 [deploy-website-stage-url]: https://turbo-app-stage.netlify.app/
-[deploy-website-storybook-badge]: https://img.shields.io/badge/website--storybook-blue?logo=storybook&logoColor=white
+[deploy-website-storybook-badge]: https://img.shields.io/badge/website-storybook-blue?logo=storybook&logoColor=white
 [deploy-website-storybook-url]: https://turbo-app-storybook.netlify.app/
 
 <!-- Deployments  UI -->
 
-[deploy-ui-prod-badge]: https://img.shields.io/badge/ui--prod-blue?logo=netlify&logoColor=white
+[deploy-ui-prod-badge]: https://img.shields.io/badge/ui--shared--lib-prod-blue?logo=storybook&logoColor=white
 [deploy-ui-prod-url]: https://turbo-ui-prod.netlify.app/
-[deploy-ui-stage-badge]: https://img.shields.io/badge/ui--stage-blue?logo=netlify&logoColor=white
+[deploy-ui-stage-badge]: https://img.shields.io/badge/ui--shared--lib-stage-blue?logo=storybook&logoColor=white
 [deploy-ui-stage-url]: https://turbo-ui-stage.netlify.app/
