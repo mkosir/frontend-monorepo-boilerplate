@@ -90,7 +90,7 @@ Monorepo features and conventions:
   - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
 - All applications in monorepo are built with Next.js.
-- Every Next.js application is [statically exported](https://nextjs.org/docs/advanced-features/static-html-export).
+- All Next.js applications are [statically exported](https://nextjs.org/docs/advanced-features/static-html-export).
 - Monorepo doesn't include any implementation of micro-frontend architecture, but is prepared with that in mind, so it can be easily extended (adding shared state, page composition etc.)
 
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
