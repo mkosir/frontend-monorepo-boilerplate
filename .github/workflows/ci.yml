@@ -77,7 +77,7 @@ jobs:
         run: npm run lint
 
   tsc:
-    name: tsc 🔎
+    name: TypeScript Compiler 🔎
     needs: build
     runs-on: ubuntu-latest
 
