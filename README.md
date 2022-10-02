@@ -8,7 +8,7 @@
 [![CI][tsc-badge]][tsc-url]
 [![CI][test-badge]][test-url]
 
-Deployments (prod/stage/storybook) - [![GitHub tag](https://img.shields.io/github/tag/mkosir/turborepo-boilerplate?include_prereleases=&sort=semver&color=blue)](https://github.com/mkosir/turborepo-boilerplate/releases/)
+Deployments - prod | stage | storybook
 
 [![CI][deploy-app-prod-badge]][deploy-app-prod-url]
 [![CI][deploy-app-stage-badge]][deploy-app-stage-url]
