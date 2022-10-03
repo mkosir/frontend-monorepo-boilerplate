@@ -1,5 +1,7 @@
 import { colors, createTheme } from '@mui/material';
 
+const customFontFamily = "'Roboto', 'Helvetica', 'Arial', sans-serif";
+
 export const theme = createTheme({
   // Theme
   brand: {
@@ -15,8 +17,6 @@ export const theme = createTheme({
 
   // Typography
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-
     title1: {
       fontSize: 24,
       fontWeight: 700,
@@ -45,6 +45,12 @@ export const theme = createTheme({
 
   // Components
   components: {
+    MuiTypography: {
+      defaultProps: {
+        fontFamily: customFontFamily,
+      },
+    },
+
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
