@@ -15,6 +15,8 @@ export const theme = createTheme({
 
   // Typography
   typography: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+
     title1: {
       fontSize: 24,
       fontWeight: 700,
