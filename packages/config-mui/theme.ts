@@ -17,6 +17,8 @@ export const theme = createTheme({
 
   // Typography
   typography: {
+    fontFamily: customFontFamily,
+
     title1: {
       fontSize: 24,
       fontWeight: 700,
