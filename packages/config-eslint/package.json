@@ -6,13 +6,13 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.38.1",
-    "@typescript-eslint/parser": "5.38.1",
+    "@typescript-eslint/eslint-plugin": "5.39.0",
+    "@typescript-eslint/parser": "5.39.0",
     "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.1",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jest": "27.0.4",
+    "eslint-plugin-jest": "27.1.0",
     "eslint-plugin-jest-dom": "4.0.2",
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-no-array-reduce": "1.0.62",
