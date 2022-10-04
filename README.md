@@ -61,14 +61,14 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | Command             | Description                                                                         |
 | ------------------- | ----------------------------------------------------------------------------------- |
 | prepare             | Setup git hooks with Husky (executes on npm install)                                |
-| build               | Build all apps and packages                                                         |
+| build               | Build all apps and packages (`build-next-static`, `dist`)                           |
 | dev                 | Start all apps                                                                      |
 | lint                | Lint all apps and packages                                                          |
-| lint-stage-husky    | Run lint-staged on every commit                                                     |
+| lint-staged-husky   | Run prettier and lint on staged files                                               |
 | tsc                 | Run TypeScript compiler                                                             |
 | test                | Run tests on all apps and packages                                                  |
 | storybook           | Start storybooks on all apps and packages                                           |
-| storybook-build     | Build all storybooks                                                                |
+| storybook-build     | Build all storybooks (`build-storybook-static`)                                     |
 | format-lint         | Lint formatting with Prettier                                                       |
 | format-fix          | Fix formatting with Prettier                                                        |
 | commit              | Run Commitizen on staged file                                                       |
