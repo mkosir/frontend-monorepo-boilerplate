@@ -23,7 +23,7 @@
     "utils-version": "*"
   },
   "devDependencies": {
-    "chalk": "5.0.1",
+    "chalk": "5.1.0",
     "config-tsconfig": "*",
     "openapi-typescript": "5.4.1",
     "utils-test": "*"
