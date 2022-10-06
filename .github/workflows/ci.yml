@@ -114,13 +114,13 @@ jobs:
   # App
   ##############
   deploy-app-stage:
-    name: Deploy App Stage 🚀
+    name: Deploy App - Stage 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     environment:
-      name: App Stage
+      name: App - Stage
       url: https://turbo-app-stage.netlify.app
 
     steps:
@@ -138,13 +138,13 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_APP }}
 
   deploy-app-storybook:
-    name: Deploy App Storybook 🚀
+    name: Deploy App - Storybook 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     environment:
-      name: App Storybook
+      name: App - Storybook
       url: https://turbo-app-storybook.netlify.app
 
     steps:
@@ -162,13 +162,13 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BOILERPLATE_APP_STORYBOOK }}
 
   deploy-app-prod:
-    name: Deploy App Production 🚀
+    name: Deploy App - Production 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
     environment:
-      name: App Prod
+      name: App - Prod
       url: https://turbo-app-prod.netlify.app/
 
     steps:
@@ -190,13 +190,13 @@ jobs:
   ##############
 
   deploy-website-stage:
-    name: Deploy Website Stage 🚀
+    name: Deploy Website - Stage 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     environment:
-      name: Website Stage
+      name: Website - Stage
       url: https://turbo-website-stage.netlify.app
 
     steps:
@@ -214,13 +214,13 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_BOILERPLATE_WEBSITE }}
 
   deploy-website-storybook:
-    name: Deploy Website Storybook 🚀
+    name: Deploy Website - Storybook 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     environment:
-      name: Website Storybook
+      name: Website - Storybook
       url: https://turbo-website-storybook.netlify.app
 
     steps:
@@ -238,13 +238,13 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BOILERPLATE_WEBSITE_STORYBOOK }}
 
   deploy-website-prod:
-    name: Deploy Website Production 🚀
+    name: Deploy Website - Production 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
     environment:
-      name: Website Prod
+      name: Website - Prod
       url: https://turbo-Website-prod.netlify.app/
 
     steps:
@@ -266,13 +266,13 @@ jobs:
   ##############
 
   deploy-ui-stage:
-    name: Deploy UI Stage 🚀
+    name: Deploy UI - Stage 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     environment:
-      name: UI Stage
+      name: UI - Stage
       url: https://turbo-ui-stage.netlify.app
 
     steps:
@@ -290,13 +290,13 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_STAGE_UI }}
 
   deploy-ui-prod:
-    name: Deploy UI Prod 🚀
+    name: Deploy UI - Prod 🚀
     needs: [build, lint, tsc, test]
     runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
 
     environment:
-      name: UI Prod
+      name: UI - Prod
       url: https://turbo-ui-prod.netlify.app
 
     steps:
