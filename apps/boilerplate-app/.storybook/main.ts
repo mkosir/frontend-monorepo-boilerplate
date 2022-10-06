@@ -5,6 +5,7 @@ import { StorybookConfig } from '@storybook/core-common';
 const storybookConfig: StorybookConfig = {
   stories: ['../src/**/*.stories.tsx'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  staticDirs: ['../public'],
   typescript: { reactDocgen: 'react-docgen' },
   core: {
     builder: 'webpack5',
