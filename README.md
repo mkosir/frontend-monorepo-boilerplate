@@ -30,7 +30,7 @@ Opinionated frontend monorepo with focus on best practices and painless develope
 
 ## Requirements
 
-- [Node v18+](https://nodeSjs.org/)
+- [Node v18+](https://nodejs.org/)
 
 ## Running
 
