@@ -17,7 +17,7 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "start-storybook -p 6200",
+    "storybook": "start-storybook -p 6200 --quiet",
     "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u"
   },

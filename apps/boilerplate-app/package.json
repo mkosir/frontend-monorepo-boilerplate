@@ -10,7 +10,7 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "start-storybook -p 6100",
+    "storybook": "start-storybook -p 6100 --quiet",
     "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u",
     "api-generate-petstore": "ts-node-esm -P tsconfig.esm.json ./src/common/api/petstore/generate/index.mts"
