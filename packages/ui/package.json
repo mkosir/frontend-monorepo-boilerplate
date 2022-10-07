@@ -27,7 +27,8 @@
     "utils-version": "*"
   },
   "devDependencies": {
-    "utils-test": "*",
-    "config-tsconfig": "*"
+    "config-storybook": "*",
+    "config-tsconfig": "*",
+    "utils-test": "*"
   }
 }
