@@ -1,18 +1,9 @@
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { Story } from '@storybook/react';
 import { theme } from 'config-mui';
+import { baseParameters } from 'config-storybook';
 
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    // Description toggle
-    // expanded: true,
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-};
+export const parameters = baseParameters;
 
 const withThemeDecorator = (Story: Story) => (
   <ThemeProvider theme={theme}>
