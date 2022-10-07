@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "chalk": "5.1.0",
+    "config-storybook": "*",
     "config-tsconfig": "*",
     "openapi-typescript": "5.4.1",
     "utils-test": "*"

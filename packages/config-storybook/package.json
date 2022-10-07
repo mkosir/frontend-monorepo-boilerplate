@@ -1,0 +1,11 @@
+{
+  "name": "config-storybook",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "update-dependencies": "npx npm-check-updates -u"
+  },
+  "dependencies": {
+    "config-mui": "*"
+  }
+}
