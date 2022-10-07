@@ -19,7 +19,7 @@
       "dependsOn": ["build"]
     },
     "storybook": {
-      "cache": false
+      "dependsOn": ["build"]
     },
     "dev": {
       "cache": false
