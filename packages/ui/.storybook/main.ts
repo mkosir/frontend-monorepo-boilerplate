@@ -6,7 +6,7 @@ const storybookConfig: StorybookConfig = {
   stories: ['../src/**/*.stories.tsx'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   staticDirs: ['../public'],
-  typescript: { reactDocgen: 'react-docgen' },
+  typescript: { reactDocgen: 'react-docgen-typescript' },
   core: {
     builder: 'webpack5',
   },

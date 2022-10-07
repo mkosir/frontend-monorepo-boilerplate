@@ -1,10 +1,12 @@
-import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import { Story } from '@storybook/react';
 import { theme } from 'config-mui';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
+    // Description toggle
+    // expanded: true,
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
@@ -12,10 +14,11 @@ export const parameters = {
   },
 };
 
-const withTheme = (Story: Story) => (
-  <MUIThemeProvider theme={theme}>
+const withThemeDecorator = (Story: Story) => (
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
     <Story />
-  </MUIThemeProvider>
+  </ThemeProvider>
 );
 
-export const decorators = [withTheme];
+export const decorators = [withThemeDecorator];

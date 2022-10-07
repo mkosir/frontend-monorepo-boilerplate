@@ -14,11 +14,11 @@ export const parameters = {
   },
 };
 
-const withTheme = (Story: Story) => (
+const withThemeDecorator = (Story: Story) => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <Story />
   </ThemeProvider>
 );
 
-export const decorators = [withTheme];
+export const decorators = [withThemeDecorator];
