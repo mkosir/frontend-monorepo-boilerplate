@@ -110,7 +110,7 @@ const useGetUsers: UseGeUsers = ({ country, isActive }) =>
 ## Naming
 
 Strive to keep naming conventions consistent and readable, because another person will maintain the code you have written.  
-There is no convention on cache invalidation, but for naming bellow conventions should be followed:
+There is no convention on cache invalidation, but for the second hardest thing, bellow conventions should be followed:
 
 - React components - Pascal case (`ProductItem`, `ProductsPage`)
 - Prop Types - component name with "Props" postfix `[ComponentName]Props` - Pascal case (`ProductItemProps`, `ProductsPageProps`)
