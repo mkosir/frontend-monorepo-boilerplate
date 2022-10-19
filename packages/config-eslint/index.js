@@ -94,6 +94,11 @@ module.exports = {
 
   settings: {
     typescript: {},
+    'import/resolver': {
+      typescript: {
+        project: ['apps/*/tsconfig.json', 'packages/*/tsconfig.json'],
+      },
+    },
     react: {
       version: 'detect',
     },
