@@ -3,7 +3,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
 
-  plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
+  plugins: ['@typescript-eslint', 'testing-library', '@tanstack/query', 'jest-dom', 'jest', 'import'],
 
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -14,6 +14,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     'plugin:no-array-reduce/recommended',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
