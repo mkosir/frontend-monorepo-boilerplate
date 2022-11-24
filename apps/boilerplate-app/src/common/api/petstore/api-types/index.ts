@@ -135,7 +135,7 @@ export type components = {
        */
       readonly quantity?: number;
       /** Format: date-time */
-      readonly shipDate?: string;
+      readonly shipDate?: PetDate;
       /**
        * @description Order Status
        * @example approved
@@ -581,7 +581,7 @@ export type operations = {
           /** @description calls per hour allowed by the user */
           readonly 'X-Rate-Limit'?: number;
           /** @description date in UTC when token expires */
-          readonly 'X-Expires-After'?: string;
+          readonly 'X-Expires-After'?: PetDate;
         };
         content: {
           readonly 'application/xml': string;
