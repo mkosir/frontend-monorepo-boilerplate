@@ -7,13 +7,14 @@
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
+    "format-fix": "prettier --config ../../.prettierrc --write --ignore-unknown -l .",
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
     "storybook": "start-storybook -p 6100 --quiet",
     "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u",
-    "api-generate-petstore": "ts-node-esm -P tsconfig.esm.json ./src/common/api/petstore/generate/index.mts"
+    "api-generate-petstore": "ts-node-esm -P tsconfig.esm.json ./src/common/api/petstore/generate/index.mts && npm run format-fix"
   },
   "dependencies": {
     "config-mui": "*",

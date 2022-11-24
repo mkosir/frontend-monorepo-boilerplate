@@ -9,68 +9,115 @@ type PetMonth = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type PetDate = `Y${number}-M${PetMonth}}`;
 
 export type paths = {
-  readonly '/pet': {
-    /** Update an existing pet by Id */
-    readonly put: operations['updatePet'];
-    /** Add a new pet to the store */
-    readonly post: operations['addPet'];
+  '/pet': {
+    /**
+     * Update an existing pet
+     * @description Update an existing pet by Id
+     */
+    put: operations['updatePet'];
+    /**
+     * Add a new pet to the store
+     * @description Add a new pet to the store
+     */
+    post: operations['addPet'];
   };
-  readonly '/pet/findByStatus': {
-    /** Multiple status values can be provided with comma separated strings */
-    readonly get: operations['findPetsByStatus'];
+  '/pet/findByStatus': {
+    /**
+     * Finds Pets by status
+     * @description Multiple status values can be provided with comma separated strings
+     */
+    get: operations['findPetsByStatus'];
   };
-  readonly '/pet/findByTags': {
-    /** Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing. */
-    readonly get: operations['findPetsByTags'];
+  '/pet/findByTags': {
+    /**
+     * Finds Pets by tags
+     * @description Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+     */
+    get: operations['findPetsByTags'];
   };
-  readonly '/pet/{petId}': {
-    /** Returns a single pet */
-    readonly get: operations['getPetById'];
-    readonly post: operations['updatePetWithForm'];
-    readonly delete: operations['deletePet'];
+  '/pet/{petId}': {
+    /**
+     * Find pet by ID
+     * @description Returns a single pet
+     */
+    get: operations['getPetById'];
+    /** Updates a pet in the store with form data */
+    post: operations['updatePetWithForm'];
+    /** Deletes a pet */
+    delete: operations['deletePet'];
   };
-  readonly '/pet/{petId}/uploadImage': {
-    readonly post: operations['uploadFile'];
+  '/pet/{petId}/uploadImage': {
+    /** uploads an image */
+    post: operations['uploadFile'];
   };
-  readonly '/store/inventory': {
-    /** Returns a map of status codes to quantities */
-    readonly get: operations['getInventory'];
+  '/store/inventory': {
+    /**
+     * Returns pet inventories by status
+     * @description Returns a map of status codes to quantities
+     */
+    get: operations['getInventory'];
   };
-  readonly '/store/order': {
-    /** Place a new order in the store */
-    readonly post: operations['placeOrder'];
+  '/store/order': {
+    /**
+     * Place an order for a pet
+     * @description Place a new order in the store
+     */
+    post: operations['placeOrder'];
   };
-  readonly '/store/order/{orderId}': {
-    /** For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions. */
-    readonly get: operations['getOrderById'];
-    /** For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors */
-    readonly delete: operations['deleteOrder'];
+  '/store/order/{orderId}': {
+    /**
+     * Find purchase order by ID
+     * @description For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+     */
+    get: operations['getOrderById'];
+    /**
+     * Delete purchase order by ID
+     * @description For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
+     */
+    delete: operations['deleteOrder'];
   };
-  readonly '/user': {
-    /** This can only be done by the logged in user. */
-    readonly post: operations['createUser'];
+  '/user': {
+    /**
+     * Create user
+     * @description This can only be done by the logged in user.
+     */
+    post: operations['createUser'];
   };
-  readonly '/user/createWithList': {
-    /** Creates list of users with given input array */
-    readonly post: operations['createUsersWithListInput'];
+  '/user/createWithList': {
+    /**
+     * Creates list of users with given input array
+     * @description Creates list of users with given input array
+     */
+    post: operations['createUsersWithListInput'];
   };
-  readonly '/user/login': {
-    readonly get: operations['loginUser'];
+  '/user/login': {
+    /** Logs user into the system */
+    get: operations['loginUser'];
   };
-  readonly '/user/logout': {
-    readonly get: operations['logoutUser'];
+  '/user/logout': {
+    /** Logs out current logged in user session */
+    get: operations['logoutUser'];
   };
-  readonly '/user/{username}': {
-    readonly get: operations['getUserByName'];
-    /** This can only be done by the logged in user. */
-    readonly put: operations['updateUser'];
-    /** This can only be done by the logged in user. */
-    readonly delete: operations['deleteUser'];
+  '/user/{username}': {
+    /** Get user by user name */
+    get: operations['getUserByName'];
+    /**
+     * Update user
+     * @description This can only be done by the logged in user.
+     */
+    put: operations['updateUser'];
+    /**
+     * Delete user
+     * @description This can only be done by the logged in user.
+     */
+    delete: operations['deleteUser'];
   };
 };
 
+export type webhooks = Record<string, never>;
+
 export type components = {
-  readonly schemas: {
+  schemas: {
     readonly Order: {
       /**
        * Format: int64
@@ -88,7 +135,7 @@ export type components = {
        */
       readonly quantity?: number;
       /** Format: date-time */
-      readonly shipDate?: PetDate;
+      readonly shipDate?: string;
       /**
        * @description Order Status
        * @example approved
@@ -180,42 +227,36 @@ export type components = {
       readonly message?: string;
     };
   };
-  readonly requestBodies: {
-    /** Pet object that needs to be added to the store */
-    Pet: {
+  responses: never;
+  parameters: never;
+  requestBodies: {
+    /** @description Pet object that needs to be added to the store */
+    readonly Pet?: {
       readonly content: {
         readonly 'application/json': components['schemas']['Pet'];
         readonly 'application/xml': components['schemas']['Pet'];
       };
     };
-    /** List of user object */
-    UserArray: {
+    /** @description List of user object */
+    readonly UserArray?: {
       readonly content: {
         readonly 'application/json': readonly components['schemas']['User'][];
       };
     };
   };
+  headers: never;
+  pathItems: never;
 };
 
+export type external = Record<string, never>;
+
 export type operations = {
-  /** Update an existing pet by Id */
-  readonly updatePet: {
-    readonly responses: {
-      /** Successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/xml': components['schemas']['Pet'];
-          readonly 'application/json': components['schemas']['Pet'];
-        };
-      };
-      /** Invalid ID supplied */
-      readonly 400: unknown;
-      /** Pet not found */
-      readonly 404: unknown;
-      /** Validation exception */
-      readonly 405: unknown;
-    };
-    /** Update an existent pet in the store */
+  updatePet: {
+    /**
+     * Update an existing pet
+     * @description Update an existing pet by Id
+     */
+    /** @description Update an existent pet in the store */
     readonly requestBody: {
       readonly content: {
         readonly 'application/json': components['schemas']['Pet'];
@@ -223,21 +264,28 @@ export type operations = {
         readonly 'application/x-www-form-urlencoded': components['schemas']['Pet'];
       };
     };
-  };
-  /** Add a new pet to the store */
-  readonly addPet: {
-    readonly responses: {
-      /** Successful operation */
-      readonly 200: {
-        readonly content: {
+    responses: {
+      /** @description Successful operation */
+      200: {
+        content: {
           readonly 'application/xml': components['schemas']['Pet'];
           readonly 'application/json': components['schemas']['Pet'];
         };
       };
-      /** Invalid input */
-      readonly 405: unknown;
+      /** @description Invalid ID supplied */
+      400: never;
+      /** @description Pet not found */
+      404: never;
+      /** @description Validation exception */
+      405: never;
     };
-    /** Create a new pet in the store */
+  };
+  addPet: {
+    /**
+     * Add a new pet to the store
+     * @description Add a new pet to the store
+     */
+    /** @description Create a new pet in the store */
     readonly requestBody: {
       readonly content: {
         readonly 'application/json': components['schemas']['Pet'];
@@ -245,325 +293,374 @@ export type operations = {
         readonly 'application/x-www-form-urlencoded': components['schemas']['Pet'];
       };
     };
-  };
-  /** Multiple status values can be provided with comma separated strings */
-  readonly findPetsByStatus: {
-    readonly parameters: {
-      readonly query: {
-        /** Status values that need to be considered for filter */
-        readonly status?: 'available' | 'pending' | 'sold';
-      };
-    };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/xml': readonly components['schemas']['Pet'][];
-          readonly 'application/json': readonly components['schemas']['Pet'][];
-        };
-      };
-      /** Invalid status value */
-      readonly 400: unknown;
-    };
-  };
-  /** Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing. */
-  readonly findPetsByTags: {
-    readonly parameters: {
-      readonly query: {
-        /** Tags to filter by */
-        readonly tags?: readonly string[];
-      };
-    };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/xml': readonly components['schemas']['Pet'][];
-          readonly 'application/json': readonly components['schemas']['Pet'][];
-        };
-      };
-      /** Invalid tag value */
-      readonly 400: unknown;
-    };
-  };
-  /** Returns a single pet */
-  readonly getPetById: {
-    readonly parameters: {
-      readonly path: {
-        /** ID of pet to return */
-        readonly petId: number;
-      };
-    };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
+    responses: {
+      /** @description Successful operation */
+      200: {
+        content: {
           readonly 'application/xml': components['schemas']['Pet'];
           readonly 'application/json': components['schemas']['Pet'];
         };
       };
-      /** Invalid ID supplied */
-      readonly 400: unknown;
-      /** Pet not found */
-      readonly 404: unknown;
+      /** @description Invalid input */
+      405: never;
     };
   };
-  readonly updatePetWithForm: {
-    readonly parameters: {
-      readonly path: {
-        /** ID of pet that needs to be updated */
-        readonly petId: number;
-      };
-      readonly query: {
-        /** Name of pet that needs to be updated */
-        readonly name?: string;
-        /** Status of pet that needs to be updated */
-        readonly status?: string;
+  findPetsByStatus: {
+    /**
+     * Finds Pets by status
+     * @description Multiple status values can be provided with comma separated strings
+     */
+    parameters?: {
+      /** @description Status values that need to be considered for filter */
+      readonly query?: {
+        status?: 'available' | 'pending' | 'sold';
       };
     };
-    readonly responses: {
-      /** Invalid input */
-      readonly 405: unknown;
-    };
-  };
-  readonly deletePet: {
-    readonly parameters: {
-      readonly header: {
-        readonly api_key?: string;
-      };
-      readonly path: {
-        /** Pet id to delete */
-        readonly petId: number;
-      };
-    };
-    readonly responses: {
-      /** Invalid pet value */
-      readonly 400: unknown;
-    };
-  };
-  readonly uploadFile: {
-    readonly parameters: {
-      readonly path: {
-        /** ID of pet to update */
-        readonly petId: number;
-      };
-      readonly query: {
-        /** Additional Metadata */
-        readonly additionalMetadata?: string;
-      };
-    };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/json': components['schemas']['ApiResponse'];
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/xml': readonly components['schemas']['Pet'][];
+          readonly 'application/json': readonly components['schemas']['Pet'][];
         };
       };
+      /** @description Invalid status value */
+      400: never;
     };
-    readonly requestBody: {
+  };
+  findPetsByTags: {
+    /**
+     * Finds Pets by tags
+     * @description Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+     */
+    parameters?: {
+      /** @description Tags to filter by */
+      readonly query?: {
+        tags?: readonly string[];
+      };
+    };
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/xml': readonly components['schemas']['Pet'][];
+          readonly 'application/json': readonly components['schemas']['Pet'][];
+        };
+      };
+      /** @description Invalid tag value */
+      400: never;
+    };
+  };
+  getPetById: {
+    /**
+     * Find pet by ID
+     * @description Returns a single pet
+     */
+    parameters: {
+      /** @description ID of pet to return */
+      readonly path: {
+        petId: number;
+      };
+    };
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/xml': components['schemas']['Pet'];
+          readonly 'application/json': components['schemas']['Pet'];
+        };
+      };
+      /** @description Invalid ID supplied */
+      400: never;
+      /** @description Pet not found */
+      404: never;
+    };
+  };
+  updatePetWithForm: {
+    /** Updates a pet in the store with form data */
+    parameters: {
+      /** @description Name of pet that needs to be updated */
+      /** @description Status of pet that needs to be updated */
+      readonly query?: {
+        name?: string;
+        status?: string;
+      };
+      /** @description ID of pet that needs to be updated */
+      readonly path: {
+        petId: number;
+      };
+    };
+    responses: {
+      /** @description Invalid input */
+      405: never;
+    };
+  };
+  deletePet: {
+    /** Deletes a pet */
+    parameters: {
+      readonly header?: {
+        api_key?: string;
+      };
+      /** @description Pet id to delete */
+      readonly path: {
+        petId: number;
+      };
+    };
+    responses: {
+      /** @description Invalid pet value */
+      400: never;
+    };
+  };
+  uploadFile: {
+    /** uploads an image */
+    parameters: {
+      /** @description Additional Metadata */
+      readonly query?: {
+        additionalMetadata?: string;
+      };
+      /** @description ID of pet to update */
+      readonly path: {
+        petId: number;
+      };
+    };
+    readonly requestBody?: {
       readonly content: {
         readonly 'application/octet-stream': string;
       };
     };
-  };
-  /** Returns a map of status codes to quantities */
-  readonly getInventory: {
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/json': { readonly [key: string]: number };
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/json': components['schemas']['ApiResponse'];
         };
       };
     };
   };
-  /** Place a new order in the store */
-  readonly placeOrder: {
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/json': components['schemas']['Order'];
+  getInventory: {
+    /**
+     * Returns pet inventories by status
+     * @description Returns a map of status codes to quantities
+     */
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/json': {
+            [key: string]: number | undefined;
+          };
         };
       };
-      /** Invalid input */
-      readonly 405: unknown;
     };
-    readonly requestBody: {
+  };
+  placeOrder: {
+    /**
+     * Place an order for a pet
+     * @description Place a new order in the store
+     */
+    readonly requestBody?: {
       readonly content: {
         readonly 'application/json': components['schemas']['Order'];
         readonly 'application/xml': components['schemas']['Order'];
         readonly 'application/x-www-form-urlencoded': components['schemas']['Order'];
       };
     };
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/json': components['schemas']['Order'];
+        };
+      };
+      /** @description Invalid input */
+      405: never;
+    };
   };
-  /** For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions. */
-  readonly getOrderById: {
-    readonly parameters: {
+  getOrderById: {
+    /**
+     * Find purchase order by ID
+     * @description For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+     */
+    parameters: {
+      /** @description ID of order that needs to be fetched */
       readonly path: {
-        /** ID of order that needs to be fetched */
-        readonly orderId: number;
+        orderId: number;
       };
     };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
           readonly 'application/xml': components['schemas']['Order'];
           readonly 'application/json': components['schemas']['Order'];
         };
       };
-      /** Invalid ID supplied */
-      readonly 400: unknown;
-      /** Order not found */
-      readonly 404: unknown;
+      /** @description Invalid ID supplied */
+      400: never;
+      /** @description Order not found */
+      404: never;
     };
   };
-  /** For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors */
-  readonly deleteOrder: {
-    readonly parameters: {
+  deleteOrder: {
+    /**
+     * Delete purchase order by ID
+     * @description For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
+     */
+    parameters: {
+      /** @description ID of the order that needs to be deleted */
       readonly path: {
-        /** ID of the order that needs to be deleted */
-        readonly orderId: number;
+        orderId: number;
       };
     };
-    readonly responses: {
-      /** Invalid ID supplied */
-      readonly 400: unknown;
-      /** Order not found */
-      readonly 404: unknown;
+    responses: {
+      /** @description Invalid ID supplied */
+      400: never;
+      /** @description Order not found */
+      404: never;
     };
   };
-  /** This can only be done by the logged in user. */
-  readonly createUser: {
-    readonly responses: {
-      /** successful operation */
-      readonly default: {
-        readonly content: {
-          readonly 'application/json': components['schemas']['User'];
-          readonly 'application/xml': components['schemas']['User'];
-        };
-      };
-    };
-    /** Created user object */
-    readonly requestBody: {
+  createUser: {
+    /**
+     * Create user
+     * @description This can only be done by the logged in user.
+     */
+    /** @description Created user object */
+    readonly requestBody?: {
       readonly content: {
         readonly 'application/json': components['schemas']['User'];
         readonly 'application/xml': components['schemas']['User'];
         readonly 'application/x-www-form-urlencoded': components['schemas']['User'];
       };
     };
-  };
-  /** Creates list of users with given input array */
-  readonly createUsersWithListInput: {
-    readonly responses: {
-      /** Successful operation */
-      readonly 200: {
-        readonly content: {
-          readonly 'application/xml': components['schemas']['User'];
+    responses: {
+      /** @description successful operation */
+      default: {
+        content: {
           readonly 'application/json': components['schemas']['User'];
+          readonly 'application/xml': components['schemas']['User'];
         };
       };
-      /** successful operation */
-      readonly default: unknown;
     };
-    readonly requestBody: {
+  };
+  createUsersWithListInput: {
+    /**
+     * Creates list of users with given input array
+     * @description Creates list of users with given input array
+     */
+    readonly requestBody?: {
       readonly content: {
         readonly 'application/json': readonly components['schemas']['User'][];
       };
     };
-  };
-  readonly loginUser: {
-    readonly parameters: {
-      readonly query: {
-        /** The user name for login */
-        readonly username?: string;
-        /** The password for login in clear text */
-        readonly password?: string;
-      };
-    };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly headers: {
-          /** calls per hour allowed by the user */
-          readonly 'X-Rate-Limit'?: number;
-          /** date in UTC when token expires */
-          readonly 'X-Expires-After'?: PetDate;
-        };
-        readonly content: {
-          readonly 'application/xml': string;
-          readonly 'application/json': string;
-        };
-      };
-      /** Invalid username/password supplied */
-      readonly 400: unknown;
-    };
-  };
-  readonly logoutUser: {
-    readonly parameters: {};
-    readonly responses: {
-      /** successful operation */
-      readonly default: unknown;
-    };
-  };
-  readonly getUserByName: {
-    readonly parameters: {
-      readonly path: {
-        /** The name that needs to be fetched. Use user1 for testing. */
-        readonly username: string;
-      };
-    };
-    readonly responses: {
-      /** successful operation */
-      readonly 200: {
-        readonly content: {
+    responses: {
+      /** @description Successful operation */
+      200: {
+        content: {
           readonly 'application/xml': components['schemas']['User'];
           readonly 'application/json': components['schemas']['User'];
         };
       };
-      /** Invalid username supplied */
-      readonly 400: unknown;
-      /** User not found */
-      readonly 404: unknown;
+      /** @description successful operation */
+      default: never;
     };
   };
-  /** This can only be done by the logged in user. */
-  readonly updateUser: {
-    readonly parameters: {
-      readonly path: {
-        /** name that need to be deleted */
-        readonly username: string;
+  loginUser: {
+    /** Logs user into the system */
+    parameters?: {
+      /** @description The user name for login */
+      /** @description The password for login in clear text */
+      readonly query?: {
+        username?: string;
+        password?: string;
       };
     };
-    readonly responses: {
-      /** successful operation */
-      readonly default: unknown;
+    responses: {
+      /** @description successful operation */
+      200: {
+        headers: {
+          /** @description calls per hour allowed by the user */
+          readonly 'X-Rate-Limit'?: number;
+          /** @description date in UTC when token expires */
+          readonly 'X-Expires-After'?: string;
+        };
+        content: {
+          readonly 'application/xml': string;
+          readonly 'application/json': string;
+        };
+      };
+      /** @description Invalid username/password supplied */
+      400: never;
     };
-    /** Update an existent user in the store */
-    readonly requestBody: {
+  };
+  logoutUser: {
+    /** Logs out current logged in user session */
+    responses: {
+      /** @description successful operation */
+      default: never;
+    };
+  };
+  getUserByName: {
+    /** Get user by user name */
+    parameters: {
+      /** @description The name that needs to be fetched. Use user1 for testing. */
+      readonly path: {
+        username: string;
+      };
+    };
+    responses: {
+      /** @description successful operation */
+      200: {
+        content: {
+          readonly 'application/xml': components['schemas']['User'];
+          readonly 'application/json': components['schemas']['User'];
+        };
+      };
+      /** @description Invalid username supplied */
+      400: never;
+      /** @description User not found */
+      404: never;
+    };
+  };
+  updateUser: {
+    /**
+     * Update user
+     * @description This can only be done by the logged in user.
+     */
+    parameters: {
+      /** @description name that need to be deleted */
+      readonly path: {
+        username: string;
+      };
+    };
+    /** @description Update an existent user in the store */
+    readonly requestBody?: {
       readonly content: {
         readonly 'application/json': components['schemas']['User'];
         readonly 'application/xml': components['schemas']['User'];
         readonly 'application/x-www-form-urlencoded': components['schemas']['User'];
       };
     };
+    responses: {
+      /** @description successful operation */
+      default: never;
+    };
   };
-  /** This can only be done by the logged in user. */
-  readonly deleteUser: {
-    readonly parameters: {
+  deleteUser: {
+    /**
+     * Delete user
+     * @description This can only be done by the logged in user.
+     */
+    parameters: {
+      /** @description The name that needs to be deleted */
       readonly path: {
-        /** The name that needs to be deleted */
-        readonly username: string;
+        username: string;
       };
     };
-    readonly responses: {
-      /** Invalid username supplied */
-      readonly 400: unknown;
-      /** User not found */
-      readonly 404: unknown;
+    responses: {
+      /** @description Invalid username supplied */
+      400: never;
+      /** @description User not found */
+      404: never;
     };
   };
 };
-
-export type external = {};
