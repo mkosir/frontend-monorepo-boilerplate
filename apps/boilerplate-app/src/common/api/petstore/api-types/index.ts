@@ -223,8 +223,8 @@ export type components = {
     readonly ApiResponse: {
       /** Format: int32 */
       readonly code?: number;
-      readonly type?: string;
-      readonly message?: string;
+      readonly type?: 'custom-string';
+      readonly message?: 'custom-string';
     };
   };
   responses: never;
