@@ -28,13 +28,13 @@
     "@emotion/styled": "11.10.5",
     "@mui/icons-material": "5.10.15",
     "@mui/material": "5.10.15",
-    "@tanstack/react-query": "4.16.1",
+    "@tanstack/react-query": "4.18.0",
     "axios": "1.2.0",
     "date-fns": "2.29.3",
     "next": "13.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.39.5"
+    "react-hook-form": "7.39.7"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
