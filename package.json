@@ -26,15 +26,15 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@mui/icons-material": "5.10.15",
-    "@mui/material": "5.10.15",
+    "@mui/icons-material": "5.10.16",
+    "@mui/material": "5.10.16",
     "@tanstack/react-query": "4.18.0",
     "axios": "1.2.0",
     "date-fns": "2.29.3",
     "next": "13.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.39.7"
+    "react-hook-form": "7.40.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
