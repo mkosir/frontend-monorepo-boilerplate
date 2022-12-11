@@ -18,13 +18,13 @@
   },
   "dependencies": {
     "config-mui": "*",
-    "react-parallax-tilt": "1.7.72",
+    "react-parallax-tilt": "1.7.76",
     "ui": "*",
     "utils-mui": "*",
     "utils-version": "*"
   },
   "devDependencies": {
-    "chalk": "5.1.2",
+    "chalk": "5.2.0",
     "config-storybook": "*",
     "config-tsconfig": "*",
     "openapi-typescript": "6.1.0",
