@@ -26,15 +26,15 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@mui/icons-material": "5.10.16",
-    "@mui/material": "5.10.17",
-    "@tanstack/react-query": "4.19.1",
+    "@mui/icons-material": "5.11.0",
+    "@mui/material": "5.11.0",
+    "@tanstack/react-query": "4.20.4",
     "axios": "1.2.1",
     "date-fns": "2.29.3",
-    "next": "13.0.6",
+    "next": "13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.40.0"
+    "react-hook-form": "7.41.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
@@ -52,7 +52,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",
-    "@types/node": "18.11.13",
+    "@types/node": "18.11.17",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
     "commitizen": "4.2.6",
