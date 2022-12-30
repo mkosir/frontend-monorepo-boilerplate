@@ -6,9 +6,9 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "@tanstack/eslint-plugin-query": "4.20.2",
-    "@typescript-eslint/eslint-plugin": "5.46.1",
-    "@typescript-eslint/parser": "5.46.1",
+    "@tanstack/eslint-plugin-query": "4.20.8",
+    "@typescript-eslint/eslint-plugin": "5.47.1",
+    "@typescript-eslint/parser": "5.47.1",
     "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.2",
