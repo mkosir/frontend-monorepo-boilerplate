@@ -24,8 +24,8 @@
     "update-dependencies": "turbo update-dependencies && npx npm-check-updates -u"
   },
   "dependencies": {
-    "@emotion/react": "11.10.5",
-    "@emotion/styled": "11.10.5",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
     "@hookform/resolvers": "2.9.11",
     "@mui/icons-material": "5.11.9",
     "@mui/material": "5.11.9",
@@ -51,9 +51,9 @@
     "@storybook/manager-webpack5": "6.5.16",
     "@storybook/react": "6.5.16",
     "@storybook/theming": "6.5.16",
-    "@testing-library/dom": "8.20.0",
+    "@testing-library/dom": "9.0.0",
     "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "13.4.0",
+    "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
@@ -72,6 +72,6 @@
   },
   "engines": {
     "npm": ">=9.3.1",
-    "node": ">=18.14.0"
+    "node": ">=18.14.1"
   }
 }
