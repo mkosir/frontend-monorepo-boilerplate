@@ -37,6 +37,7 @@ Opinionated frontend monorepo with focus on best practices and painless develope
 _Easily set up a local development environment_
 
 - `npm install`
+- `npm run build`
 - `npm run dev` - Start all NextJs apps 🚀
 
 Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
