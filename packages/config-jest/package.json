@@ -6,7 +6,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "@types/jest": "29.4.1",
+    "@types/jest": "29.4.2",
     "jest": "29.5.0",
     "jest-config": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
