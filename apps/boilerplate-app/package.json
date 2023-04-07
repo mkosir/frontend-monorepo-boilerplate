@@ -2,7 +2,7 @@
   "name": "boilerplate-app",
   "version": "0.0.0",
   "scripts": {
-    "build": "next build && next export -o build-next-static",
+    "build": "next build",
     "dev": "open http://localhost:3100 && next dev --port 3100",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",

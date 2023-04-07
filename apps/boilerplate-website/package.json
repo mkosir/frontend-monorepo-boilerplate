@@ -2,7 +2,7 @@
   "name": "boilerplate-website",
   "version": "0.0.0",
   "scripts": {
-    "build": "next build && next export -o build-next-static",
+    "build": "next build",
     "dev": "next dev --port 3101",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
