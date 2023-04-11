@@ -1,31 +1,25 @@
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { Version, VersionProps } from '.';
+import { Version } from '.';
 
 export default {
   component: Version,
   title: 'Version',
-} as Meta;
+} satisfies Meta<typeof Version>;
 
-const base: VersionProps = {
-  version: 'v1.0.18',
+type Story = StoryObj<typeof Version>;
+
+export const Production: Story = {
+  args: { version: 'v1.0.18' },
+  name: 'Production (git tag)',
 };
 
-const Template: Story<VersionProps> = (args) => <Version {...base} {...args} />;
-
-export const Production = Template.bind({});
-Production.args = base;
-Production.storyName = 'Production (tag)';
-
-export const Stage = Template.bind({});
-const StageArgs: VersionProps = {
-  version: 'Main [f076db8]',
+export const Stage: Story = {
+  args: { version: 'Main [f076db8]' },
+  name: 'Stage (git branch & commit)',
 };
-Stage.args = StageArgs;
-Stage.storyName = 'Stage (branch & commit)';
 
-export const LocalDev = Template.bind({});
-const LocalArgs: VersionProps = {
-  version: 'Local build',
+export const Local: Story = {
+  args: { version: 'Local build' },
+  name: 'Local development',
 };
-LocalDev.args = LocalArgs;

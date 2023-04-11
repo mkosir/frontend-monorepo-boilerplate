@@ -1,14 +1,9 @@
 import { action } from '@storybook/addon-actions';
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, ButtonProps } from '.';
 
-export default {
-  component: Button,
-  title: 'Button',
-} as Meta;
-
-const base: ButtonProps = {
+const baseArgs: ButtonProps = {
   children: 'Click Me',
   isDisabled: false,
   size: 'medium',
@@ -16,28 +11,24 @@ const base: ButtonProps = {
   onClick: action('onClick'),
 };
 
-const Template: Story<ButtonProps> = (args) => <Button {...base} {...args} />;
+export default {
+  component: Button,
+  args: baseArgs,
+  title: 'Button',
+} satisfies Meta<typeof Button>;
 
-export const Default = Template.bind({});
-Default.args = base;
+type Story = StoryObj<typeof Button>;
 
-export const LongText = Template.bind({});
-const LongTextArgs: ButtonProps = {
-  ...base,
-  children: 'Really Looooong Text',
+export const Default: Story = {};
+
+export const LongText: Story = {
+  args: { children: 'Really Looooong Text' },
 };
-LongText.args = LongTextArgs;
 
-export const Disabled = Template.bind({});
-const DisabledArgs: ButtonProps = {
-  ...base,
-  isDisabled: true,
+export const Disabled: Story = {
+  args: { isDisabled: true },
 };
-Disabled.args = DisabledArgs;
 
-export const RedBgColor = Template.bind({});
-const RedBGColorArgs: ButtonProps = {
-  ...base,
-  bgColor: 'red',
+export const RedBgColor: Story = {
+  args: { bgColor: 'red' },
 };
-RedBgColor.args = RedBGColorArgs;

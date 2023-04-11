@@ -7,7 +7,7 @@ export const Status404Page = () => {
       <Typography variant="h6" mt={1} mb={2}>
         Page not found
       </Typography>
-      <img src="/error-400.png" alt="page not found" width={200} />
+      <img src="/assets/missing-piece.png" alt="404 page" width={150} />
     </Box>
   );
 };

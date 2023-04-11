@@ -1,12 +1,12 @@
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Status404Page } from '.';
 
 export default {
   component: Status404Page,
   title: 'Status404Page',
-} as Meta;
+} satisfies Meta<typeof Status404Page>;
 
-const Template: Story = (args) => <Status404Page {...args} />;
+type Story = StoryObj<typeof Status404Page>;
 
-export const Default = Template.bind({});
+export const Default: Story = {};

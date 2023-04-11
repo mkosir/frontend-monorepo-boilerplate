@@ -1,27 +1,25 @@
 import { action } from '@storybook/addon-actions';
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { MontyHome, MontyHomeProps } from '.';
 
-export default {
-  component: MontyHome,
-  title: 'HomePage/MontyHome',
-} as Meta;
-
-const base: MontyHomeProps = {
+const baseArgs: MontyHomeProps = {
   title: 'Home page (specific) feature',
   isTiltEnabled: true,
   sx: undefined,
   onMontyHomeSelected: action('onMontyHomeSelected'),
 };
 
-const Template: Story<MontyHomeProps> = (args) => <MontyHome {...base} {...args} />;
+export default {
+  component: MontyHome,
+  args: baseArgs,
+  title: 'HomePage/MontyHome',
+} satisfies Meta<typeof MontyHome>;
 
-export const Default = Template.bind({});
+type Story = StoryObj<typeof MontyHome>;
 
-export const TiltDisabled = Template.bind({});
-const TiltDisabledArgs: MontyHomeProps = {
-  ...base,
-  isTiltEnabled: false,
+export const Default: Story = {};
+
+export const TiltDisabled: Story = {
+  args: { isTiltEnabled: false },
 };
-TiltDisabled.args = TiltDisabledArgs;
