@@ -23,7 +23,7 @@ env:
     ./apps/boilerplate-website/build-next-static
     ./apps/boilerplate-website/build-storybook-static
     ./packages/ui/build-storybook-static
-  CACHE_KEY_BUILD: build-${{ github.sha }}
+  CACHE_KEY_BUILD: build-${{ github.sha }}-${{ github.ref_type }}
 
 jobs:
   build:
