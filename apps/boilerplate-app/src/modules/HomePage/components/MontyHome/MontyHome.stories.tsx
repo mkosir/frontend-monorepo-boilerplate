@@ -13,7 +13,6 @@ const baseArgs: MontyHomeProps = {
 export default {
   component: MontyHome,
   args: baseArgs,
-  title: 'HomePage/MontyHome',
 } satisfies Meta<typeof MontyHome>;
 
 type Story = StoryObj<typeof MontyHome>;
