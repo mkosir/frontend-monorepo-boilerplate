@@ -4,7 +4,6 @@ import { Version } from '.';
 
 export default {
   component: Version,
-  title: 'Version',
 } satisfies Meta<typeof Version>;
 
 type Story = StoryObj<typeof Version>;

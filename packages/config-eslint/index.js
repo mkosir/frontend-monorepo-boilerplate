@@ -25,6 +25,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
 
+    'storybook/no-title-property-in-meta': 'error',
+
     'prefer-template': 'error',
     'no-nested-ternary': 'error',
     'no-unneeded-ternary': 'error',

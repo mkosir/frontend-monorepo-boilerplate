@@ -14,7 +14,6 @@ const baseArgs: ButtonProps = {
 export default {
   component: Button,
   args: baseArgs,
-  title: 'Button',
 } satisfies Meta<typeof Button>;
 
 type Story = StoryObj<typeof Button>;
