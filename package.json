@@ -40,8 +40,8 @@
     "zod": "3.21.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.0",
-    "@commitlint/config-conventional": "17.6.0",
+    "@commitlint/cli": "17.6.1",
+    "@commitlint/config-conventional": "17.6.1",
     "@storybook/addon-essentials": "7.0.4",
     "@storybook/nextjs": "7.0.4",
     "@storybook/react": "7.0.4",
