@@ -27,7 +27,7 @@
     "chalk": "5.2.0",
     "config-storybook": "*",
     "config-tsconfig": "*",
-    "openapi-typescript": "6.2.2",
+    "openapi-typescript": "6.2.4",
     "utils-test": "*"
   }
 }
