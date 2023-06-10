@@ -4,9 +4,6 @@ const nextConfig = {
   output: 'export',
   distDir: 'build-next-static',
   swcMinify: true,
-  // experimental: {
-  //   appDir: true,
-  // },
   reactStrictMode: true,
   modularizeImports: {
     '@mui/icons-material': {
