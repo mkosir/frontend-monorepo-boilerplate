@@ -1,5 +1,5 @@
 {
-  "name": "ui-mui",
+  "name": "ui",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -17,13 +17,9 @@
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "storybook dev -p 7200 --quiet",
+    "storybook": "storybook dev -p 7100 --quiet",
     "storybook-build": "storybook build -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u"
-  },
-  "dependencies": {
-    "config-mui": "*",
-    "utils-mui": "*"
   },
   "devDependencies": {
     "config-storybook": "*",

@@ -1,6 +1,5 @@
-import { screen } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { renderWithTheme } from 'utils-test';
 
 import { Button } from '.';
 
@@ -11,7 +10,7 @@ describe('packages', () => {
         const onClick = jest.fn();
         const btnContent = 'Click Me';
 
-        renderWithTheme(<Button onClick={onClick}>{btnContent}</Button>);
+        render(<Button onClick={onClick}>{btnContent}</Button>);
 
         expect(screen.getByRole('button', { name: btnContent })).toBeInTheDocument();
         expect(onClick).not.toBeCalled();
@@ -21,7 +20,7 @@ describe('packages', () => {
         const onClick = jest.fn();
         const btnContent = 'Click Me';
 
-        renderWithTheme(<Button onClick={onClick}>{btnContent}</Button>);
+        render(<Button onClick={onClick}>{btnContent}</Button>);
 
         const button = screen.getByRole('button', { name: btnContent });
         await userEvent.click(button);
