@@ -48,7 +48,7 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
 - [NextJs v13](https://github.com/vercel/next.js) apps
 - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
-- [Tailwind](https://github.com/tailwindlabs/tailwindcss)1234
+- [Tailwind](https://github.com/tailwindlabs/tailwindcss)
 - Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/turborepo-boilerplate-multiple-ui/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
