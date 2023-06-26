@@ -1,4 +1,4 @@
-# Turborepo / Next.js / TypeScript / Material UI boilerplate
+# Turborepo / Next.js / TypeScript / Tailwind / Material UI boilerplate
 
 [![TypeScript][typescript-badge]][typescript-url]
 [![semantic-release][semantic-badge]][semantic-url]
