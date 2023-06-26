@@ -94,7 +94,7 @@ TLDR:
 Monorepo features and conventions:
 
 - Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
-- Monorepo includes two styling solutions (feel free to remove one, depending on you use case):
+- Monorepo includes two styling solutions (feel free to remove one, depending on your use case):
   - Material UI support (UI component library, shared theme across all apps and packages etc.),
   - Tailwind
 - Workspaces:
