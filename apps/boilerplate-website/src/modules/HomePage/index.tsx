@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { Button } from 'ui';
+import { Button } from 'ui-mui';
 
 export const HomePage = () => {
   return (

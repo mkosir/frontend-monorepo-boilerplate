@@ -1,7 +1,7 @@
 import { Button, styled } from '@mui/material';
 import { shouldForwardProp } from 'utils-mui';
 
-import { ButtonProps } from './';
+import { ButtonProps } from '.';
 
 export const ButtonStyled = styled(Button, {
   shouldForwardProp: shouldForwardProp<ButtonProps>(['isDisabled', 'bgColor']),

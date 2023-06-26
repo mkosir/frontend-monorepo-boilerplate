@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "config-mui": "*",
-    "ui": "*",
+    "ui-mui": "*",
     "utils-mui": "*",
     "utils-version": "*"
   },

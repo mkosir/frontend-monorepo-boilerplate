@@ -3,7 +3,7 @@ import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
 import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Version } from 'ui';
+import { Version } from 'ui-mui';
 import { createEmotionCache } from 'utils-mui';
 import { getVersionInfo } from 'utils-version';
 

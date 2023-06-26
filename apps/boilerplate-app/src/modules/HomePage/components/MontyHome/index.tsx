@@ -1,6 +1,6 @@
 import { Box, Link, SxProps, Typography, useTheme } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
-import { Button } from 'ui';
+import { Button } from 'ui-mui';
 
 import { TiltContent } from './styled';
 
