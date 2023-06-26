@@ -135,6 +135,7 @@ There is no convention on cache invalidation, but for the second hardest thing, 
       ERROR,
     }
     ```
+  - Prefer using `null` instead of `undefined`, to explicitly state it has no value (assignment, return type).
 
 ## React Components
 
