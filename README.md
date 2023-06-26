@@ -48,7 +48,7 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
 - [NextJs v13](https://github.com/vercel/next.js) apps
 - Monorepo implements 3 styling solutions to build custom UI components, with shared theme across all apps.  
-  Easily import UI components package into app, (depending on your use case, remove not needed ones):
+  Easily import UI components package into app:
   - [Vanilla CSS package](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
   - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) library built with [Tailwind v3](https://tailwindcss.com/)
   - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
