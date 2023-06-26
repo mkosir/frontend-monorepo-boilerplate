@@ -47,8 +47,11 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [Turborepo v1](https://turborepo.org/) remote cache build system, with blazingly fast execution of commands (build, lint, test etc.) on your local machine and CI
 - [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
 - [NextJs v13](https://github.com/vercel/next.js) apps
-- [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
-- [Tailwind](https://github.com/tailwindlabs/tailwindcss)
+- Monorepo implements 3 styling solutions to build custom UI components, with shared theme across all apps.  
+  Easily import UI components package into app, (depending on your use case, remove not needed ones):
+  - [Vanilla CSS package](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
+  - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) library built with [Tailwind v3](https://tailwindcss.com/)
+  - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
 - Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/turborepo-boilerplate-multiple-ui/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
@@ -94,9 +97,6 @@ TLDR:
 Monorepo features and conventions:
 
 - Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
-- Monorepo includes two styling solutions (feel free to remove one, depending on your use case):
-  - Material UI support (UI component library, shared theme across all apps and packages etc.),
-  - Tailwind
 - Workspaces:
   - It comes with two workspaces `apps` and `packages`.
   - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
