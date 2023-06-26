@@ -23,9 +23,9 @@ Deployments - prod/stage/storybook
 
 Opinionated frontend monorepo with focus on best practices and painless developer experience:
 
-- Monorepo setup can be easily extended with custom libraries or into micro-frontend architecture 🔧
+- Monorepo setup that can be easily extended 🔧
 - Spin it up with single command 🌀
-- Blazing fast builds with Turborepo [remote caching](https://turborepo.org/docs/core-concepts/remote-caching) ⚡
+- Blazing fast builds, lints, tests with Turborepo [remote caching](https://turborepo.org/docs/core-concepts/remote-caching) ⚡
 - TypeScript 100% codebase
 
 ## Requirements
@@ -38,7 +38,7 @@ _Easily set up a local development environment_
 
 - `npm install`
 - `npm run build`
-- `npm run dev` - Start all NextJs apps 🚀
+- `npm run dev` - Start all apps 🚀
 
 Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 
@@ -47,7 +47,8 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [Turborepo v1](https://turborepo.org/) remote cache build system, with blazingly fast execution of commands (build, lint, test etc.) on your local machine and CI
 - [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
 - [NextJs v13](https://github.com/vercel/next.js) apps
-- [Material UI component](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
+- [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
+- [Tailwind](https://github.com/tailwindlabs/tailwindcss)
 - Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/firsttris/vscode-jest/raw/master/public/vscode-jest.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
@@ -81,18 +82,27 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 
 Convention over configuration should be followed as much as possible as described in [Conventions.md](https://github.com/mkosir/turborepo-boilerplate/blob/main/README_CONVENTIONS.md)
 
+TLDR:
+
+- **Code is organized and grouped by feature.** Place code as close to where it's relevant as possible.
+- Strive for data immutability.
+- Client global state is discouraged. If truly needed use Zustand (no Redux).
+- Use named exports. In case of exceptions [eslint rule](https://github.com/mkosir/turborepo-boilerplate/blob/main/packages/config-eslint/index.js#L78) is disabled (e.g. Next.js pages)
+
 ## Monorepo
 
 Monorepo features and conventions:
 
-- Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, Material UI support (UI component library, shared theme across all apps and packages etc.), consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
+- Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
+- Monorepo includes two styling solutions (feel free to remove one, depending on you use case):
+  - Material UI support (UI component library, shared theme across all apps and packages etc.),
+  - Tailwind
 - Workspaces:
   - It comes with two workspaces `apps` and `packages`.
   - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
-- All applications in monorepo are built with Next.js.
-- All Next.js applications are [statically exported](https://nextjs.org/docs/advanced-features/static-html-export).
-- Monorepo doesn't include any implementation of micro-frontend architecture, but is prepared with that in mind, so it can be easily extended (adding shared state, page composition etc.)
+- For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
+- Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
 
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript

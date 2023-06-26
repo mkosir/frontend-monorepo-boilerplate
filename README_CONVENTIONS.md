@@ -3,6 +3,13 @@
 Since "consistency is the key" majority of rules is enforced by automated tooling as ESLint, TypeScript, Prettier, etc.  
 Still certain design and architectural decisions must be followed which are covered with described conventions bellow.
 
+## TLDR
+
+- **Code is organized and grouped by feature.** Place code as close to where it's relevant as possible.
+- Strive for data immutability.
+- Client global state is discouraged. If truly needed use Zustand (no Redux).
+- Use named exports. In case of exceptions [eslint rule](https://github.com/mkosir/turborepo-boilerplate/blob/main/packages/config-eslint/index.js#L78) is disabled (e.g. Next.js pages)
+
 ## Code Collocation
 
 - Every application or package in monorepo has project files/folders organized and grouped by **feature**.
@@ -61,7 +68,8 @@ apps/
 
 ## Data immutability
 
-Majority of the data should be immutable (`Readonly`, `ReadonlyArray`). Always return new array, object etc. with the changes, not the original.
+Majority of the data should be immutable (use `Readonly`, `ReadonlyArray`, always return new array, object etc). To keep cognitive load low for future developers try to keep data objects small.  
+Mutations should be used sparingly in cases when necessary: complex objects, performance reasoning etc.
 
 ## Functions
 
@@ -207,5 +215,5 @@ List and reasoning of some conventions enforced by automated tooling:
   const y: ReadonlyArray<string> = ['a', 'b'];
   ```
 
-- Default export is not allowed. In case of exception this rule is disabled in `.eslintrc.js` (Next.js pages etc.)
+- Use named exports. In case of exceptions [eslint rule](https://github.com/mkosir/turborepo-boilerplate/blob/main/packages/config-eslint/index.js#L78) is disabled (e.g. Next.js pages)
 - All test descriptions follows naming convention as `it('should ... when ...')`.
