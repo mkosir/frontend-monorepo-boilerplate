@@ -51,7 +51,7 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
   Easily import UI components package into app:
   - [Vanilla CSS package](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
   - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) library built with [Tailwind v3](https://tailwindcss.com/)
-  - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
+  - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
 - Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/turborepo-boilerplate-multiple-ui/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
