@@ -56,7 +56,6 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
 - Git hooks with [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
-- Merging to `main` branch deploys to stage environment, creating new GitHub release deploys to production
 - Commit messages must meet [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) format.  
   After staging changes just run `npm run commit` and get instant feedback on your commit message formatting and be prompted for required fields by [Commitizen](https://github.com/commitizen/cz-cli)
 
@@ -102,6 +101,7 @@ Monorepo features and conventions:
   - It comes with two workspaces `apps` and `packages`.
   - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
+- Merging to `main` branch deploys to stage environment, creating new GitHub release deploys to production.
 - For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
 - Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
 
