@@ -100,7 +100,7 @@ Monorepo features and conventions:
 - Workspaces:
   - It comes with two workspaces `apps` and `packages`.
   - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
-  - All other `packages` beside configurations are always being built/transpiled and output to `dist/` folder.
+  - All other `packages` beside configurations are always being built/transpiled to `dist/` folder.
 - Merging to `main` branch deploys to stage environment, creating new GitHub release deploys to production.
 - For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
 - Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
