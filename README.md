@@ -81,9 +81,9 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | remove-turbo-cache  | Removes Turborepo local cache                                                       |
 | update-dependencies | Update dependencies to their latest versions                                        |
 
-## Conventions
+## Coding Guidelines
 
-Convention over configuration should be followed as much as possible as described in [Conventions.md](https://github.com/mkosir/turborepo-boilerplate/blob/main/README_CONVENTIONS.md)
+Convention over configuration should be followed as much as possible as described in [Coding Guidelines](https://github.com/mkosir/typescript-react-guidelines/blob/main/coding-guidelines.md)
 
 TLDR:
 
