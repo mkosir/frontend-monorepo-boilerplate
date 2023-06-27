@@ -83,7 +83,7 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 
 ## Coding Guidelines
 
-Convention over configuration should be followed as much as possible as described in [Coding Guidelines](https://github.com/mkosir/typescript-react-guidelines/blob/main/coding-guidelines.md)
+Convention over configuration should be followed as much as possible as described in [Coding Guidelines](https://github.com/mkosir/typescript-react-guidelines/blob/main/coding-guidelines.md).
 
 TLDR:
 
