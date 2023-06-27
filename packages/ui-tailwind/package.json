@@ -1,21 +1,27 @@
 {
-  "name": "boilerplate-website",
+  "name": "ui-tailwind",
   "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "build": "next build",
-    "dev": "next dev --port 3101",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "storybook dev -p 6101 --quiet",
+    "storybook": "storybook dev -p 7300 --quiet",
     "storybook-build": "storybook build -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "ui-tailwind": "*",
     "utils-version": "*"
   },
   "devDependencies": {

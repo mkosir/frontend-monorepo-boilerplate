@@ -1,0 +1,11 @@
+{
+  "extends": "config-tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      ".": ["."]
+    }
+  },
+  "include": ["src/**/*", "../config-mui/mui-theme.d.ts"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
+}

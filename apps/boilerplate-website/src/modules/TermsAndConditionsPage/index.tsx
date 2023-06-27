@@ -1,11 +1,10 @@
-import { Box, Typography } from '@mui/material';
-import { Button } from 'ui-mui';
+import { Button } from 'ui-tailwind';
 
 export const TermsAndConditionsPage = () => {
   return (
-    <Box m={5}>
-      <Typography variant="h5">Terms And Conditions Page</Typography>
+    <div className="m-5">
+      <div className="text-lg font-medium">Terms And Conditions Page</div>
       <Button onClick={() => console.log('Boop')}>Boop</Button>
-    </Box>
+    </div>
   );
 };
