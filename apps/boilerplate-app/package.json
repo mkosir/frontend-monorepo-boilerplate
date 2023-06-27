@@ -19,6 +19,7 @@
   "dependencies": {
     "config-mui": "*",
     "react-parallax-tilt": "1.7.150",
+    "ui": "*",
     "ui-mui": "*",
     "utils-mui": "*",
     "utils-version": "*"
