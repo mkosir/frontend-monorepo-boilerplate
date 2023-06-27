@@ -21,6 +21,9 @@
     "storybook-build": "storybook build -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u"
   },
+  "dependencies": {
+    "utils-version": "*"
+  },
   "devDependencies": {
     "config-storybook": "*",
     "config-tsconfig": "*",
