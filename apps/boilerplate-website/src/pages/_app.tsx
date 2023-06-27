@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { Version } from 'ui-tailwind';
 import { getVersionInfo } from 'utils-version';
 
+import 'common/styles/global.css';
+// include styles from the ui package
 // import 'ui-tailwind/index.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
