@@ -14,7 +14,10 @@ export const baseStorybookPreview: Preview = {
       },
     },
   },
+};
 
+export const baseStorybookPreviewMui: Preview = {
+  ...baseStorybookPreview,
   decorators: [
     (Story) => (
       <ThemeProvider theme={theme}>
