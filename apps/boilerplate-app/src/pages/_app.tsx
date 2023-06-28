@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box textAlign="center" mt={3} mb={5}>
-            <Typography variant="title1">Turborepo Boilerplate - App</Typography>
+            <Typography variant="title1">Turborepo Boilerplate - App (Material UI)</Typography>
             <Version version={getVersionInfo()} />
           </Box>
           {<Component {...pageProps} />}

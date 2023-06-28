@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mb-5 mt-3 text-center">
-        <div className="text-lg font-medium">Turborepo Boilerplate - Website</div>
+        <div className="text-lg font-medium">Turborepo Boilerplate - Website (Tailwind)</div>
         <Version version={getVersionInfo()} />
       </div>
       {<Component {...pageProps} />}
