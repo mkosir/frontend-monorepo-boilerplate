@@ -5,7 +5,7 @@ const customFontFamily = "'Roboto', 'Helvetica', 'Arial', sans-serif";
 export const theme = createTheme({
   // Theme
   brand: {
-    blue: colors.blue[100],
+    blue: colors.blue[800],
     green: colors.green[400],
   },
 

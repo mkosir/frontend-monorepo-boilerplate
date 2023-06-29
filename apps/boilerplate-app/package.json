@@ -13,22 +13,17 @@
     "test-coverage": "jest --coverage --verbose",
     "storybook": "storybook dev -p 6100 --quiet",
     "storybook-build": "storybook build -o build-storybook-static",
-    "update-dependencies": "npx npm-check-updates -u",
-    "api-generate-petstore": "ts-node-esm -P tsconfig.esm.json ./src/common/api/petstore/generate/index.mts && npm run format-fix"
+    "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "config-mui": "*",
+    "config-tailwind": "*",
     "react-parallax-tilt": "1.7.151",
-    "ui": "*",
-    "ui-mui": "*",
-    "utils-mui": "*",
+    "ui-tailwind": "*",
     "utils-version": "*"
   },
   "devDependencies": {
-    "chalk": "5.2.0",
     "config-storybook": "*",
     "config-tsconfig": "*",
-    "openapi-typescript": "6.2.8",
     "utils-test": "*"
   }
 }

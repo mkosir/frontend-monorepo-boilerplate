@@ -1,13 +1,16 @@
-import { Box, Typography } from '@mui/material';
+import Link from 'next/link';
+
+import { Paths } from 'common/consts/paths';
 
 export const Status404Page = () => {
   return (
-    <Box textAlign="center" mt={24}>
-      <Typography variant="title2">404</Typography>
-      <Typography variant="h6" mt={1} mb={2}>
-        Page not found
-      </Typography>
-      <img src="/assets/missing-piece.png" alt="404 page" width={150} />
-    </Box>
+    <div className="mt-24 text-center">
+      <div className="text-xl font-medium">404</div>
+      <div className="text-md mb-4 mt-1 font-medium">Page not found</div>
+      <img src="/assets/missing-piece.png" alt="404 page" className="mx-auto mb-10 w-40" />
+      <Link href={Paths.home} className=" text-blue-400 hover:text-blue-500 hover:underline">
+        Home
+      </Link>
+    </div>
   );
 };

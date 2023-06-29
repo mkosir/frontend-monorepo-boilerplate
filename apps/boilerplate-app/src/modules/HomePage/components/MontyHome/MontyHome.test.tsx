@@ -1,6 +1,5 @@
-import { screen } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { renderWithTheme } from 'utils-test';
 
 import { MontyHome } from './';
 
@@ -12,9 +11,11 @@ describe('apps', () => {
           it('should render title, subtitle and buttons when props are passed', () => {
             const onMontyHomeSelected = jest.fn();
 
-            renderWithTheme(
+            render(
               <MontyHome
-                title="Home page (specific) feature"
+                title="Home page (scoped) feature"
+                openDoorNo={null}
+                message={null}
                 isTiltEnabled={false}
                 onMontyHomeSelected={onMontyHomeSelected}
               />,
@@ -22,7 +23,7 @@ describe('apps', () => {
 
             const buttons = screen.getAllByRole('button');
 
-            expect(screen.getByText('Home page (specific) feature')).toBeInTheDocument();
+            expect(screen.getByText('Home page (scoped) feature')).toBeInTheDocument();
             expect(screen.getByText('Monty Home Problem')).toBeInTheDocument();
             expect(buttons.length).toBe(3);
             expect(onMontyHomeSelected).not.toBeCalled();
@@ -31,9 +32,11 @@ describe('apps', () => {
           it('should call prop with truthful argument when correct home button is clicked', async () => {
             const onMontyHomeSelected = jest.fn();
 
-            renderWithTheme(
+            render(
               <MontyHome
-                title="Home page (specific) feature"
+                title="Home page (scoped) feature"
+                openDoorNo={null}
+                message={null}
                 isTiltEnabled={false}
                 onMontyHomeSelected={onMontyHomeSelected}
               />,

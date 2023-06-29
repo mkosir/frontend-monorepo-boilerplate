@@ -1,21 +1,40 @@
-import { Box, Typography } from '@mui/material';
-import { Button } from 'ui';
+import { useState } from 'react';
 
-import { MontyHome } from './components/MontyHome';
+import { DoorNo, MontyHome, OpenDoorNo } from './components/MontyHome';
 
 export const HomePage = () => {
+  const [openDoorNo, setOpenDoorNo] = useState<OpenDoorNo>(null);
+  const [message, setMessage] = useState<null | string>(null);
+
+  const handleMontyHomeSelected = (doorNo: DoorNo) => {
+    if (!openDoorNo) {
+      setOpenDoorNo(doorNo === 1 ? 3 : 1);
+      return;
+    }
+
+    switch (doorNo) {
+      case 1:
+        setMessage('Sorry, better luck next time. Baaa 🐐');
+        return;
+      case 2:
+        setMessage('Congrats! 🚗');
+        return;
+      case 3:
+        setMessage('Sorry, better luck next time. Baaa 🐐');
+        return;
+    }
+  };
+
   return (
-    <Box m={5}>
-      <Typography variant="h5">Home Page</Typography>
-      <Button onClick={() => console.log('UI button')}>UI btn</Button>
+    <div className="m-5">
+      <div className="mb-3 text-lg font-medium">Home Page</div>
       <MontyHome
         title="Home page (scoped) feature"
+        openDoorNo={openDoorNo}
+        message={message}
         isTiltEnabled={true}
-        sx={{ mt: 3 }}
-        onMontyHomeSelected={(isHome) =>
-          isHome ? console.log('Congrats') : console.log('Sorry, better luck next time')
-        }
+        onMontyHomeSelected={handleMontyHomeSelected}
       />
-    </Box>
+    </div>
   );
 };

@@ -1,10 +1,9 @@
-import { Button } from 'ui-tailwind';
+import { Box, Typography } from '@mui/material';
 
 export const AboutPage = () => {
   return (
-    <div className="m-5">
-      <div className="text-md font-medium">About Page</div>
-      <Button onClick={() => console.log('Boop')}>Boop</Button>
-    </div>
+    <Box m={5}>
+      <Typography variant="h5">About Page</Typography>
+    </Box>
   );
 };

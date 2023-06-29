@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-boilerplate",
+  "name": "frontend-monorepo-boilerplate",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -67,7 +67,7 @@
     "ts-node": "10.9.1",
     "tsup": "7.1.0",
     "turbo": "1.10.6",
-    "typescript": "5.1.5"
+    "typescript": "5.1.6"
   },
   "engines": {
     "node": ">=18.16.1",

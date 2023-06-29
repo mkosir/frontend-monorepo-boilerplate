@@ -1,9 +1,13 @@
+import { Box, Typography } from '@mui/material';
+
 export const Status404Page = () => {
   return (
-    <div className="mt-24 text-center">
-      <div className="text-xl font-medium">404</div>
-      <div className="text-md mb-4 mt-1 font-medium">Page not found</div>
-      <img src="/assets/missing-piece.png" alt="404 page" className="mx-auto w-40" />
-    </div>
+    <Box textAlign="center" mt={24}>
+      <Typography variant="title2">404</Typography>
+      <Typography variant="h6" mt={1} mb={2}>
+        Page not found
+      </Typography>
+      <img src="/assets/missing-piece.png" alt="404 page" width={150} />
+    </Box>
   );
 };
