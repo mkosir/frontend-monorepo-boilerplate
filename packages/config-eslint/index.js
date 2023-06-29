@@ -99,7 +99,7 @@ module.exports = {
     typescript: {},
     'import/resolver': {
       typescript: {
-        project: ['apps/*/tsconfig.json', 'packages/*/tsconfig.json'],
+        project: ['./tsconfig.json', 'apps/*/tsconfig.json', 'packages/*/tsconfig.json'],
       },
     },
     react: {
