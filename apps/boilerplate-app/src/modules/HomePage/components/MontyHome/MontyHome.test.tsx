@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { MontyHome } from './';
+import { DoorNo, MontyHome } from './';
 
 describe('apps', () => {
   describe('boilerplate-app', () => {
@@ -45,7 +45,7 @@ describe('apps', () => {
             const buttonHome2 = screen.getByRole('button', { name: 'Home 2' });
             await userEvent.click(buttonHome2);
 
-            expect(onMontyHomeSelected).toBeCalledWith<[boolean]>(true);
+            expect(onMontyHomeSelected).toBeCalledWith<[DoorNo]>(2);
           });
         });
       });
