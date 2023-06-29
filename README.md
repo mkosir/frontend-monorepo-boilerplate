@@ -1,4 +1,4 @@
-# Turborepo / Next.js / TypeScript / Tailwind / Material UI boilerplate
+# Frontend Monorepo Boilerplate TypeScript / Tailwind / Material UI / Next.js
 
 [![TypeScript][typescript-badge]][typescript-url]
 [![semantic-release][semantic-badge]][semantic-url]
@@ -8,7 +8,7 @@
 [![CI][tsc-badge]][tsc-url]
 [![CI][test-badge]][test-url]
 
-Deployments - prod/stage/storybook
+**Deployments** - Prod / Stage / Storybook
 
 [![CI][deploy-app-prod-badge]][deploy-app-prod-url]
 [![CI][deploy-app-stage-badge]][deploy-app-stage-url]
@@ -21,12 +21,12 @@ Deployments - prod/stage/storybook
 [![CI][deploy-ui-prod-badge]][deploy-ui-prod-url]
 [![CI][deploy-ui-stage-badge]][deploy-ui-stage-url]
 
-Opinionated frontend monorepo with focus on best practices and painless developer experience:
+Frontend monorepo with focus on best practices and painless developer experience:
 
 - Monorepo setup that can be easily extended 🔧
 - Spin it up with single command 🌀
-- Blazing fast builds, lints, tests with Turborepo [remote caching](https://turborepo.org/docs/core-concepts/remote-caching) ⚡
 - TypeScript 100% codebase
+- Blazing fast builds, lints, tests with Turborepo [remote caching](https://turborepo.org/docs/core-concepts/remote-caching) ⚡
 
 ## Requirements
 
@@ -47,11 +47,11 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [Turborepo v1](https://turborepo.org/) remote cache build system, with blazingly fast execution of commands (build, lint, test etc.) on your local machine and CI
 - [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [Strict Configuration](https://typescript-eslint.io/docs/linting/configs#strict)
 - [Next.js v13](https://github.com/vercel/next.js) apps
-- Monorepo implements 3 styling solutions to build custom UI components, with shared theme across all apps (pick your use case and remove others).  
+- Monorepo implements 3 styling solutions with shared theme across all apps (pick your use case and remove others).  
   Easily import UI components package into apps:
   - [Vanilla CSS package](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
-  - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) library built with [Tailwind v3](https://tailwindcss.com/)
-  - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui) library built with [MUI v5](https://mui.com/) and shared theme across all apps and packages
+  - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) components library built with [Tailwind v3](https://tailwindcss.com/)
+  - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui) components library built with [MUI v5](https://mui.com/)
 - Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/turborepo-boilerplate-multiple-ui/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
@@ -63,23 +63,23 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 
 Bellow commands will be executed on monorepo level - on all apps and packages where npm script exists.
 
-| Command             | Description                                                                         |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| prepare             | Setup git hooks with Husky (executes on npm install)                                |
-| build               | Build all apps and packages (`build-next-static`, `dist`)                           |
-| dev                 | Start all apps                                                                      |
-| lint                | Lint all apps and packages                                                          |
-| lint-staged-husky   | Run prettier and lint on staged files                                               |
-| tsc                 | Run TypeScript compiler                                                             |
-| test                | Run tests on all apps and packages                                                  |
-| storybook           | Start storybooks on all apps and packages                                           |
-| storybook-build     | Build all storybooks (`build-storybook-static`)                                     |
-| format-lint         | Lint formatting with Prettier                                                       |
-| format-fix          | Fix formatting with Prettier                                                        |
-| commit              | Run Commitizen on staged file                                                       |
-| clean               | Remove installed, generated and cached folders (node_modules, coverage, .next etc.) |
-| remove-turbo-cache  | Removes Turborepo local cache                                                       |
-| update-dependencies | Update dependencies to their latest versions                                        |
+| Command             | Description                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| prepare             | Setup git hooks with Husky (executes on npm install)             |
+| build               | Build all apps and packages (output `build-next-static`, `dist`) |
+| dev                 | Start all apps                                                   |
+| lint                | Lint all apps and packages                                       |
+| lint-staged-husky   | Run prettier and lint on staged files                            |
+| tsc                 | Run TypeScript compiler                                          |
+| test                | Run tests on all apps and packages                               |
+| storybook           | Start storybooks on all apps and packages                        |
+| storybook-build     | Build all storybooks (output `build-storybook-static`)           |
+| format-lint         | Lint formatting with Prettier                                    |
+| format-fix          | Fix formatting with Prettier                                     |
+| commit              | Run Commitizen on staged file                                    |
+| clean               | Remove installed, generated and cached folders                   |
+| remove-turbo-cache  | Removes Turborepo local cache                                    |
+| update-dependencies | Update dependencies to their latest versions                     |
 
 ## Coding Guidelines
 
@@ -99,12 +99,12 @@ TLDR:
 
 Monorepo features and conventions:
 
-- Monorepo is being quite highly opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
+- Monorepo is opinionated in order to achieve best developer experience. It's meant to be used as frontend only monorepo, 100% TypeScript, consistent codebase across whole monorepo with automated tooling in place as ESLint, Prettier, TypeScript, conventional commits etc.
 - Workspaces:
   - It comes with two workspaces `apps` and `packages`.
-  - All configurations (eslint, jest, material ui etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
+  - All configurations (eslint, jest, tailwind etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled to `dist/` folder.
-- Merging to `main` branch deploys to stage environment, creating new GitHub release deploys to production.
+- Merging to `main` branch deploys to `stage` environment, creating new GitHub release deploys to `production`.
 - For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
 - Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
 
