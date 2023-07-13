@@ -45,7 +45,8 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 ## Features:
 
 - [Turborepo v1](https://turborepo.org/) remote cache build system, with blazingly fast execution of commands (build, lint, test etc.) on your local machine and CI
-- [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [`strict-type-checked` configuration](https://typescript-eslint.io/linting/configs/#strict-type-checked)
+- [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [typescript-eslint](https://typescript-eslint.io/) [`strict-type-checked`](https://typescript-eslint.io/linting/configs/#strict-type-checked) and
+  [`stylistic-type-checked`](https://typescript-eslint.io/linting/configs/#stylistic-type-checked) configurations enabled.
 - [Next.js v13](https://github.com/vercel/next.js) apps
 - Monorepo implements 3 styling solutions with shared theme across all apps (pick your use case and remove others).  
   Easily import UI components package into apps:
