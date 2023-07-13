@@ -6,9 +6,9 @@ module.exports = {
   plugins: ['@typescript-eslint', 'testing-library', '@tanstack/query', 'jest-dom', 'jest', 'import'],
 
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:@typescript-eslint/strict',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'prettier',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
@@ -39,6 +39,7 @@ module.exports = {
     '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
+    '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
 
     'jsx-a11y/anchor-is-valid': ['off'],
 
@@ -80,7 +81,7 @@ module.exports = {
     },
   ],
 
-  // ESlint default behaviour ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
+  // ESlint default behavior ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
   ignorePatterns: [
     '!.*',
     'node_modules',
