@@ -76,7 +76,6 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 | storybook-build     | Build all storybooks (output `build-storybook-static`)           |
 | format-lint         | Lint formatting with Prettier                                    |
 | format-fix          | Fix formatting with Prettier                                     |
-| commit              | Run Commitizen on staged file                                    |
 | clean               | Remove installed, generated and cached folders                   |
 | remove-turbo-cache  | Removes Turborepo local cache                                    |
 | update-dependencies | Update dependencies to their latest versions                     |
