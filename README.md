@@ -83,17 +83,17 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 
 ## Coding Guidelines
 
-Convention over configuration should be followed as much as possible as described in [Coding Guidelines](https://github.com/mkosir/typescript-react-guidelines/blob/main/coding-guidelines.md).
+Convention over configuration should be followed as much as possible as described in [Coding Guidelines](https://github.com/mkosir/typescript-react-guidelines).
 
 TLDR:
 
-- **Code is organized and grouped by feature.** Place code as close to where it's relevant as possible.
+- **Code is organized and grouped by feature.** Collocate code as close as possible to where it's relevant.
 - Strive for data immutability.
 - Strive for functions to be pure, stateless and have single responsibility.
 - Use of server-state library is encouraged ([react-query](https://tanstack.com/query/latest)).
-- Use of client-state library for global state is not allowed.  
+- Use of client-state library for global state is discouraged.  
   Reconsider if something should be truly global across application, e.g. `themeMode`, `Permissions` or even that can be put in server-state user settings (e.g. `/me` endpoint). If still truly needed use [Zustand](https://github.com/pmndrs/zustand) (no Redux).
-- Use named exports. In case of exceptions disable [eslint rule](https://github.com/mkosir/turborepo-boilerplate/blob/main/packages/config-eslint/index.js#L78) (e.g. Next.js pages).
+- Use named exports. In case of exceptions disable [eslint rule](https://github.com/mkosir/frontend-monorepo-boilerplate/blob/main/packages/config-eslint/index.js#L78) (e.g. Next.js pages).
 
 ## Monorepo
 
