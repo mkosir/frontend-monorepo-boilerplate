@@ -53,7 +53,7 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
   - [Vanilla CSS package](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
   - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) components library built with [Tailwind v3](https://tailwindcss.com/)
   - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui) components library built with [MUI v5](https://mui.com/)
-- Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/typescript-react-guidelines/raw/main/misc/vscode-jest-runner.gif).
+- Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/typescript-react-style-guide/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
 - Git hooks with [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
@@ -83,7 +83,7 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 
 ## Coding Guidelines
 
-Convention over configuration should be followed as much as possible as described in [Coding Guidelines](https://github.com/mkosir/typescript-react-guidelines).
+Convention over configuration should be followed as much as possible as described in [TypeScript & React Style Guide](https://github.com/mkosir/typescript-react-style-guide).
 
 TLDR:
 
