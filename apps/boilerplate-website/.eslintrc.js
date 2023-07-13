@@ -4,8 +4,8 @@ module.exports = {
   root: true,
 
   parserOptions: {
+    project: true,
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
   },
 
   extends: ['eslint-config-base'],
