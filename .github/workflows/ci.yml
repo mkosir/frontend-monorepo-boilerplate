@@ -287,7 +287,7 @@ jobs:
 
       - uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ${{ env.FILE_PATH_UI_BUILD }}
+          publish-dir: ${{ env.FILE_PATH_UI_TAILWIND_BUILD }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -311,7 +311,7 @@ jobs:
 
       - uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ${{ env.FILE_PATH_UI_BUILD }}
+          publish-dir: ${{ env.FILE_PATH_UI_TAILWIND_BUILD }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
