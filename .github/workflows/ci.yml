@@ -15,14 +15,18 @@ env:
   FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: ./apps/boilerplate-website/build-next-static
   FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK: ./apps/boilerplate-website/build-storybook-static
 
-  FILE_PATH_UI_BUILD: ./packages/ui-mui/build-storybook-static
+  FILE_PATH_UI_BUILD: ./packages/ui/build-storybook-static
+  FILE_PATH_UI_MUI_BUILD: ./packages/ui-mui/build-storybook-static
+  FILE_PATH_UI_TAILWIND_BUILD: ./packages/ui-tailwind/build-storybook-static
 
   CACHE_PATHS_BUILD: |
     ./apps/boilerplate-app/build-next-static
     ./apps/boilerplate-app/build-storybook-static
     ./apps/boilerplate-website/build-next-static
     ./apps/boilerplate-website/build-storybook-static
+    ./packages/ui/build-storybook-static
     ./packages/ui-mui/build-storybook-static
+    ./packages/ui-tailwind/build-storybook-static
   CACHE_KEY_BUILD: build-${{ github.sha }}-${{ github.ref_type }}
 
 jobs:
