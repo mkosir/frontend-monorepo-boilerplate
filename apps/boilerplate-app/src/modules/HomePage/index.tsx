@@ -7,19 +7,22 @@ export const HomePage = () => {
   const [message, setMessage] = useState<null | string>(null);
 
   const handleMontyHomeSelected = (doorNo: DoorNo) => {
-    if (!openDoorNo) {
-      setOpenDoorNo(doorNo === 1 ? 3 : 1);
-      return;
-    }
-
     switch (doorNo) {
       case 1:
+        if (!openDoorNo) {
+          setOpenDoorNo(doorNo);
+          return;
+        }
         setMessage('Sorry, better luck next time. Baaa 🐐');
         return;
       case 2:
         setMessage('Congrats! 🚗');
         return;
       case 3:
+        if (!openDoorNo) {
+          setOpenDoorNo(doorNo);
+          return;
+        }
         setMessage('Sorry, better luck next time. Baaa 🐐');
         return;
     }
