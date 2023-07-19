@@ -26,8 +26,8 @@
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@hookform/resolvers": "3.1.1",
-    "@mui/icons-material": "5.14.0",
-    "@mui/material": "5.14.0",
+    "@mui/icons-material": "5.14.1",
+    "@mui/material": "5.14.1",
     "@tanstack/react-query": "4.29.25",
     "@tanstack/react-query-devtools": "4.29.25",
     "axios": "1.4.0",
@@ -39,13 +39,13 @@
     "zod": "3.21.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.6",
-    "@commitlint/config-conventional": "17.6.6",
-    "@storybook/addon-essentials": "7.0.27",
-    "@storybook/nextjs": "7.0.27",
-    "@storybook/react": "7.0.27",
+    "@commitlint/cli": "17.6.7",
+    "@commitlint/config-conventional": "17.6.7",
+    "@storybook/addon-essentials": "7.1.0",
+    "@storybook/nextjs": "7.1.0",
+    "@storybook/react": "7.1.0",
     "@testing-library/dom": "9.3.1",
-    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/node": "20.4.2",
@@ -59,16 +59,16 @@
     "prettier": "3.0.0",
     "prettier-plugin-tailwindcss": "0.4.1",
     "shx": "0.3.4",
-    "storybook": "7.0.27",
+    "storybook": "7.1.0",
     "tailwindcss": "3.3.3",
     "ts-jest": "29.1.1",
     "ts-node": "10.9.1",
     "tsup": "7.1.0",
-    "turbo": "1.10.7",
+    "turbo": "1.10.8",
     "typescript": "5.1.6"
   },
   "engines": {
-    "node": ">=18.16.1",
-    "npm": ">=9.5.1"
+    "node": ">=18.17.0",
+    "npm": ">=9.6.7"
   }
 }
