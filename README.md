@@ -91,8 +91,7 @@ TLDR:
 - Strive for data immutability.
 - Strive for functions to be pure, stateless and have single responsibility.
 - Use of server-state library is encouraged ([react-query](https://github.com/tanstack/query), [apollo client](https://github.com/apollographql/apollo-client)...).
-- Use of client-state library for global state is discouraged.  
-  Reconsider if something should be truly global across application, e.g. `themeMode`, `Permissions` or even that can be put in server-state (e.g. user settings `/me` endpoint). If still truly needed use [Zustand](https://github.com/pmndrs/zustand) (no Redux).
+- Use of client-state library for global state is discouraged.
 - Use named exports.
 
 ## Monorepo
