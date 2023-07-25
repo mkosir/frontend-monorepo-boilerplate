@@ -49,7 +49,7 @@
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/node": "20.4.4",
-    "@types/react": "18.2.15",
+    "@types/react": "18.2.16",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
     "commitizen": "4.3.0",
@@ -64,7 +64,7 @@
     "ts-jest": "29.1.1",
     "ts-node": "10.9.1",
     "tsup": "7.1.0",
-    "turbo": "1.10.9",
+    "turbo": "1.10.11",
     "typescript": "5.1.6"
   },
   "engines": {
