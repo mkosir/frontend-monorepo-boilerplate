@@ -83,21 +83,21 @@ Bellow commands will be executed on monorepo level - on all apps and packages wh
 
 ## Coding Guidelines
 
-Convention over configuration should be followed as much as possible as described in [TypeScript & React Style Guide](https://github.com/mkosir/typescript-react-style-guide).
+Convention over configuration should be followed as much as possible as described in [TypeScript Style Guide](https://github.com/mkosir/typescript-style-guide).
 
 TLDR:
 
-- **Code is organized and grouped by feature.** Collocate code as close as possible to where it's relevant. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#code-collocation)
-- Strive for data immutability. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#data-immutability)
-- Strive for functions to be pure, stateless and have single responsibility. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#functions)
-- Strive for functions to implement majority of arguments/props as required (use optional sparingly). [&#11107;](https://github.com/mkosir/typescript-react-style-guide#required--optional-props)
-- Embrace const assertions. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#const-assertion)
-- Strong emphasis to keep naming conventions consistent and readable. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#naming-conventions)
-- Use of server-state library is encouraged ([react-query](https://github.com/tanstack/query), [apollo client](https://github.com/apollographql/apollo-client)...). [&#11107;](https://github.com/mkosir/typescript-react-style-guide#passing-data)
-- Use of client-state library for global state is discouraged. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#passing-data)
-- Use named exports. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#named-export)
-- Prop drilling should not become an issue. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#passing-data)
-- Test business logic, not implementation details. [&#11107;](https://github.com/mkosir/typescript-react-style-guide#what--how-to-test)
+- **Code is organized and grouped by feature.** Collocate code as close as possible to where it's relevant. [&#11107;](https://github.com/mkosir/typescript-style-guide#code-collocation)
+- Strive for data immutability. [&#11107;](https://github.com/mkosir/typescript-style-guide#data-immutability)
+- Strive for functions to be pure, stateless and have single responsibility. [&#11107;](https://github.com/mkosir/typescript-style-guide#functions)
+- Strive for functions to implement majority of arguments/props as required (use optional sparingly). [&#11107;](https://github.com/mkosir/typescript-style-guide#required--optional-props)
+- Embrace const assertions. [&#11107;](https://github.com/mkosir/typescript-style-guide#const-assertion)
+- Strong emphasis to keep naming conventions consistent and readable. [&#11107;](https://github.com/mkosir/typescript-style-guide#naming-conventions)
+- Use of server-state library is encouraged ([react-query](https://github.com/tanstack/query), [apollo client](https://github.com/apollographql/apollo-client)...). [&#11107;](https://github.com/mkosir/typescript-style-guide#passing-data)
+- Use of client-state library for global state is discouraged. [&#11107;](https://github.com/mkosir/typescript-style-guide#passing-data)
+- Use named exports. [&#11107;](https://github.com/mkosir/typescript-style-guide#named-export)
+- Prop drilling should not become an issue. [&#11107;](https://github.com/mkosir/typescript-style-guide#passing-data)
+- Test business logic, not implementation details. [&#11107;](https://github.com/mkosir/typescript-style-guide#what--how-to-test)
 
 ## Monorepo
 
