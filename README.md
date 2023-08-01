@@ -87,17 +87,17 @@ Convention over configuration should be followed as much as possible as describe
 
 TLDR:
 
-- **Code is organized and grouped by feature.** Collocate code as close as possible to where it's relevant. [&#11107;](#code-collocation)
-- Strive for data immutability. [&#11107;](#data-immutability)
-- Strive for functions to be pure, stateless and have single responsibility. [&#11107;](#functions)
-- Strive to have majority of function arguments required (use optional sparingly). [&#11107;](#required--optional-props)
-- Embrace const assertions. [&#11107;](#const-assertion)
-- Strong emphasis to keep naming conventions consistent and readable. [&#11107;](#naming-conventions)
-- Use named exports. [&#11107;](#named-export)
-- Use of server-state library is encouraged ([react-query](https://github.com/tanstack/query), [apollo client](https://github.com/apollographql/apollo-client)...). [&#11107;](#store--pass-data)
-- Use of client-state library for global state is discouraged. [&#11107;](#store--pass-data)
-- UI components must only show derived state and send events, nothing more (no business logic). [&#11107;](#component-types)
-- Test business logic, not implementation details. [&#11107;](#what--how-to-test)
+- **Code is organized and grouped by feature.** Collocate code as close as possible to where it's relevant. [&#11107;](https://mkosir.github.io/typescript-style-guide/#code-collocation)
+- Strive for data immutability. [&#11107;](https://mkosir.github.io/typescript-style-guide/#data-immutability)
+- Strive for functions to be pure, stateless and have single responsibility. [&#11107;](https://mkosir.github.io/typescript-style-guide/#functions)
+- Strive to have majority of function arguments required (use optional sparingly). [&#11107;](https://mkosir.github.io/typescript-style-guide/#required--optional-props)
+- Embrace const assertions. [&#11107;](https://mkosir.github.io/typescript-style-guide/#const-assertion)
+- Strong emphasis to keep naming conventions consistent and readable. [&#11107;](https://mkosir.github.io/typescript-style-guide/#naming-conventions)
+- Use named exports. [&#11107;](https://mkosir.github.io/typescript-style-guide/#named-export)
+- Use of server-state library is encouraged ([react-query](https://github.com/tanstack/query), [apollo client](https://github.com/apollographql/apollo-client)...). [&#11107;](https://mkosir.github.io/typescript-style-guide/#store--pass-data)
+- Use of client-state library for global state is discouraged. [&#11107;](https://mkosir.github.io/typescript-style-guide/#store--pass-data)
+- UI components must only show derived state and send events, nothing more (no business logic). [&#11107;](https://mkosir.github.io/typescript-style-guide/#component-types)
+- Test business logic, not implementation details. [&#11107;](https://mkosir.github.io/typescript-style-guide/#what--how-to-test)
 
 ## Monorepo
 
