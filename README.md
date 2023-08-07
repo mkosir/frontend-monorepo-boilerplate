@@ -90,7 +90,7 @@ TLDR:
 - **Code is organized and grouped by feature.** Collocate code as close as possible to where it's relevant. [&#11107;](https://mkosir.github.io/typescript-style-guide/#code-collocation)
 - Strive for data immutability. [&#11107;](https://mkosir.github.io/typescript-style-guide/#data-immutability)
 - Strive for functions to be pure, stateless and have single responsibility. [&#11107;](https://mkosir.github.io/typescript-style-guide/#functions)
-- Strive to have majority of function arguments required (use optional sparingly). [&#11107;](https://mkosir.github.io/typescript-style-guide/#required--optional-props)
+- Majority of function arguments should be required (use optional sparingly). [&#11107;](https://mkosir.github.io/typescript-style-guide/#required--optional-args)
 - Embrace const assertions. [&#11107;](https://mkosir.github.io/typescript-style-guide/#const-assertion)
 - Strong emphasis to keep naming conventions consistent and readable. [&#11107;](https://mkosir.github.io/typescript-style-guide/#naming-conventions)
 - Use named exports. [&#11107;](https://mkosir.github.io/typescript-style-guide/#named-export)
