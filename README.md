@@ -30,7 +30,7 @@ Frontend monorepo with focus on best practices and painless developer experience
 
 ## Requirements
 
-- [Node v18+](https://nodejs.org/)
+- [Node v20+](https://nodejs.org/)
 
 ## Running
 
