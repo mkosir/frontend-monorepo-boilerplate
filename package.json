@@ -28,9 +28,9 @@
     "@hookform/resolvers": "3.3.2",
     "@mui/icons-material": "5.14.18",
     "@mui/material": "5.14.18",
-    "@tanstack/react-query": "5.8.3",
-    "@tanstack/react-query-devtools": "5.8.3",
-    "axios": "1.6.1",
+    "@tanstack/react-query": "5.8.4",
+    "@tanstack/react-query-devtools": "5.8.4",
+    "axios": "1.6.2",
     "date-fns": "2.30.0",
     "next": "14.0.2",
     "react": "18.2.0",
@@ -38,8 +38,8 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.1",
-    "@commitlint/config-conventional": "18.4.0",
+    "@commitlint/cli": "18.4.2",
+    "@commitlint/config-conventional": "18.4.2",
     "@storybook/addons": "7.5.3",
     "@storybook/nextjs": "7.5.3",
     "@storybook/react": "7.5.3",
