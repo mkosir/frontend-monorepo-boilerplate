@@ -1,12 +1,8 @@
 # Frontend Monorepo Boilerplate TypeScript / Tailwind / Material UI / Next.js
 
+[![CI][ci-badge]][ci-url]
 [![TypeScript][typescript-badge]][typescript-url]
 [![semantic-release][semantic-badge]][semantic-url]
-
-[![CI][build-badge]][build-url]
-[![CI][lint-badge]][lint-url]
-[![CI][tsc-badge]][tsc-url]
-[![CI][test-badge]][test-url]
 
 **Deployments** - Prod / Stage / Storybook
 
@@ -112,18 +108,12 @@ Monorepo features and conventions:
 - For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
 - Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
 
+[ci-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/CI.yml/badge.svg
+[ci-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/CI.yml
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
-[build-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/build.yml
-[lint-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml/badge.svg
-[lint-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/lint.yml
-[tsc-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml/badge.svg
-[tsc-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/tsc.yml
-[test-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml/badge.svg
-[test-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/test.yml
 
 <!-- Deployments  App -->
 
