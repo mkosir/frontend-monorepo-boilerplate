@@ -46,9 +46,9 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [Next.js v14](https://github.com/vercel/next.js) apps
 - Monorepo implements 3 styling solutions with shared theme across all apps (pick your use case and remove others).  
   Easily import UI components package into apps:
-  - [Vanilla CSS package](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui)
-  - [Tailwind](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-tailwind) components library built with [Tailwind v3](https://tailwindcss.com/)
-  - [Material UI](https://github.com/mkosir/turborepo-boilerplate/tree/main/packages/ui-mui) components library built with [MUI v5](https://mui.com/)
+  - [Vanilla CSS package](https://github.com/mkosir/frontend-monorepo-boilerplate/tree/main/packages/ui)
+  - [Tailwind](https://github.com/mkosir/frontend-monorepo-boilerplate/tree/main/packages/ui-tailwind) components library built with [Tailwind v3](https://tailwindcss.com/)
+  - [Material UI](https://github.com/mkosir/frontend-monorepo-boilerplate/tree/main/packages/ui-mui) components library built with [MUI v5](https://mui.com/)
 - Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/typescript-style-guide/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
@@ -108,8 +108,8 @@ Monorepo features and conventions:
 - For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
 - Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
 
-[ci-badge]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/CI.yml/badge.svg
-[ci-url]: https://github.com/mkosir/turborepo-boilerplate/actions/workflows/CI.yml
+[ci-badge]: https://github.com/mkosir/frontend-monorepo-boilerplate/actions/workflows/CI.yml/badge.svg
+[ci-url]: https://github.com/mkosir/frontend-monorepo-boilerplate/actions/workflows/CI.yml
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
