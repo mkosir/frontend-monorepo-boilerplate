@@ -6,7 +6,7 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", "../config-mui/mui-theme.d.ts"],
+  "include": [".", ".eslintrc.cjs", "../config-mui/mui-theme.d.ts"],
   "exclude": [
     "node_modules",
     ".next",
