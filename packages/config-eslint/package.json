@@ -6,7 +6,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "@tanstack/eslint-plugin-query": "5.12.1",
+    "@tanstack/eslint-plugin-query": "5.14.6",
     "@typescript-eslint/eslint-plugin": "6.15.0",
     "@typescript-eslint/parser": "6.15.0",
     "eslint": "8.56.0",
@@ -17,7 +17,7 @@
     "eslint-plugin-jest-dom": "5.1.0",
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-no-array-reduce": "1.0.62",
-    "eslint-plugin-prettier": "5.1.0",
+    "eslint-plugin-prettier": "5.1.1",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "0.6.15",
