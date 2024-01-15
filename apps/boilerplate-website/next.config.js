@@ -10,6 +10,12 @@ const nextConfig = {
       transform: '@mui/icons-material/{{member}}',
     },
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;

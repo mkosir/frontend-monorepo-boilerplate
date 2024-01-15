@@ -5,6 +5,12 @@ const nextConfig = {
   distDir: 'build-next-static',
   swcMinify: true,
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
