@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      ".": ["."]
-    }
+      ".": ["."],
+    },
   },
   // Files and folders starting with a . are ignored by the glob patterns
   "include": [".", ".eslintrc.cjs", ".storybook/**/*", "../../packages/config-mui/mui-theme.d.ts"],
@@ -16,6 +16,6 @@
     "dist",
     "compiled",
     "build-next-static",
-    "build-storybook-static"
-  ]
+    "build-storybook-static",
+  ],
 }

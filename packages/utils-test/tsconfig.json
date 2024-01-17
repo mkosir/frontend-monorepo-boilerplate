@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      ".": ["."]
-    }
+      ".": ["."],
+    },
   },
   "include": [".", ".eslintrc.cjs", "../config-mui/mui-theme.d.ts"],
   "exclude": [
@@ -15,6 +15,6 @@
     "dist",
     "compiled",
     "build-next-static",
-    "build-storybook-static"
-  ]
+    "build-storybook-static",
+  ],
 }
