@@ -4,7 +4,7 @@
   "scripts": {
     "build": "next build",
     "dev": "open http://localhost:3100 && next dev --port 3100",
-    "lint": "eslint --max-warnings 0 .",
+    "lint": "eslint --report-unused-disable-directives --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
     "format-fix": "prettier --config ../../.prettierrc --write --ignore-unknown -l .",

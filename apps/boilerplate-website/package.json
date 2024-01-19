@@ -4,7 +4,7 @@
   "scripts": {
     "build": "next build",
     "dev": "open http://localhost:3101 && next dev --port 3101",
-    "lint": "eslint --max-warnings 0 .",
+    "lint": "eslint --report-unused-disable-directives --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
     "test": "jest --verbose",
