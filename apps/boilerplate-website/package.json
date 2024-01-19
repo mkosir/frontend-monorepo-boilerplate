@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "config-mui": "*",
+    "next": "14.1.0",
     "ui": "*",
     "ui-mui": "*",
     "utils-mui": "*",
