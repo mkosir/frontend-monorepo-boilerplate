@@ -43,13 +43,13 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 - [Turborepo v1](https://turborepo.org/) remote cache build system, with fast execution of commands (build, lint, test etc.) on your local machine and CI
 - [TypeScript v5](https://github.com/microsoft/TypeScript) codebase with [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) [`strict-type-checked`](https://typescript-eslint.io/linting/configs/#strict-type-checked) and
   [`stylistic-type-checked`](https://typescript-eslint.io/linting/configs/#stylistic-type-checked) configurations enabled.
-- [Next.js v14](https://github.com/vercel/next.js) apps
+- [Vite](https://vitejs.dev/) and [Next.js v14](https://github.com/vercel/next.js) apps
 - Monorepo implements 3 styling solutions with shared theme across all apps (pick your use case and remove others).  
   Easily import UI components package into apps:
   - [Vanilla CSS package](https://github.com/mkosir/frontend-monorepo-boilerplate/tree/main/packages/ui)
   - [Tailwind](https://github.com/mkosir/frontend-monorepo-boilerplate/tree/main/packages/ui-tailwind) components library built with [Tailwind v3](https://tailwindcss.com/)
   - [Material UI](https://github.com/mkosir/frontend-monorepo-boilerplate/tree/main/packages/ui-mui) components library built with [MUI v5](https://mui.com/)
-- Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run a single test in any monorepo app/package [instantly](https://github.com/mkosir/typescript-style-guide/raw/main/misc/vscode-jest-runner.gif).
+- Unit and integration tests with [Jest](https://github.com/facebook/jest) and [React Testing Library](https://github.com/testing-library/react-testing-library). Run any single test in monorepo app/package [instantly](https://github.com/mkosir/typescript-style-guide/raw/main/misc/vscode-jest-runner.gif).
 - Linting with [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) code formatter
 - Git hooks with [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
@@ -105,7 +105,6 @@ Monorepo features and conventions:
   - All configurations (eslint, jest, tailwind etc.) in `packages` are always prefixed with "config-" and imported into other workspaces directly from source without building (never transpiled).
   - All other `packages` beside configurations are always being built/transpiled to `dist/` folder.
 - Merging to `main` branch deploys to `stage` environment, creating new GitHub release deploys to `production`.
-- For consistency all applications in monorepo are built with Next.js, but can be easily replaced with any other React framework/tooling (Vite, Remix etc.)
 - Monorepo doesn't implement any high-level architectures (islands, micro-frontends), but is prepared with that in mind, so it can be easily extended (page composition, adding shared state etc.)
 
 [ci-badge]: https://github.com/mkosir/frontend-monorepo-boilerplate/actions/workflows/CI.yml/badge.svg
