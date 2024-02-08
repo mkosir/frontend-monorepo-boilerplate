@@ -1,8 +1,8 @@
 node_modules
 coverage
 dist
-build-next-static
-build-storybook-static
+build
+build-storybook
 compiled
 
 .DS_Store
