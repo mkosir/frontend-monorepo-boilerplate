@@ -3,11 +3,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "build-next-static/**"]
+      "outputs": ["dist/**", "build/**"]
     },
     "storybook-build": {
       "dependsOn": ["build"],
-      "outputs": ["build-storybook-static/**"]
+      "outputs": ["build-storybook/**"]
     },
     "lint": {
       "dependsOn": ["build"]
