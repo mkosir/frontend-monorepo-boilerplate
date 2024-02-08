@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { DoorNo, MontyHome } from './';
+import { DoorNo, MontyHome } from '.';
 
 describe('apps', () => {
   describe('boilerplate-app', () => {

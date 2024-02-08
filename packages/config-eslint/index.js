@@ -3,7 +3,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
 
-  plugins: ['@typescript-eslint', 'testing-library', '@tanstack/query', 'jest-dom', 'jest', 'import'],
+  plugins: ['@typescript-eslint', 'testing-library', '@tanstack/query', 'jest-dom', 'jest', 'import', 'react-refresh'],
 
   extends: [
     'plugin:@typescript-eslint/strict-type-checked',
@@ -21,6 +21,7 @@ module.exports = {
   ],
 
   rules: {
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
 
@@ -88,8 +89,8 @@ module.exports = {
     '.turbo',
     'dist',
     'compiled',
-    'build-next-static',
-    'build-storybook-static',
+    'build',
+    'build-storybook',
     // Files bellow are not git ignored. Eslint fix in the making https://github.com/eslint/eslint/issues/15010
     'VersionInfo.ts',
     'next-env.d.ts',

@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Monorepo Boilerplate - Website (Material UI)</title>
+        <title>Monorepo Boilerplate - Website (Nextjs/Material UI)</title>
         <meta name="description" content="Monorepo boilerplate - Website (Material UI)." />
         <meta name="version" content={getVersionInfo()} />
         <link rel="icon" href="/favicon.ico" />
@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box textAlign="center" mt={3} mb={5}>
-            <Typography variant="h6">Monorepo Boilerplate - Website (Material UI)</Typography>
+            <Typography variant="h6">Monorepo Boilerplate - Website (Nextjs/Material UI)</Typography>
             <Version version={getVersionInfo()} />
           </Box>
           {<Component {...pageProps} />}

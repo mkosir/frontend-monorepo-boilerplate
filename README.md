@@ -1,4 +1,4 @@
-# Frontend Monorepo Boilerplate TypeScript / Tailwind / Material UI / Next.js
+# Frontend Monorepo Boilerplate TypeScript / Tailwind / Material UI
 
 [![CI][ci-badge]][ci-url]
 [![TypeScript][typescript-badge]][typescript-url]
@@ -60,22 +60,22 @@ Visit one of the monorepo apps [localhost:3100](http://localhost:3100/)
 
 Bellow commands will be executed on monorepo level - on all apps and packages where npm script exists.
 
-| Command             | Description                                                      |
-| ------------------- | ---------------------------------------------------------------- |
-| prepare             | Setup git hooks with Husky (executes on npm install)             |
-| build               | Build all apps and packages (output `build-next-static`, `dist`) |
-| dev                 | Start all apps                                                   |
-| lint                | Lint all apps and packages                                       |
-| lint-staged-husky   | Run prettier and lint on staged files                            |
-| tsc                 | Run TypeScript compiler                                          |
-| test                | Run tests on all apps and packages                               |
-| storybook           | Start storybooks on all apps and packages                        |
-| storybook-build     | Build all storybooks (output `build-storybook-static`)           |
-| format-lint         | Lint formatting with Prettier                                    |
-| format-fix          | Fix formatting with Prettier                                     |
-| clean               | Remove installed, generated and cached folders                   |
-| remove-turbo-cache  | Removes Turborepo local cache                                    |
-| update-dependencies | Update dependencies to their latest versions                     |
+| Command             | Description                                          |
+| ------------------- | ---------------------------------------------------- |
+| prepare             | Setup git hooks with Husky (executes on npm install) |
+| build               | Build all apps and packages (output `build`, `dist`) |
+| dev                 | Start all apps                                       |
+| lint                | Lint all apps and packages                           |
+| lint-staged-husky   | Run prettier and lint on staged files                |
+| tsc                 | Run TypeScript compiler                              |
+| test                | Run tests on all apps and packages                   |
+| storybook           | Start storybooks on all apps and packages            |
+| storybook-build     | Build all storybooks (output `build-storybook`)      |
+| format-lint         | Lint formatting with Prettier                        |
+| format-fix          | Fix formatting with Prettier                         |
+| clean               | Remove installed, generated and cached folders       |
+| remove-turbo-cache  | Removes Turborepo local cache                        |
+| update-dependencies | Update dependencies to their latest versions         |
 
 ## Coding Guidelines
 

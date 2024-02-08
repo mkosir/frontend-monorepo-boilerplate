@@ -9,24 +9,24 @@ env:
 
   FILE_PATH_VERSION_INFO: ./packages/utils-version/src/VersionInfo.ts
 
-  FILE_PATH_BOILERPLATE_APP_BUILD_NEXT: ./apps/boilerplate-app/build-next-static
-  FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK: ./apps/boilerplate-app/build-storybook-static
+  FILE_PATH_BOILERPLATE_APP_BUILD: ./apps/boilerplate-app/build
+  FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK: ./apps/boilerplate-app/build-storybook
 
-  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT: ./apps/boilerplate-website/build-next-static
-  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK: ./apps/boilerplate-website/build-storybook-static
+  FILE_PATH_BOILERPLATE_WEBSITE_BUILD: ./apps/boilerplate-website/build
+  FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK: ./apps/boilerplate-website/build-storybook
 
-  FILE_PATH_UI_BUILD: ./packages/ui/build-storybook-static
-  FILE_PATH_UI_MUI_BUILD: ./packages/ui-mui/build-storybook-static
-  FILE_PATH_UI_TAILWIND_BUILD: ./packages/ui-tailwind/build-storybook-static
+  FILE_PATH_UI_BUILD: ./packages/ui/build-storybook
+  FILE_PATH_UI_MUI_BUILD: ./packages/ui-mui/build-storybook
+  FILE_PATH_UI_TAILWIND_BUILD: ./packages/ui-tailwind/build-storybook
 
   CACHE_PATHS_BUILD: |
-    ./apps/boilerplate-app/build-next-static
-    ./apps/boilerplate-app/build-storybook-static
-    ./apps/boilerplate-website/build-next-static
-    ./apps/boilerplate-website/build-storybook-static
-    ./packages/ui/build-storybook-static
-    ./packages/ui-mui/build-storybook-static
-    ./packages/ui-tailwind/build-storybook-static
+    ./apps/boilerplate-app/build
+    ./apps/boilerplate-app/build-storybook
+    ./apps/boilerplate-website/build
+    ./apps/boilerplate-website/build-storybook
+    ./packages/ui/build-storybook
+    ./packages/ui-mui/build-storybook
+    ./packages/ui-tailwind/build-storybook
   CACHE_KEY_BUILD: build-${{ github.sha }}-${{ github.ref_type }}
 
 jobs:
@@ -135,7 +135,7 @@ jobs:
 
       - uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -183,7 +183,7 @@ jobs:
 
       - uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_NEXT }}
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -211,7 +211,7 @@ jobs:
 
       - uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -259,7 +259,7 @@ jobs:
 
       - uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_NEXT }}
+          publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

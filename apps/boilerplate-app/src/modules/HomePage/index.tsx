@@ -29,7 +29,7 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="m-5">
+    <div>
       <div className="mb-3 text-lg font-medium">Home Page</div>
       <MontyHome
         title="Home page (scoped) feature"

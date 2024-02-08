@@ -2,7 +2,7 @@
 
 const nextConfig = {
   output: 'export',
-  distDir: 'build-next-static',
+  distDir: 'build',
   swcMinify: true,
   reactStrictMode: true,
   modularizeImports: {
