@@ -7,3 +7,4 @@ dist
 compiled
 build
 build-storybook
+routeTree.gen.ts
