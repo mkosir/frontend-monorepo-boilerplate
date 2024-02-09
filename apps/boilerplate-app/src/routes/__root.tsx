@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Link, Outlet, createRootRoute } from '@tanstack/react-router';
 import { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet';
