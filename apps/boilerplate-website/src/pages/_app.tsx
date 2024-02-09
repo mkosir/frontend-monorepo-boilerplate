@@ -3,6 +3,7 @@ import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
 import { theme } from 'config-mui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import Link from 'next/link';
 import { Version } from 'ui-mui';
 import { createEmotionCache } from 'utils-mui';
 import { getVersionInfo } from 'utils-version';
@@ -23,6 +24,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           <CssBaseline />
           <Box textAlign="center" mt={3} mb={5}>
             <Typography variant="h6">Monorepo Boilerplate - Website (Nextjs/Material UI)</Typography>
+            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+            </Box>
             <Version version={getVersionInfo()} />
           </Box>
           {<Component {...pageProps} />}
