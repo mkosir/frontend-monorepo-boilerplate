@@ -1,6 +1,7 @@
 {
   "name": "boilerplate-app",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "open http://localhost:3100 && vite",
     "build": "tsc && vite build",
