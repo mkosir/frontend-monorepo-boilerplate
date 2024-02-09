@@ -2,7 +2,7 @@
   "name": "boilerplate-app",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "open http://localhost:3100 && vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0 .",
@@ -17,20 +17,20 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.15.21",
-    "@tanstack/router-devtools": "1.15.21",
+    "@tanstack/react-router": "1.15.23",
+    "@tanstack/router-devtools": "1.15.23",
     "config-tailwind": "*",
     "react-parallax-tilt": "1.7.209",
     "ui-tailwind": "*",
     "utils-version": "*"
   },
   "devDependencies": {
-    "@tanstack/router-vite-plugin": "1.15.20",
+    "@tanstack/router-vite-plugin": "1.15.22",
     "@vitejs/plugin-react-swc": "3.6.0",
     "config-storybook": "*",
     "config-tsconfig": "*",
     "utils-test": "*",
-    "vite": "5.0.12",
+    "vite": "5.1.1",
     "vite-tsconfig-paths": "4.3.1"
   }
 }
