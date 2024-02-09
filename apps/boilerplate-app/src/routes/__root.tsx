@@ -1,13 +1,16 @@
+/* eslint-disable prettier/prettier */
 import { Link, Outlet, createRootRoute } from '@tanstack/react-router';
 import { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet';
 import { Version } from 'ui-tailwind';
 import { getVersionInfo } from 'utils-version';
-
-//  <meta name="version" content={getVersionInfo()} />
 
 export const Route = createRootRoute({
   component: () => (
     <>
+      <Helmet>
+        <meta name="version" content={getVersionInfo()} />
+      </Helmet>
       <div className="mb-5 mt-3 text-center">
         <div className="text-lg font-medium">Monorepo Boilerplate - App (Vite/Tailwind)</div>
         <div className="flex gap-4 justify-center text-blue-900">

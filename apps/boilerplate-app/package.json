@@ -21,12 +21,14 @@
     "@tanstack/react-router": "1.15.23",
     "@tanstack/router-devtools": "1.15.23",
     "config-tailwind": "*",
+    "react-helmet": "6.1.0",
     "react-parallax-tilt": "1.7.209",
     "ui-tailwind": "*",
     "utils-version": "*"
   },
   "devDependencies": {
     "@tanstack/router-vite-plugin": "1.15.22",
+    "@types/react-helmet": "6.1.11",
     "@vitejs/plugin-react-swc": "3.6.0",
     "config-storybook": "*",
     "config-tsconfig": "*",
