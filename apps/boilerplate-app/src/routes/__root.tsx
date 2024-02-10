@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 import { Version } from 'ui-tailwind';
 import { getVersionInfo } from 'utils-version';
 
+import { Status404Page } from 'modules';
+
 export const Route = createRootRoute({
   component: () => (
     <>
@@ -28,6 +30,7 @@ export const Route = createRootRoute({
       <TanStackRouterDevtools />
     </>
   ),
+  notFoundComponent: () => <Status404Page />,
 });
 
 const TanStackRouterDevtoolsLazy = import.meta.env.PROD
