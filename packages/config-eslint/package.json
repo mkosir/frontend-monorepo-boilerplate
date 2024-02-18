@@ -13,7 +13,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jest": "27.8.0",
+    "eslint-plugin-jest": "27.9.0",
     "eslint-plugin-jest-dom": "5.1.0",
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-no-array-reduce": "1.0.62",
@@ -21,7 +21,7 @@
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-refresh": "0.4.5",
-    "eslint-plugin-storybook": "0.6.15",
+    "eslint-plugin-storybook": "0.8.0",
     "eslint-plugin-testing-library": "6.2.0"
   }
 }
