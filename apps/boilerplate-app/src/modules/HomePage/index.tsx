@@ -10,17 +10,21 @@ export const HomePage = () => {
     switch (doorNo) {
       case 1:
         if (!openDoorNo) {
-          setOpenDoorNo(doorNo);
+          setOpenDoorNo(3);
           return;
         }
         setMessage('Sorry, better luck next time. Baaa 🐐');
         return;
       case 2:
+        if (!openDoorNo) {
+          setOpenDoorNo(1);
+          return;
+        }
         setMessage('Congrats! 🚗');
         return;
       case 3:
         if (!openDoorNo) {
-          setOpenDoorNo(doorNo);
+          setOpenDoorNo(1);
           return;
         }
         setMessage('Sorry, better luck next time. Baaa 🐐');
