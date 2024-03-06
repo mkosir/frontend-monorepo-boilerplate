@@ -1,14 +1,10 @@
-import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { MontyHome, MontyHomeProps } from '.';
 
 const baseArgs: MontyHomeProps = {
   title: 'Home page (scoped) feature',
-  openDoorNo: null,
-  message: null,
   isTiltEnabled: true,
-  onMontyHomeSelected: action('onMontyHomeSelected'),
 };
 
 export default {
@@ -20,12 +16,8 @@ type Story = StoryObj<typeof MontyHome>;
 
 export const Default: Story = {};
 
-export const Win: Story = {
-  args: { message: 'Congrats! 🚗' },
-};
-
-export const Loss: Story = {
-  args: { message: 'Sorry, better luck next time. Baaa 🐐' },
+export const CustomTitle: Story = {
+  args: { title: 'Choose wisely' },
 };
 
 export const TiltDisabled: Story = {
