@@ -22,7 +22,7 @@
     "@tanstack/router-devtools": "1.19.1",
     "config-tailwind": "*",
     "react-helmet": "6.1.0",
-    "react-parallax-tilt": "1.7.212",
+    "react-parallax-tilt": "1.7.213",
     "ui-tailwind": "*",
     "utils-version": "*"
   },
