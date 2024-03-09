@@ -18,8 +18,8 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.19.1",
-    "@tanstack/router-devtools": "1.19.1",
+    "@tanstack/react-router": "1.19.2",
+    "@tanstack/router-devtools": "1.19.2",
     "config-tailwind": "*",
     "react-helmet": "6.1.0",
     "react-parallax-tilt": "1.7.214",
@@ -27,7 +27,7 @@
     "utils-version": "*"
   },
   "devDependencies": {
-    "@tanstack/router-vite-plugin": "1.19.0",
+    "@tanstack/router-vite-plugin": "1.19.2",
     "@types/react-helmet": "6.1.11",
     "@vitejs/plugin-react-swc": "3.6.0",
     "config-storybook": "*",
