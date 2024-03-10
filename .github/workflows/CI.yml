@@ -133,7 +133,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD }}
           production-deploy: true
@@ -157,7 +157,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD_STORYBOOK }}
           production-deploy: true
@@ -181,7 +181,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_APP_BUILD }}
           production-deploy: true
@@ -209,7 +209,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD }}
           production-deploy: true
@@ -233,7 +233,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD_STORYBOOK }}
           production-deploy: true
@@ -257,7 +257,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_BOILERPLATE_WEBSITE_BUILD }}
           production-deploy: true
@@ -285,7 +285,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_UI_TAILWIND_BUILD }}
           production-deploy: true
@@ -309,7 +309,7 @@ jobs:
           path: ${{ env.CACHE_PATHS_BUILD }}
           key: ${{ env.CACHE_KEY_BUILD }}
 
-      - uses: nwtgck/actions-netlify@v2
+      - uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: ${{ env.FILE_PATH_UI_TAILWIND_BUILD }}
           production-deploy: true
