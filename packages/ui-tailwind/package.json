@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "config-storybook": "*",
+    "config-tailwind": "*",
     "config-tsconfig": "*",
     "utils-test": "*"
   }
