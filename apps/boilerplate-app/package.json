@@ -18,8 +18,8 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.20.5",
-    "@tanstack/router-devtools": "1.20.5",
+    "@tanstack/react-router": "1.21.0",
+    "@tanstack/router-devtools": "1.21.0",
     "config-tailwind": "*",
     "react-helmet": "6.1.0",
     "react-parallax-tilt": "1.7.217",
