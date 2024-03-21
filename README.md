@@ -32,7 +32,7 @@ Frontend monorepo with focus on best practices and painless developer experience
 
 _Easily set up a local development environment_
 
-- `npm install`
+- `npm i`
 - `npm run build`
 - `npm run dev` - Start all apps 🚀
 
