@@ -18,8 +18,8 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.22.0",
-    "@tanstack/router-devtools": "1.22.0",
+    "@tanstack/react-router": "1.22.5",
+    "@tanstack/router-devtools": "1.22.5",
     "config-tailwind": "*",
     "react-helmet": "6.1.0",
     "react-parallax-tilt": "1.7.217",
@@ -33,7 +33,7 @@
     "config-storybook": "*",
     "config-tsconfig": "*",
     "utils-test": "*",
-    "vite": "5.2.2",
+    "vite": "5.2.6",
     "vite-tsconfig-paths": "4.3.2"
   }
 }
